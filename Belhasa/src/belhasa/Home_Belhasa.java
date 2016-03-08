@@ -34,69 +34,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         desktopPane = new javax.swing.JDesktopPane();
-        MainLoginFrame = new javax.swing.JInternalFrame();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        AdminLoginFrame = new javax.swing.JInternalFrame();
-        jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        StudentLoginFrame = new javax.swing.JInternalFrame();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jButton12 = new javax.swing.JButton();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jButton13 = new javax.swing.JButton();
-        AdminHomeFrame = new javax.swing.JInternalFrame();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        ApproveNewStudents = new javax.swing.JInternalFrame();
-        jLabel5 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton10 = new javax.swing.JButton();
-        StudentsSignUpFrame = new javax.swing.JInternalFrame();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        St_SignUp_firstName_Textfield = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        St_SignUp_lastName_Textfield = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jButton11 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
-        St_SignUp_Nationality_Textfield = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        St_SignUp_EmiratesId_Textfield = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        ConfirmNotificationModeFrame = new javax.swing.JInternalFrame();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
         InstantRegisterFrame = new javax.swing.JInternalFrame();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
@@ -132,11 +71,327 @@ public class Home_Belhasa extends javax.swing.JFrame {
         qstn_Add_Btn = new javax.swing.JButton();
         Qstn_Delete_Btn = new javax.swing.JButton();
         Qstn_Update_Btn = new javax.swing.JButton();
+        MainLoginFrame = new javax.swing.JInternalFrame();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        AdminLoginFrame = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        StudentLoginFrame = new javax.swing.JInternalFrame();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jButton13 = new javax.swing.JButton();
+        ApproveNewStudents = new javax.swing.JInternalFrame();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton10 = new javax.swing.JButton();
+        AdminHomeFrame = new javax.swing.JInternalFrame();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        StudentsSignUpFrame = new javax.swing.JInternalFrame();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        St_SignUp_firstName_Textfield = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        St_SignUp_lastName_Textfield = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jButton11 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        St_SignUp_Nationality_Textfield = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        St_SignUp_EmiratesId_Textfield = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        ConfirmNotificationModeFrame = new javax.swing.JInternalFrame();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        LicenseCategoryFrame = new javax.swing.JInternalFrame();
+        LicenseCategory_Label = new javax.swing.JLabel();
+        LMV_RdBtn = new javax.swing.JRadioButton();
+        MC_RdBtn = new javax.swing.JRadioButton();
+        HVT_RdBtn = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         desktopPane.setBackground(new java.awt.Color(255, 255, 255));
         desktopPane.setPreferredSize(new java.awt.Dimension(1253, 1173));
+
+        InstantRegisterFrame.setVisible(true);
+
+        jLabel22.setText("Instant Registration");
+
+        jLabel23.setText("Admin Password");
+
+        jButton6.setText("Activate Account");
+
+        javax.swing.GroupLayout InstantRegisterFrameLayout = new javax.swing.GroupLayout(InstantRegisterFrame.getContentPane());
+        InstantRegisterFrame.getContentPane().setLayout(InstantRegisterFrameLayout);
+        InstantRegisterFrameLayout.setHorizontalGroup(
+            InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jLabel23)
+                        .addGap(104, 104, 104)
+                        .addComponent(jButton6)
+                        .addGap(1982, 1982, 1982)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(jLabel22)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        InstantRegisterFrameLayout.setVerticalGroup(
+            InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel22)
+                .addGap(66, 66, 66)
+                .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addComponent(jButton6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(InstantRegisterFrame);
+        InstantRegisterFrame.setBounds(0, 0, 2574, 1123);
+
+        LessonsFrame.setVisible(true);
+
+        Lessons_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Lessons_Label.setText("LESSONS");
+
+        LS_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Lessons"
+            }
+        ));
+        jScrollPane2.setViewportView(LS_Table);
+
+        Lessons_Add_Btn.setText("Add");
+
+        Lessons_Delete_Btn.setText("Delete");
+
+        Lessons_Enter_Btn.setText("Enter");
+
+        javax.swing.GroupLayout LessonsFrameLayout = new javax.swing.GroupLayout(LessonsFrame.getContentPane());
+        LessonsFrame.getContentPane().setLayout(LessonsFrameLayout);
+        LessonsFrameLayout.setHorizontalGroup(
+            LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonsFrameLayout.createSequentialGroup()
+                .addGap(202, 202, 202)
+                .addComponent(Lessons_Label)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LessonsFrameLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(LessonsFrameLayout.createSequentialGroup()
+                        .addComponent(Lessons_Add_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109)
+                        .addComponent(Lessons_Delete_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Lessons_Enter_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
+        );
+        LessonsFrameLayout.setVerticalGroup(
+            LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonsFrameLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(Lessons_Label)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Lessons_Add_Btn)
+                    .addComponent(Lessons_Delete_Btn)
+                    .addComponent(Lessons_Enter_Btn))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(LessonsFrame);
+        LessonsFrame.setBounds(0, 0, 509, 398);
+
+        LessonContentFrame.setVisible(true);
+
+        LsContent_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        LsContent_Label.setText("Lesson contents");
+
+        LsContent_Textarea.setColumns(20);
+        LsContent_Textarea.setRows(5);
+        jScrollPane3.setViewportView(LsContent_Textarea);
+
+        LsContent_Update_Btn.setText("Update");
+
+        LsContent_Qstn_Btn.setText("Questions");
+
+        javax.swing.GroupLayout LessonContentFrameLayout = new javax.swing.GroupLayout(LessonContentFrame.getContentPane());
+        LessonContentFrame.getContentPane().setLayout(LessonContentFrameLayout);
+        LessonContentFrameLayout.setHorizontalGroup(
+            LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonContentFrameLayout.createSequentialGroup()
+                .addGroup(LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LessonContentFrameLayout.createSequentialGroup()
+                        .addGap(219, 219, 219)
+                        .addComponent(LsContent_Label))
+                    .addGroup(LessonContentFrameLayout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addGroup(LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LessonContentFrameLayout.createSequentialGroup()
+                                .addComponent(LsContent_Update_Btn)
+                                .addGap(112, 112, 112)
+                                .addComponent(LsContent_Qstn_Btn)
+                                .addGap(25, 25, 25)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        LessonContentFrameLayout.setVerticalGroup(
+            LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonContentFrameLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(LsContent_Label)
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LsContent_Update_Btn)
+                    .addComponent(LsContent_Qstn_Btn))
+                .addGap(34, 34, 34))
+        );
+
+        desktopPane.add(LessonContentFrame);
+        LessonContentFrame.setBounds(0, 0, 484, 331);
+
+        AddLessonFrame.setVisible(true);
+
+        Add_Lesson_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Add_Lesson_Label.setText("ADD LESSONS");
+
+        Add_Lesson_Lsn_Label.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Add_Lesson_Lsn_Label.setText("LESSON");
+
+        Add_Lesson_Add_Btn.setText("Add");
+
+        javax.swing.GroupLayout AddLessonFrameLayout = new javax.swing.GroupLayout(AddLessonFrame.getContentPane());
+        AddLessonFrame.getContentPane().setLayout(AddLessonFrameLayout);
+        AddLessonFrameLayout.setHorizontalGroup(
+            AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddLessonFrameLayout.createSequentialGroup()
+                .addGroup(AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AddLessonFrameLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(Add_Lesson_Lsn_Label)
+                        .addGap(71, 71, 71)
+                        .addGroup(AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Add_Lesson_Add_Btn)
+                            .addComponent(Add_Lesson_Lsn_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(AddLessonFrameLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(Add_Lesson_Label)))
+                .addContainerGap(109, Short.MAX_VALUE))
+        );
+        AddLessonFrameLayout.setVerticalGroup(
+            AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddLessonFrameLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(Add_Lesson_Label)
+                .addGap(57, 57, 57)
+                .addGroup(AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Add_Lesson_Lsn_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Add_Lesson_Lsn_Label))
+                .addGap(42, 42, 42)
+                .addComponent(Add_Lesson_Add_Btn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(AddLessonFrame);
+        AddLessonFrame.setBounds(0, 0, 490, 262);
+
+        QuestionsFrame.setVisible(true);
+
+        Qstn_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Qstn_Label.setText("QUESTIONS");
+        QuestionsFrame.getContentPane().add(Qstn_Label, java.awt.BorderLayout.CENTER);
+
+        Qstn_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Question", "Option1", "Option2", "Option3", "Answer"
+            }
+        ));
+        jScrollPane4.setViewportView(Qstn_Table);
+
+        QuestionsFrame.getContentPane().add(jScrollPane4, java.awt.BorderLayout.PAGE_START);
+
+        Qstn_Qstn_Label.setText("QUESTION");
+        QuestionsFrame.getContentPane().add(Qstn_Qstn_Label, java.awt.BorderLayout.PAGE_END);
+        QuestionsFrame.getContentPane().add(Qstn_Textfield, java.awt.BorderLayout.LINE_END);
+
+        buttonGroup3.add(jRadioButton6);
+        jRadioButton6.setText("jRadioButton3");
+        QuestionsFrame.getContentPane().add(jRadioButton6, java.awt.BorderLayout.LINE_START);
+
+        buttonGroup3.add(jRadioButton7);
+        jRadioButton7.setText("jRadioButton4");
+        QuestionsFrame.getContentPane().add(jRadioButton7, java.awt.BorderLayout.CENTER);
+
+        buttonGroup3.add(jRadioButton5);
+        jRadioButton5.setText("jRadioButton5");
+        QuestionsFrame.getContentPane().add(jRadioButton5, java.awt.BorderLayout.CENTER);
+
+        qstn_Add_Btn.setText("Add");
+        QuestionsFrame.getContentPane().add(qstn_Add_Btn, java.awt.BorderLayout.CENTER);
+
+        Qstn_Delete_Btn.setText("Delete");
+        QuestionsFrame.getContentPane().add(Qstn_Delete_Btn, java.awt.BorderLayout.CENTER);
+
+        Qstn_Update_Btn.setText("Update");
+        QuestionsFrame.getContentPane().add(Qstn_Update_Btn, java.awt.BorderLayout.CENTER);
+
+        desktopPane.add(QuestionsFrame);
+        QuestionsFrame.setBounds(0, 0, 468, 473);
 
         MainLoginFrame.setVisible(true);
 
@@ -162,21 +417,18 @@ public class Home_Belhasa extends javax.swing.JFrame {
         MainLoginFrameLayout.setHorizontalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainLoginFrameLayout.createSequentialGroup()
+                .addGap(1322, 1322, 1322)
+                .addComponent(jButton1)
+                .addGap(434, 434, 434)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MainLoginFrameLayout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addComponent(jButton1)
-                        .addGap(130, 130, 130)
-                        .addComponent(jButton2))
-                    .addGroup(MainLoginFrameLayout.createSequentialGroup()
-                        .addGap(229, 229, 229)
-                        .addComponent(jLabel6)))
+                    .addComponent(jButton2)
+                    .addComponent(jLabel6))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         MainLoginFrameLayout.setVerticalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(MainLoginFrameLayout.createSequentialGroup()
+                .addContainerGap(793, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(111, 111, 111)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -186,6 +438,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(MainLoginFrame);
+        MainLoginFrame.setBounds(510, 60, 1970, 1071);
 
         AdminLoginFrame.setVisible(true);
 
@@ -262,12 +515,13 @@ public class Home_Belhasa extends javax.swing.JFrame {
                 .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addContainerGap())
         );
 
         desktopPane.add(AdminLoginFrame);
+        AdminLoginFrame.setBounds(0, 0, 422, 349);
 
         StudentLoginFrame.setVisible(true);
 
@@ -315,7 +569,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(StudentLoginFrameLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jLabel19)
-                .addGap(53, 53, 53)
+                .addGap(325, 325, 325)
                 .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -323,7 +577,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                 .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
                     .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton12)
                     .addComponent(jButton13))
@@ -331,6 +585,59 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentLoginFrame);
+        StudentLoginFrame.setBounds(0, 0, 471, 588);
+
+        ApproveNewStudents.setVisible(true);
+
+        jLabel5.setText("New Students");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jButton10.setText("Approve");
+
+        javax.swing.GroupLayout ApproveNewStudentsLayout = new javax.swing.GroupLayout(ApproveNewStudents.getContentPane());
+        ApproveNewStudents.getContentPane().setLayout(ApproveNewStudentsLayout);
+        ApproveNewStudentsLayout.setHorizontalGroup(
+            ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(jLabel5))
+                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jButton10)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApproveNewStudentsLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
+        );
+        ApproveNewStudentsLayout.setVerticalGroup(
+            ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 612, Short.MAX_VALUE)
+                .addComponent(jButton10)
+                .addGap(23, 23, 23))
+        );
+
+        desktopPane.add(ApproveNewStudents);
+        ApproveNewStudents.setBounds(0, 0, 717, 1050);
 
         AdminHomeFrame.setVisible(true);
 
@@ -389,61 +696,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
                 .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton9))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         desktopPane.add(AdminHomeFrame);
-
-        ApproveNewStudents.setVisible(true);
-
-        jLabel5.setText("New Students");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jButton10.setText("Approve");
-
-        javax.swing.GroupLayout ApproveNewStudentsLayout = new javax.swing.GroupLayout(ApproveNewStudents.getContentPane());
-        ApproveNewStudents.getContentPane().setLayout(ApproveNewStudentsLayout);
-        ApproveNewStudentsLayout.setHorizontalGroup(
-            ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jLabel5))
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jButton10)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApproveNewStudentsLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
-        );
-        ApproveNewStudentsLayout.setVerticalGroup(
-            ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton10)
-                .addGap(23, 23, 23))
-        );
-
-        desktopPane.add(ApproveNewStudents);
+        AdminHomeFrame.setBounds(0, 0, 470, 317);
 
         StudentsSignUpFrame.setVisible(true);
 
@@ -578,7 +835,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
                             .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -595,6 +852,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentsSignUpFrame);
+        StudentsSignUpFrame.setBounds(0, 0, 563, 584);
 
         ConfirmNotificationModeFrame.setVisible(true);
 
@@ -625,254 +883,59 @@ public class Home_Belhasa extends javax.swing.JFrame {
                 .addComponent(jRadioButton3)
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         desktopPane.add(ConfirmNotificationModeFrame);
+        ConfirmNotificationModeFrame.setBounds(0, 0, 190, 168);
 
-        InstantRegisterFrame.setVisible(true);
+        LicenseCategoryFrame.setVisible(true);
 
-        jLabel22.setText("Instant Registration");
+        LicenseCategory_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        LicenseCategory_Label.setText("LICENSE CATEGORY");
 
-        jLabel23.setText("Admin Password");
+        buttonGroup4.add(LMV_RdBtn);
+        LMV_RdBtn.setText("LMV");
 
-        jButton6.setText("Activate Account");
+        buttonGroup4.add(MC_RdBtn);
+        MC_RdBtn.setText("MC");
 
-        javax.swing.GroupLayout InstantRegisterFrameLayout = new javax.swing.GroupLayout(InstantRegisterFrame.getContentPane());
-        InstantRegisterFrame.getContentPane().setLayout(InstantRegisterFrameLayout);
-        InstantRegisterFrameLayout.setHorizontalGroup(
-            InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
-                .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel23)
-                        .addGap(104, 104, 104)
-                        .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(jLabel22)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        buttonGroup4.add(HVT_RdBtn);
+        HVT_RdBtn.setText("HVT");
+
+        javax.swing.GroupLayout LicenseCategoryFrameLayout = new javax.swing.GroupLayout(LicenseCategoryFrame.getContentPane());
+        LicenseCategoryFrame.getContentPane().setLayout(LicenseCategoryFrameLayout);
+        LicenseCategoryFrameLayout.setHorizontalGroup(
+            LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                .addGroup(LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addGroup(LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MC_RdBtn)
+                            .addComponent(LMV_RdBtn)
+                            .addComponent(HVT_RdBtn)))
+                    .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(LicenseCategory_Label)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
-        InstantRegisterFrameLayout.setVerticalGroup(
-            InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel22)
-                .addGap(66, 66, 66)
-                .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        LicenseCategoryFrameLayout.setVerticalGroup(
+            LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(LicenseCategory_Label)
+                .addGap(38, 38, 38)
+                .addComponent(LMV_RdBtn)
                 .addGap(31, 31, 31)
-                .addComponent(jButton6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(MC_RdBtn)
+                .addGap(39, 39, 39)
+                .addComponent(HVT_RdBtn)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        desktopPane.add(InstantRegisterFrame);
-
-        LessonsFrame.setVisible(true);
-
-        Lessons_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Lessons_Label.setText("LESSONS");
-
-        LS_Table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null}
-            },
-            new String [] {
-                "Lessons"
-            }
-        ));
-        jScrollPane2.setViewportView(LS_Table);
-
-        Lessons_Add_Btn.setText("Add");
-
-        Lessons_Delete_Btn.setText("Delete");
-
-        Lessons_Enter_Btn.setText("Enter");
-
-        javax.swing.GroupLayout LessonsFrameLayout = new javax.swing.GroupLayout(LessonsFrame.getContentPane());
-        LessonsFrame.getContentPane().setLayout(LessonsFrameLayout);
-        LessonsFrameLayout.setHorizontalGroup(
-            LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonsFrameLayout.createSequentialGroup()
-                .addGap(202, 202, 202)
-                .addComponent(Lessons_Label)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LessonsFrameLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(LessonsFrameLayout.createSequentialGroup()
-                        .addComponent(Lessons_Add_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(109, 109, 109)
-                        .addComponent(Lessons_Delete_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Lessons_Enter_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31))
-        );
-        LessonsFrameLayout.setVerticalGroup(
-            LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonsFrameLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(Lessons_Label)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(LessonsFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lessons_Add_Btn)
-                    .addComponent(Lessons_Delete_Btn)
-                    .addComponent(Lessons_Enter_Btn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        desktopPane.add(LessonsFrame);
-
-        LessonContentFrame.setVisible(true);
-
-        LsContent_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        LsContent_Label.setText("Lesson contents");
-
-        LsContent_Textarea.setColumns(20);
-        LsContent_Textarea.setRows(5);
-        jScrollPane3.setViewportView(LsContent_Textarea);
-
-        LsContent_Update_Btn.setText("Update");
-
-        LsContent_Qstn_Btn.setText("Questions");
-
-        javax.swing.GroupLayout LessonContentFrameLayout = new javax.swing.GroupLayout(LessonContentFrame.getContentPane());
-        LessonContentFrame.getContentPane().setLayout(LessonContentFrameLayout);
-        LessonContentFrameLayout.setHorizontalGroup(
-            LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonContentFrameLayout.createSequentialGroup()
-                .addGroup(LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(LessonContentFrameLayout.createSequentialGroup()
-                        .addGap(219, 219, 219)
-                        .addComponent(LsContent_Label))
-                    .addGroup(LessonContentFrameLayout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addGroup(LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LessonContentFrameLayout.createSequentialGroup()
-                                .addComponent(LsContent_Update_Btn)
-                                .addGap(112, 112, 112)
-                                .addComponent(LsContent_Qstn_Btn)
-                                .addGap(25, 25, 25)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        LessonContentFrameLayout.setVerticalGroup(
-            LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonContentFrameLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(LsContent_Label)
-                .addGap(32, 32, 32)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(LessonContentFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LsContent_Update_Btn)
-                    .addComponent(LsContent_Qstn_Btn))
-                .addGap(34, 34, 34))
-        );
-
-        desktopPane.add(LessonContentFrame);
-
-        AddLessonFrame.setVisible(true);
-
-        Add_Lesson_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Add_Lesson_Label.setText("ADD LESSONS");
-
-        Add_Lesson_Lsn_Label.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        Add_Lesson_Lsn_Label.setText("LESSON");
-
-        Add_Lesson_Add_Btn.setText("Add");
-
-        javax.swing.GroupLayout AddLessonFrameLayout = new javax.swing.GroupLayout(AddLessonFrame.getContentPane());
-        AddLessonFrame.getContentPane().setLayout(AddLessonFrameLayout);
-        AddLessonFrameLayout.setHorizontalGroup(
-            AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddLessonFrameLayout.createSequentialGroup()
-                .addGroup(AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AddLessonFrameLayout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(Add_Lesson_Lsn_Label)
-                        .addGap(71, 71, 71)
-                        .addGroup(AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Add_Lesson_Add_Btn)
-                            .addComponent(Add_Lesson_Lsn_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(AddLessonFrameLayout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(Add_Lesson_Label)))
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
-        AddLessonFrameLayout.setVerticalGroup(
-            AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddLessonFrameLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(Add_Lesson_Label)
-                .addGap(57, 57, 57)
-                .addGroup(AddLessonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Add_Lesson_Lsn_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Add_Lesson_Lsn_Label))
-                .addGap(42, 42, 42)
-                .addComponent(Add_Lesson_Add_Btn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        desktopPane.add(AddLessonFrame);
-
-        QuestionsFrame.setVisible(true);
-
-        Qstn_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Qstn_Label.setText("QUESTIONS");
-        QuestionsFrame.getContentPane().add(Qstn_Label);
-
-        Qstn_Table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Question", "Option1", "Option2", "Option3", "Answer"
-            }
-        ));
-        jScrollPane4.setViewportView(Qstn_Table);
-
-        QuestionsFrame.getContentPane().add(jScrollPane4);
-
-        Qstn_Qstn_Label.setText("QUESTION");
-        QuestionsFrame.getContentPane().add(Qstn_Qstn_Label);
-        QuestionsFrame.getContentPane().add(Qstn_Textfield);
-
-        buttonGroup3.add(jRadioButton6);
-        jRadioButton6.setText("jRadioButton3");
-        QuestionsFrame.getContentPane().add(jRadioButton6);
-
-        buttonGroup3.add(jRadioButton7);
-        jRadioButton7.setText("jRadioButton4");
-        QuestionsFrame.getContentPane().add(jRadioButton7);
-
-        buttonGroup3.add(jRadioButton5);
-        jRadioButton5.setText("jRadioButton5");
-        QuestionsFrame.getContentPane().add(jRadioButton5);
-
-        qstn_Add_Btn.setText("Add");
-        QuestionsFrame.getContentPane().add(qstn_Add_Btn);
-
-        Qstn_Delete_Btn.setText("Delete");
-        QuestionsFrame.getContentPane().add(Qstn_Delete_Btn);
-
-        Qstn_Update_Btn.setText("Update");
-        QuestionsFrame.getContentPane().add(Qstn_Update_Btn);
-
-        desktopPane.add(QuestionsFrame);
+        desktopPane.add(LicenseCategoryFrame);
+        LicenseCategoryFrame.setBounds(0, 0, 395, 324);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1013,7 +1076,9 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JInternalFrame AdminLoginFrame;
     private javax.swing.JInternalFrame ApproveNewStudents;
     private javax.swing.JInternalFrame ConfirmNotificationModeFrame;
+    private javax.swing.JRadioButton HVT_RdBtn;
     private javax.swing.JInternalFrame InstantRegisterFrame;
+    private javax.swing.JRadioButton LMV_RdBtn;
     private javax.swing.JTable LS_Table;
     private javax.swing.JInternalFrame LessonContentFrame;
     private javax.swing.JInternalFrame LessonsFrame;
@@ -1021,10 +1086,13 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JButton Lessons_Delete_Btn;
     private javax.swing.JButton Lessons_Enter_Btn;
     private javax.swing.JLabel Lessons_Label;
+    private javax.swing.JInternalFrame LicenseCategoryFrame;
+    private javax.swing.JLabel LicenseCategory_Label;
     private javax.swing.JLabel LsContent_Label;
     private javax.swing.JButton LsContent_Qstn_Btn;
     private javax.swing.JTextArea LsContent_Textarea;
     private javax.swing.JButton LsContent_Update_Btn;
+    private javax.swing.JRadioButton MC_RdBtn;
     private javax.swing.JInternalFrame MainLoginFrame;
     private javax.swing.JButton Qstn_Delete_Btn;
     private javax.swing.JLabel Qstn_Label;
@@ -1042,6 +1110,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
