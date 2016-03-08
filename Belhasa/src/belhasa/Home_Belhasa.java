@@ -32,6 +32,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         desktopPane = new javax.swing.JDesktopPane();
         MainLoginFrame = new javax.swing.JInternalFrame();
         jButton1 = new javax.swing.JButton();
@@ -60,6 +61,20 @@ public class Home_Belhasa extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton10 = new javax.swing.JButton();
+        StudentsHomeFrame = new javax.swing.JInternalFrame();
+        St_Home_ChangePswd_Btn = new javax.swing.JButton();
+        AdminChangepasswordFrame = new javax.swing.JInternalFrame();
+        Ad_changepswd_Label = new javax.swing.JLabel();
+        Ad_changepswd_password_Label = new javax.swing.JLabel();
+        Ad_changepswd_Confpswd_Label = new javax.swing.JLabel();
+        Ad_changepswd_password_Textfield = new javax.swing.JTextField();
+        Ad_changepswd_Confpswd_Textfieldl = new javax.swing.JTextField();
+        Ad_changepswd_sUBMIT_Btn = new javax.swing.JButton();
+        LicenseCategoryFrame = new javax.swing.JInternalFrame();
+        LcCategory_Label = new javax.swing.JLabel();
+        LcCategory_LMV_RdBtn = new javax.swing.JRadioButton();
+        LcCategory_MC_RdBtn = new javax.swing.JRadioButton();
+        LcCategory_HVT_RdBtn = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,7 +119,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         MainLoginFrameLayout.setVerticalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
-                .addContainerGap(164, Short.MAX_VALUE)
+                .addContainerGap(168, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(111, 111, 111)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -199,11 +214,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentLoginFrame.getContentPane().setLayout(StudentLoginFrameLayout);
         StudentLoginFrameLayout.setHorizontalGroup(
             StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 751, Short.MAX_VALUE)
         );
         StudentLoginFrameLayout.setVerticalGroup(
             StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 226, Short.MAX_VALUE)
         );
 
         AdminHomeFrame.setVisible(true);
@@ -222,6 +237,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         jButton7.setText("Results");
 
         jButton8.setText("Change Password");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("Logout");
 
@@ -309,11 +329,132 @@ public class Home_Belhasa extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
+        StudentsHomeFrame.setVisible(true);
+
+        St_Home_ChangePswd_Btn.setText("CHANGE PASSWORD");
+
+        javax.swing.GroupLayout StudentsHomeFrameLayout = new javax.swing.GroupLayout(StudentsHomeFrame.getContentPane());
+        StudentsHomeFrame.getContentPane().setLayout(StudentsHomeFrameLayout);
+        StudentsHomeFrameLayout.setHorizontalGroup(
+            StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(St_Home_ChangePswd_Btn)
+                .addContainerGap(436, Short.MAX_VALUE))
+        );
+        StudentsHomeFrameLayout.setVerticalGroup(
+            StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(St_Home_ChangePswd_Btn)
+                .addContainerGap(180, Short.MAX_VALUE))
+        );
+
+        AdminChangepasswordFrame.setVisible(true);
+
+        Ad_changepswd_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Ad_changepswd_Label.setText("CHANGE PASSWORD");
+
+        Ad_changepswd_password_Label.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Ad_changepswd_password_Label.setText("Password");
+
+        Ad_changepswd_Confpswd_Label.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Ad_changepswd_Confpswd_Label.setText("Confirm Password");
+
+        Ad_changepswd_sUBMIT_Btn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Ad_changepswd_sUBMIT_Btn.setText("SUBMIT");
+
+        javax.swing.GroupLayout AdminChangepasswordFrameLayout = new javax.swing.GroupLayout(AdminChangepasswordFrame.getContentPane());
+        AdminChangepasswordFrame.getContentPane().setLayout(AdminChangepasswordFrameLayout);
+        AdminChangepasswordFrameLayout.setHorizontalGroup(
+            AdminChangepasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AdminChangepasswordFrameLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(AdminChangepasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminChangepasswordFrameLayout.createSequentialGroup()
+                        .addGroup(AdminChangepasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Ad_changepswd_Confpswd_Label)
+                            .addComponent(Ad_changepswd_password_Label))
+                        .addGap(74, 74, 74)
+                        .addGroup(AdminChangepasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Ad_changepswd_sUBMIT_Btn)
+                            .addComponent(Ad_changepswd_password_Textfield)
+                            .addComponent(Ad_changepswd_Confpswd_Textfieldl, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Ad_changepswd_Label, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+        AdminChangepasswordFrameLayout.setVerticalGroup(
+            AdminChangepasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminChangepasswordFrameLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(Ad_changepswd_Label)
+                .addGap(37, 37, 37)
+                .addGroup(AdminChangepasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Ad_changepswd_password_Label)
+                    .addComponent(Ad_changepswd_password_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(AdminChangepasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Ad_changepswd_Confpswd_Label)
+                    .addComponent(Ad_changepswd_Confpswd_Textfieldl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(Ad_changepswd_sUBMIT_Btn)
+                .addGap(21, 21, 21))
+        );
+
+        LicenseCategoryFrame.setVisible(true);
+
+        LcCategory_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        LcCategory_Label.setText("LICENSE CATEGORY");
+
+        buttonGroup2.add(LcCategory_LMV_RdBtn);
+        LcCategory_LMV_RdBtn.setText("LMV");
+
+        buttonGroup2.add(LcCategory_MC_RdBtn);
+        LcCategory_MC_RdBtn.setText("MC");
+
+        buttonGroup2.add(LcCategory_HVT_RdBtn);
+        LcCategory_HVT_RdBtn.setText("HVT");
+
+        javax.swing.GroupLayout LicenseCategoryFrameLayout = new javax.swing.GroupLayout(LicenseCategoryFrame.getContentPane());
+        LicenseCategoryFrame.getContentPane().setLayout(LicenseCategoryFrameLayout);
+        LicenseCategoryFrameLayout.setHorizontalGroup(
+            LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                .addGroup(LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addGroup(LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LcCategory_MC_RdBtn)
+                            .addComponent(LcCategory_LMV_RdBtn)
+                            .addComponent(LcCategory_HVT_RdBtn)))
+                    .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(LcCategory_Label)))
+                .addContainerGap(82, Short.MAX_VALUE))
+        );
+        LicenseCategoryFrameLayout.setVerticalGroup(
+            LicenseCategoryFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LicenseCategoryFrameLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(LcCategory_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(LcCategory_LMV_RdBtn)
+                .addGap(18, 18, 18)
+                .addComponent(LcCategory_MC_RdBtn)
+                .addGap(32, 32, 32)
+                .addComponent(LcCategory_HVT_RdBtn)
+                .addContainerGap(78, Short.MAX_VALUE))
+        );
+
         desktopPane.setLayer(MainLoginFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
         desktopPane.setLayer(AdminLoginFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
         desktopPane.setLayer(StudentLoginFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
         desktopPane.setLayer(AdminHomeFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
         desktopPane.setLayer(ApproveNewStudents, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        desktopPane.setLayer(StudentsHomeFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        desktopPane.setLayer(AdminChangepasswordFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        desktopPane.setLayer(LicenseCategoryFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout desktopPaneLayout = new javax.swing.GroupLayout(desktopPane);
         desktopPane.setLayout(desktopPaneLayout);
@@ -343,6 +484,21 @@ public class Home_Belhasa extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(ApproveNewStudents, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desktopPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(StudentsHomeFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desktopPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AdminChangepasswordFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desktopPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(LicenseCategoryFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         desktopPaneLayout.setVerticalGroup(
             desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -369,6 +525,21 @@ public class Home_Belhasa extends javax.swing.JFrame {
                 .addGroup(desktopPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(ApproveNewStudents, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desktopPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(StudentsHomeFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desktopPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AdminChangepasswordFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desktopPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(LicenseCategoryFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -415,6 +586,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         ApproveNewStudents.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        closeAllFrames();
+        AdminChangepasswordFrame.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -452,12 +628,27 @@ public class Home_Belhasa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Ad_changepswd_Confpswd_Label;
+    private javax.swing.JTextField Ad_changepswd_Confpswd_Textfieldl;
+    private javax.swing.JLabel Ad_changepswd_Label;
+    private javax.swing.JLabel Ad_changepswd_password_Label;
+    private javax.swing.JTextField Ad_changepswd_password_Textfield;
+    private javax.swing.JButton Ad_changepswd_sUBMIT_Btn;
+    private javax.swing.JInternalFrame AdminChangepasswordFrame;
     private javax.swing.JInternalFrame AdminHomeFrame;
     private javax.swing.JInternalFrame AdminLoginFrame;
     private javax.swing.JInternalFrame ApproveNewStudents;
+    private javax.swing.JRadioButton LcCategory_HVT_RdBtn;
+    private javax.swing.JRadioButton LcCategory_LMV_RdBtn;
+    private javax.swing.JLabel LcCategory_Label;
+    private javax.swing.JRadioButton LcCategory_MC_RdBtn;
+    private javax.swing.JInternalFrame LicenseCategoryFrame;
     private javax.swing.JInternalFrame MainLoginFrame;
+    private javax.swing.JButton St_Home_ChangePswd_Btn;
     private javax.swing.JInternalFrame StudentLoginFrame;
+    private javax.swing.JInternalFrame StudentsHomeFrame;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
