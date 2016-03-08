@@ -36,6 +36,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         MainLoginFrame = new javax.swing.JInternalFrame();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         AdminLoginFrame = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -81,21 +82,30 @@ public class Home_Belhasa extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setText("jLabel6");
+
         javax.swing.GroupLayout MainLoginFrameLayout = new javax.swing.GroupLayout(MainLoginFrame.getContentPane());
         MainLoginFrame.getContentPane().setLayout(MainLoginFrameLayout);
         MainLoginFrameLayout.setHorizontalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainLoginFrameLayout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(jButton1)
-                .addGap(130, 130, 130)
-                .addComponent(jButton2)
+                .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainLoginFrameLayout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jButton1)
+                        .addGap(130, 130, 130)
+                        .addComponent(jButton2))
+                    .addGroup(MainLoginFrameLayout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addComponent(jLabel6)))
                 .addContainerGap(177, Short.MAX_VALUE))
         );
         MainLoginFrameLayout.setVerticalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
-                .addContainerGap(273, Short.MAX_VALUE)
+                .addContainerGap(156, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(111, 111, 111)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -338,7 +348,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(desktopPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(MainLoginFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(754, Short.MAX_VALUE))
+                .addContainerGap(746, Short.MAX_VALUE))
             .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(desktopPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -463,6 +473,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
