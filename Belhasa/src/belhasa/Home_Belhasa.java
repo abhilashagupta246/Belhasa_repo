@@ -753,6 +753,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
             String[] bccRecipients = new String[]{""};
             String subject = "New User Registered";
             StringBuffer messageBodyBuffer = new StringBuffer();
+            
                     messageBodyBuffer.append("Hi Admin");
             
                     //recipients[0] = adusr_email_textfield.getText(); //admin email id
