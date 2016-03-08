@@ -96,6 +96,10 @@ public class Home_Belhasa extends javax.swing.JFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         InstantRegisterFrame = new javax.swing.JInternalFrame();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -140,7 +144,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         MainLoginFrameLayout.setVerticalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
-                .addContainerGap(176, Short.MAX_VALUE)
+                .addContainerGap(180, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(111, 111, 111)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -582,15 +586,42 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         InstantRegisterFrame.setVisible(true);
 
+        jLabel22.setText("Instant Registration");
+
+        jLabel23.setText("Admin Password");
+
+        jButton6.setText("Activate Account");
+
         javax.swing.GroupLayout InstantRegisterFrameLayout = new javax.swing.GroupLayout(InstantRegisterFrame.getContentPane());
         InstantRegisterFrame.getContentPane().setLayout(InstantRegisterFrameLayout);
         InstantRegisterFrameLayout.setHorizontalGroup(
             InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jLabel23)
+                        .addGap(104, 104, 104)
+                        .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton6)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(jLabel22)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         InstantRegisterFrameLayout.setVerticalGroup(
             InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel22)
+                .addGap(66, 66, 66)
+                .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addComponent(jButton6)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         desktopPane.setLayer(MainLoginFrame, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -843,6 +874,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -864,6 +896,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -881,6 +915,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
