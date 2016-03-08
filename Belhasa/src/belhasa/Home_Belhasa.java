@@ -82,7 +82,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel6.setText("LOGIN");
 
         javax.swing.GroupLayout MainLoginFrameLayout = new javax.swing.GroupLayout(MainLoginFrame.getContentPane());
         MainLoginFrame.getContentPane().setLayout(MainLoginFrameLayout);
@@ -103,7 +104,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         MainLoginFrameLayout.setVerticalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
-                .addContainerGap(156, Short.MAX_VALUE)
+                .addContainerGap(164, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(111, 111, 111)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -348,7 +349,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(desktopPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(MainLoginFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(746, Short.MAX_VALUE))
+                .addContainerGap(724, Short.MAX_VALUE))
             .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(desktopPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
