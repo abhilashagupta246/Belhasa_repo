@@ -33,6 +33,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     String adminUser="";
     public Home_Belhasa() {
         initComponents();
+        con=mysqlconnect.ConnectDb();
         closeAllFrames();
         MainLoginFrame.setVisible(true);
     }
@@ -158,7 +159,6 @@ public class Home_Belhasa extends javax.swing.JFrame {
         St_SignUp_DOB_Year_combo = new javax.swing.JComboBox<>();
         St_SignUp_Register_btn = new javax.swing.JButton();
         St_SignUp_nationailty_label = new javax.swing.JLabel();
-        St_SignUp_Nationality_Textfield = new javax.swing.JTextField();
         St_SignUp_passportNo_label = new javax.swing.JLabel();
         St_SignUp_PassportNo_Textfield = new javax.swing.JTextField();
         St_SignUp_emiratesId_label = new javax.swing.JLabel();
@@ -169,6 +169,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         St_SignUp_Age_Textfield = new javax.swing.JTextField();
         St_SignUp_Email_label = new javax.swing.JLabel();
         St_SignUp_Email_Textfield = new javax.swing.JTextField();
+        St_SignUp_nationailty_combo = new javax.swing.JComboBox<>();
         ConfirmNotificationModeFrame = new javax.swing.JInternalFrame();
         Email_RadioButton = new javax.swing.JRadioButton();
         Instant_RadioButton = new javax.swing.JRadioButton();
@@ -924,9 +925,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         St_SignUp_DOB_label.setText("Birthday");
 
-        St_SignUp_DOB_Day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day" }));
+        St_SignUp_DOB_Day_combo.setMaximumRowCount(32);
+        St_SignUp_DOB_Day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
-        St_SignUp_DOB_Month_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month" }));
+        St_SignUp_DOB_Month_combo.setMaximumRowCount(12);
+        St_SignUp_DOB_Month_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", " " }));
 
         St_SignUp_DOB_Year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year" }));
 
@@ -989,22 +992,26 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                 .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentsSignUpFrameLayout.createSequentialGroup()
-                                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                                        .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_Nationality_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(46, 46, 46)
+                                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
+                                                .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                                                .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addGap(46, 46, 46))
+                                    .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
+                                        .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33))))))
         );
@@ -1029,7 +1036,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                 .addGap(23, 23, 23)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(St_SignUp_nationailty_label)
-                                    .addComponent(St_SignUp_Nationality_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(26, 26, 26)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(St_SignUp_passportNo_label)
@@ -1043,7 +1050,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(St_SignUp_MaritalStatus_label)
                             .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(St_SignUp_Email_label)
                             .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1068,7 +1075,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentsSignUpFrame);
-        StudentsSignUpFrame.setBounds(0, 0, 563, 589);
+        StudentsSignUpFrame.setBounds(0, 0, 570, 597);
 
         ConfirmNotificationModeFrame.setVisible(true);
 
@@ -1311,32 +1318,25 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentsSignUpFrame.setVisible(false);
         ConfirmNotificationModeFrame.setVisible(false);
     }
-    private void countryList()
-    {
-        Country us = new Country("USA", "us");
-        Country in = new Country("India", "in");
-        Country vn = new Country("Vietnam", "vn");
-        Country ca = new Country("Canada", "ca");
-        Country de = new Country("Denmark", "de");
-        Country fr = new Country("France", "fr");
-        Country gb = new Country("Great Britain", "gb");
-        Country jp = new Country("Japan", "jp");
- 
-        //create the model and add elements
-        DefaultListModel<Country> listModel = new DefaultListModel<>();
-        listModel.addElement(us);
-        listModel.addElement(in);
-        listModel.addElement(vn);
-        listModel.addElement(ca);
-        listModel.addElement(de);
-        listModel.addElement(fr);
-        listModel.addElement(gb);
-        listModel.addElement(jp);
- 
-        //create the list
-        JList<Country> countryList = new JList<>(listModel);
-        //ApproveStLogin_nationality_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Country", " " }));
-    }
+   private void countryList()
+   {
+       String countrylist="select * from countrylist";
+       try{
+           pst=con.prepareStatement(countrylist);
+           rs=pst.executeQuery();
+           while(rs.next())
+           {
+               String country=rs.getString("country_name");
+               //System.out.println(country);
+               St_SignUp_nationailty_combo.addItem(country);
+           }
+       }
+       catch(Exception e)
+       {
+           
+       }
+       
+   }
     private void MainLogin_admin_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainLogin_admin_btnActionPerformed
         closeAllFrames();
         AdminLoginFrame.setVisible(true);
@@ -1361,6 +1361,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private void StLogin_SignUp_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StLogin_SignUp_btnActionPerformed
         closeAllFrames();
         StudentsSignUpFrame.setVisible(true);
+        countryList();
     }//GEN-LAST:event_StLogin_SignUp_btnActionPerformed
 
     private void AdminHome_License_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_License_btnActionPerformed
@@ -1538,7 +1539,7 @@ private void Register_Students_Fun() {
                     messageBodyBuffer.append("</br>");
                     messageBodyBuffer.append("Last Name: ").append(St_SignUp_lastName_Textfield.getText());
                     messageBodyBuffer.append("</br>");
-                    messageBodyBuffer.append("Nationality: ").append(St_SignUp_Nationality_Textfield.getText());
+                    //messageBodyBuffer.append("Nationality: ").append(St_SignUp_Nationality_Textfield.getText());
                     messageBodyBuffer.append("</br>");
                     messageBodyBuffer.append("Emirates Id: ").append(St_SignUp_EmiratesId_Textfield.getText());
                     messageBodyBuffer.append("</br>");
@@ -1698,7 +1699,6 @@ private void Register_Students_Fun() {
     private javax.swing.JTextField St_SignUp_EmiratesId_Textfield;
     private javax.swing.JTextField St_SignUp_MaritalStatus_Textfield;
     private javax.swing.JLabel St_SignUp_MaritalStatus_label;
-    private javax.swing.JTextField St_SignUp_Nationality_Textfield;
     private javax.swing.JTextField St_SignUp_PassportNo_Textfield;
     private javax.swing.JButton St_SignUp_Register_btn;
     private javax.swing.JLabel St_SignUp_age_label;
@@ -1707,6 +1707,7 @@ private void Register_Students_Fun() {
     private javax.swing.JLabel St_SignUp_firstName_label;
     private javax.swing.JTextField St_SignUp_lastName_Textfield;
     private javax.swing.JLabel St_SignUp_lastName_label;
+    private javax.swing.JComboBox<String> St_SignUp_nationailty_combo;
     private javax.swing.JLabel St_SignUp_nationailty_label;
     private javax.swing.JLabel St_SignUp_passportNo_label;
     private javax.swing.JComboBox<String> St_Signup_gender_combobox;
