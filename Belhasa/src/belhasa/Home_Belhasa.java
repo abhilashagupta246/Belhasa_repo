@@ -28,6 +28,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     
     public Home_Belhasa() {
         initComponents();
+        con = mysqlconnect.ConnectDb();
         closeAllFrames();
         MainLoginFrame.setVisible(true);
     }
@@ -158,7 +159,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.setPreferredSize(new java.awt.Dimension(1253, 1173));
 
         InstantRegisterFrame.setMinimumSize(new java.awt.Dimension(0, 0));
-        InstantRegisterFrame.setPreferredSize(new java.awt.Dimension(200, 200));
+        InstantRegisterFrame.setPreferredSize(new java.awt.Dimension(400, 700));
         InstantRegisterFrame.setVisible(true);
 
         InstantRegister_label.setText("Instant Registration");
@@ -168,6 +169,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         InstantRegister_pwd_textfield.setPreferredSize(new java.awt.Dimension(40, 20));
 
         InstantRegister_activate_btn.setText("Activate Account");
+        InstantRegister_activate_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InstantRegister_activate_btnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout InstantRegisterFrameLayout = new javax.swing.GroupLayout(InstantRegisterFrame.getContentPane());
         InstantRegisterFrame.getContentPane().setLayout(InstantRegisterFrameLayout);
@@ -185,7 +191,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(InstantRegister_activate_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(InstantRegister_pwd_textfield, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
         InstantRegisterFrameLayout.setVerticalGroup(
             InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,11 +204,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
                     .addComponent(InstantRegister_pwd_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(InstantRegister_activate_btn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         desktopPane.add(InstantRegisterFrame);
-        InstantRegisterFrame.setBounds(0, 0, 200, 200);
+        InstantRegisterFrame.setBounds(0, 0, 400, 700);
 
         LessonsFrame.setVisible(true);
 
@@ -264,7 +270,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonsFrame);
-        LessonsFrame.setBounds(0, 0, 509, 397);
+        LessonsFrame.setBounds(0, 0, 509, 398);
 
         LessonContentFrame.setVisible(true);
 
@@ -314,7 +320,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonContentFrame);
-        LessonContentFrame.setBounds(0, 0, 484, 330);
+        LessonContentFrame.setBounds(0, 0, 484, 331);
 
         AddLessonFrame.setVisible(true);
 
@@ -359,7 +365,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AddLessonFrame);
-        AddLessonFrame.setBounds(0, 0, 490, 261);
+        AddLessonFrame.setBounds(0, 0, 490, 262);
 
         QuestionsFrame.setVisible(true);
 
@@ -408,7 +414,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         QuestionsFrame.getContentPane().add(Qstn_Update_Btn, java.awt.BorderLayout.CENTER);
 
         desktopPane.add(QuestionsFrame);
-        QuestionsFrame.setBounds(0, 0, 468, 472);
+        QuestionsFrame.setBounds(0, 0, 468, 473);
 
         MainLoginFrame.setPreferredSize(new java.awt.Dimension(200, 200));
         MainLoginFrame.setVisible(true);
@@ -448,7 +454,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(MainLogin_admin_btn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addComponent(MainLogin_student_btn)
                 .addGap(50, 50, 50))
             .addGroup(MainLoginFrameLayout.createSequentialGroup()
@@ -542,7 +548,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AdminLoginFrame);
-        AdminLoginFrame.setBounds(0, 0, 422, 356);
+        AdminLoginFrame.setBounds(0, 0, 422, 357);
 
         StudentLoginFrame.setVisible(true);
 
@@ -606,7 +612,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentLoginFrame);
-        StudentLoginFrame.setBounds(0, 0, 471, 587);
+        StudentLoginFrame.setBounds(0, 0, 471, 588);
 
         ApproveNewStudents.setVisible(true);
 
@@ -658,7 +664,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(ApproveNewStudents);
-        ApproveNewStudents.setBounds(0, 0, 521, 1049);
+        ApproveNewStudents.setBounds(0, 0, 521, 1050);
 
         AdminHomeFrame.setVisible(true);
 
@@ -721,7 +727,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AdminHomeFrame);
-        AdminHomeFrame.setBounds(0, 0, 470, 316);
+        AdminHomeFrame.setBounds(0, 0, 470, 317);
 
         StudentsSignUpFrame.setVisible(true);
 
@@ -812,7 +818,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                     .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                                         .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                                         .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(33, 33, 33)
                                         .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -861,7 +867,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17)
                             .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(St_SignUp_MaritalStatus_Label)
                             .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -886,7 +892,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentsSignUpFrame);
-        StudentsSignUpFrame.setBounds(0, 0, 563, 589);
+        StudentsSignUpFrame.setBounds(0, 0, 607, 624);
 
         ConfirmNotificationModeFrame.setVisible(true);
 
@@ -903,6 +909,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         });
 
         Instant_RadioButton.setText("Instant Registration");
+        Instant_RadioButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Instant_RadioButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout ConfirmNotificationModeFrameLayout = new javax.swing.GroupLayout(ConfirmNotificationModeFrame.getContentPane());
         ConfirmNotificationModeFrame.getContentPane().setLayout(ConfirmNotificationModeFrameLayout);
@@ -926,7 +937,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(ConfirmNotificationModeFrame);
-        ConfirmNotificationModeFrame.setBounds(0, 0, 190, 167);
+        ConfirmNotificationModeFrame.setBounds(0, 0, 190, 168);
 
         LicenseCategoryFrame.setVisible(true);
 
@@ -974,7 +985,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LicenseCategoryFrame);
-        LicenseCategoryFrame.setBounds(0, 0, 395, 323);
+        LicenseCategoryFrame.setBounds(0, 0, 395, 324);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -998,7 +1009,17 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentLoginFrame.setVisible(false);
         AdminLoginFrame.setVisible(false);
         ApproveNewStudents.setVisible(false);
-        StudentsSignUpFrame.setVisible(false);
+        StudentsSignUpFrame.setVisible(true);
+        LessonsFrame.setVisible(false);
+        AddLessonFrame.setVisible(false);
+        QuestionsFrame.setVisible(false);
+        LessonContentFrame.setVisible(false);
+        InstantRegisterFrame.setVisible(false);
+        LicenseCategoryFrame.setVisible(false);
+        ConfirmNotificationModeFrame.setVisible(false);
+        ApproveNewStudents.setVisible(false);
+        
+        
     }
     private void MainLogin_admin_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainLogin_admin_btnActionPerformed
         closeAllFrames();
@@ -1030,7 +1051,10 @@ public class Home_Belhasa extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void Email_RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Email_RadioButtonActionPerformed
+      Register_Students_Fun();
         UserRegistration_MailToAdmin();
+        closeAllFrames();
+         MainLoginFrame.setVisible(true);
     }//GEN-LAST:event_Email_RadioButtonActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -1040,9 +1064,44 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
     private void Email_RadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Email_RadioButtonMouseClicked
        Register_Students_Fun();
+       UserRegistration_MailToAdmin();
+       closeAllFrames();
+       MainLoginFrame.setVisible(true);
     }//GEN-LAST:event_Email_RadioButtonMouseClicked
+
+    private void Instant_RadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Instant_RadioButtonMouseClicked
+        closeAllFrames();
+        InstantRegisterFrame.setVisible(true);
+    }//GEN-LAST:event_Instant_RadioButtonMouseClicked
+
+    private void InstantRegister_activate_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstantRegister_activate_btnActionPerformed
+       try{
+        String adminPasswordCheck="select username ,password from adminlogin";
+        pst=con.prepareStatement(adminPasswordCheck);
+        rs = pst.executeQuery();
+        System.out.println("instant.....1");
+        while(rs.next())
+        {
+           System.out.println(rs.getString("password"));
+        if(rs.getString("password").equalsIgnoreCase(InstantRegister_pwd_textfield.getText())){
+            System.out.println("2222 ...");
+          Register_Students_Fun();  
+          UserRegistration_Mail();
+          closeAllFrames();
+          MainLoginFrame.setVisible(true);
+        }
+        else{
+            System.out.println("333.......");
+        InstantRegisterFrame.setVisible(true);
+        }
+        }
+       }
+       catch (SQLException ex) {
+                    Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }//GEN-LAST:event_InstantRegister_activate_btnActionPerformed
 private void Register_Students_Fun() {
-      //  rowcount = User_Table.getSelectedRowCount();
+      
 //        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
 //            if (userCheck(adusr_email_textfield.getText())) {
 //                JOptionPane.showMessageDialog(null, "Email Id already exist", "Alert", JOptionPane.ERROR_MESSAGE);
@@ -1056,43 +1115,77 @@ private void Register_Students_Fun() {
 //            adusr_password_textfield.setText("");
 //            adusr_confpassword_textfield.setText("");
 //            }else {
-//                try {
-//                    String insertStudent = "INSERT INTO students(firstname,lastname,gender,nationality,dob,age,maritalstatus,emiratesid,passportnumber,emailid) VALUES(?,?,?,?,?,?,?,?,?,?)";
-//                    pst = con.prepareStatement(insertStudent);
-//                    pst.setString(1, St_SignUp_firstName_Textfield.getText());
-//                    pst.setString(2, St_SignUp_lastName_Textfield.getText());
-//                    pst.setString(3, St_Signup_gender_combobox.getText());
-//                    pst.setString(4, St_SignUp_Nationality_Textfield.getText());
-//                    pst.setString(5, St_SignUp_DOB_Day_combo.getText());
- //                   pst.setString(6, St_SignUp_Age_Textfield.getText());
-//                    pst.setString(7, St_SignUp_MaritalStatus_Textfield.getText());
-//                    pst.setString(8, St_SignUp_EmiratesId_Textfield.getText());
-//                    pst.setString(9, St_SignUp_PassportNo_Textfield.getText());
-//                    pst.setString(10, St_SignUp_Nationality_Textfield.getText());
-//                    
-//                    pst.executeUpdate();
-//                    adusr_username_textfield.setText("");
-//                    adusr_email_textfield.setText("");
-//                    adusr_password_textfield.setText("");
-//                    adusr_confpassword_textfield.setText("");
-//                    NewUserAdmin_Mail();
-//                    //updateUsersIndex();
-//                } catch (SQLException ex) {
-//                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-//                }
+                try {
+                    System.out.println("1...");
+                    String insertStudent = "INSERT INTO students(firstname,lastname,gender,nationality,dob,age,maritalstatus,emiratesid,passportnumber,emailid,photo) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+                    System.out.println("2...");
+                    pst = con.prepareStatement(insertStudent);
+                    pst.setString(1, St_SignUp_firstName_Textfield.getText());
+                    pst.setString(2, St_SignUp_lastName_Textfield.getText());
+                    System.out.println("3...");
+                    if(St_Signup_gender_combobox.getSelectedItem()=="Male"){
+                      pst.setString(3, "Male");  
+                    }
+                    else if(St_Signup_gender_combobox.getSelectedItem()=="Female"){
+                      pst.setString(3, "Female");  
+                    }
+                    else{
+                     pst.setString(3, "Others");   
+                    }
+                    System.out.println("Admin mail...4");
+                    pst.setString(4, St_SignUp_Nationality_Textfield.getText());
+                    String day=St_SignUp_DOB_Day_combo.getSelectedItem().toString();
+                    String month=St_SignUp_DOB_Month_combo.getSelectedItem().toString();
+                    String year=St_SignUp_DOB_Year_combo.getSelectedItem().toString();
+                    System.out.println("Admin mail...5");
+                    StringBuffer dob=new StringBuffer();
+                    dob.append(month).append("-").append(day).append("-").append(year);
+                    pst.setString(5, dob.toString());
+                    System.out.println("Admin mail...6");
+                    //pst.setString(6, St_SignUp_Age_Textfield.getText());
+                    pst.setString(6, "25");
+                    pst.setString(7, St_SignUp_MaritalStatus_Textfield.getText());
+                    System.out.println("666......");
+                    pst.setString(8, St_SignUp_EmiratesId_Textfield.getText());
+                    pst.setString(9, St_SignUp_PassportNo_Textfield.getText());
+                    pst.setString(10, St_SignUp_Email_Textfield.getText());
+                    pst.setString(11, "uih");
+                    System.out.println("66666...........");
+                    pst.executeUpdate();
+                    System.out.println("Admin mail...7");
+                    St_SignUp_firstName_Textfield.setText("");
+                    St_SignUp_lastName_Textfield.setText("");
+                    St_SignUp_Nationality_Textfield.setText("");
+                    St_SignUp_Age_Textfield.setText("");
+                    St_SignUp_MaritalStatus_Textfield.setText("");
+                    St_SignUp_EmiratesId_Textfield.setText("");
+                    St_SignUp_PassportNo_Textfield.setText("");
+                    St_SignUp_Email_Textfield.setText("");
+                    //St_Signup_gender_combobox.setText("");
+                    
+                    //updateUsersIndex();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, ex);
+                }
 //            }
 //        } else {
 //            JOptionPane.showMessageDialog(null, "Please enter user information correctly", "Alert", JOptionPane.ERROR_MESSAGE);
 //            AddUserFrame.requestFocus();
-//                    adusr_username_textfield.setText("");
-//                    adusr_email_textfield.setText("");
-//                    adusr_password_textfield.setText("");
-//                    adusr_confpassword_textfield.setText("");
+//                     St_SignUp_firstName_Textfield.setText("");
+//                    St_SignUp_lastName_Textfield.setText("");
+//                    St_SignUp_Nationality_Textfield.setText("");
+//                    St_SignUp_Age_Textfield.setText("");
+//                    St_SignUp_MaritalStatus_Textfield.setText("");
+//                    St_SignUp_EmiratesId_Textfield.setText("");
+//                    St_SignUp_PassportNo_Textfield.setText("");
+//                    St_SignUp_Email_Textfield.setText("");
+//                    St_Signup_gender_combobox.setText("");
 //        }
 //        Populate_Users();
     }
      private void UserRegistration_MailToAdmin()
     {
+        System.out.println("Admin mail...");
         String messageBody = null;
             String[] recipients = new String[1];
             String[] bccRecipients = new String[]{""};
@@ -1124,7 +1217,40 @@ private void Register_Students_Fun() {
                     messageBodyBuffer.append("Team");
                     messageBody = messageBodyBuffer.toString();
 
-                    new MailUtil().sendMail(recipients, bccRecipients, subject, messageBody);
+                    //new MailUtil().sendMail(recipients, bccRecipients, subject, messageBody);
+                   
+    }
+      private void UserRegistration_Mail()
+    {
+         System.out.println("user mail...");
+        String messageBody = null;
+            String[] recipients = new String[1];
+            String[] bccRecipients = new String[]{""};
+            String subject = "User Registeration";
+            StringBuffer messageBodyBuffer = new StringBuffer();
+            
+                    messageBodyBuffer.append("Hi ").append(St_SignUp_firstName_Textfield.getText());
+            
+                    //recipients[0] = adusr_email_textfield.getText(); //admin email id
+                    messageBodyBuffer.append("</br>");
+                    messageBodyBuffer.append("</br>");
+                    messageBodyBuffer.append("Your registration has been approved by admin.");
+                    messageBodyBuffer.append("</br>");
+                     messageBodyBuffer.append("Your registration number is ");
+                    messageBodyBuffer.append("</br>");
+                     messageBodyBuffer.append("and password is ");//give password
+                   
+                    messageBodyBuffer.append("</br>");
+                    messageBodyBuffer.append("Please login the application and change your password ");
+                    messageBodyBuffer.append("</br>");
+                    messageBodyBuffer.append("</br>");
+                    messageBodyBuffer.append("</br>");
+                    messageBodyBuffer.append("Regards,");
+                    messageBodyBuffer.append("</br>");
+                    messageBodyBuffer.append("Team");
+                    messageBody = messageBodyBuffer.toString();
+
+                   // new MailUtil().sendMail(recipients, bccRecipients, subject, messageBody);
                    
     }
     /**
@@ -1260,8 +1386,6 @@ private void Register_Students_Fun() {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton7;
