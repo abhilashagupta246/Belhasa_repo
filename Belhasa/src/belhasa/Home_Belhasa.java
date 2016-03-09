@@ -1,5 +1,8 @@
 package belhasa;
 
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,6 +10,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 /*
@@ -25,7 +30,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     Statement stmt;
     ResultSet rs, rs1, rs2;
     PreparedStatement pst, pst1, pst2;
-    
+    String adminUser="";
     public Home_Belhasa() {
         initComponents();
         closeAllFrames();
@@ -97,60 +102,91 @@ public class Home_Belhasa extends javax.swing.JFrame {
         AdminLogin_login_btn = new javax.swing.JButton();
         AdminLogin_label = new javax.swing.JLabel();
         StudentLoginFrame = new javax.swing.JInternalFrame();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jButton12 = new javax.swing.JButton();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jButton13 = new javax.swing.JButton();
+        StLogin_label = new javax.swing.JLabel();
+        StLogin_StId_label = new javax.swing.JLabel();
+        StLogin_StPwd_label = new javax.swing.JLabel();
+        StLogin_SignIn_btn = new javax.swing.JButton();
+        StLogin_StId_textfieldl = new javax.swing.JTextField();
+        StLogin_StPwd_textfield = new javax.swing.JTextField();
+        StLogin_SignUp_btn = new javax.swing.JButton();
         ApproveNewStudents = new javax.swing.JInternalFrame();
-        jLabel5 = new javax.swing.JLabel();
+        ApproveStLogin_label = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton10 = new javax.swing.JButton();
+        St_Table = new javax.swing.JTable();
+        ApproveStLogin_Approve_btn = new javax.swing.JButton();
+        ApproveStLogin_firstname_label = new javax.swing.JLabel();
+        ApproveStLogin_firstname_textfield = new javax.swing.JTextField();
+        ApproveStLogin_lastname_label = new javax.swing.JLabel();
+        ApproveStLogin_lastname_textfield = new javax.swing.JTextField();
+        ApproveStLogin_gender_label = new javax.swing.JLabel();
+        ApproveStLogin_nationality_label = new javax.swing.JLabel();
+        ApproveStLogin_dob_label = new javax.swing.JLabel();
+        ApproveStLogin_dob_day_combo = new javax.swing.JComboBox<>();
+        ApproveStLogin_dob_month_combo = new javax.swing.JComboBox<>();
+        ApproveStLogin_dob_year_combo = new javax.swing.JComboBox<>();
+        ApproveStLogin_marital_label = new javax.swing.JLabel();
+        ApproveStLogin_marital_combo = new javax.swing.JComboBox<>();
+        ApproveStLogin_emiratesId_label = new javax.swing.JLabel();
+        ApproveStLogin_emiratesid_textfield = new javax.swing.JTextField();
+        ApproveStLogin_passportno_label = new javax.swing.JLabel();
+        ApproveStLogin_passportno_textfield = new javax.swing.JTextField();
+        ApproveStLogin_emailid_label = new javax.swing.JLabel();
+        ApproveStLogin_email_textfield = new javax.swing.JTextField();
+        ApproveStLogin_Update_btn = new javax.swing.JButton();
+        ApproveStLogin_Delete_btn = new javax.swing.JButton();
+        ApproveStLogin_gender_combo = new javax.swing.JComboBox<>();
+        ApproveStLogin_nationality_combo = new javax.swing.JComboBox<>();
         AdminHomeFrame = new javax.swing.JInternalFrame();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        AdminHome_NewSt_btn = new javax.swing.JButton();
+        AdminHome_Results_btn = new javax.swing.JButton();
+        AdminHome_ChangePwd_btn = new javax.swing.JButton();
+        AdminHome_Logout_btn = new javax.swing.JButton();
+        AdminHome_License_btn = new javax.swing.JButton();
         StudentsSignUpFrame = new javax.swing.JInternalFrame();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        Signup_Fname_Label = new javax.swing.JLabel();
+        StSignUp_label1 = new javax.swing.JLabel();
+        StSignUp_label2 = new javax.swing.JLabel();
+        St_SignUp_firstName_label = new javax.swing.JLabel();
         St_SignUp_firstName_Textfield = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        St_SignUp_lastName_label = new javax.swing.JLabel();
         St_SignUp_lastName_Textfield = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        StSignUp_photo_label = new javax.swing.JLabel();
+        St_Signup_gender_label = new javax.swing.JLabel();
         St_Signup_gender_combobox = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
+        St_SignUp_DOB_label = new javax.swing.JLabel();
         St_SignUp_DOB_Day_combo = new javax.swing.JComboBox<>();
         St_SignUp_DOB_Month_combo = new javax.swing.JComboBox<>();
         St_SignUp_DOB_Year_combo = new javax.swing.JComboBox<>();
-        jButton11 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
+        St_SignUp_Register_btn = new javax.swing.JButton();
+        St_SignUp_nationailty_label = new javax.swing.JLabel();
         St_SignUp_Nationality_Textfield = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
+        St_SignUp_passportNo_label = new javax.swing.JLabel();
         St_SignUp_PassportNo_Textfield = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
+        St_SignUp_emiratesId_label = new javax.swing.JLabel();
         St_SignUp_EmiratesId_Textfield = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
+        St_SignUp_MaritalStatus_label = new javax.swing.JLabel();
         St_SignUp_MaritalStatus_Textfield = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
+        St_SignUp_age_label = new javax.swing.JLabel();
         St_SignUp_Age_Textfield = new javax.swing.JTextField();
-        St_SignUp_MaritalStatus_Label = new javax.swing.JLabel();
+        St_SignUp_Email_label = new javax.swing.JLabel();
         St_SignUp_Email_Textfield = new javax.swing.JTextField();
         ConfirmNotificationModeFrame = new javax.swing.JInternalFrame();
         Email_RadioButton = new javax.swing.JRadioButton();
         Instant_RadioButton = new javax.swing.JRadioButton();
+        Email_RadioButton_label = new javax.swing.JLabel();
         LicenseCategoryFrame = new javax.swing.JInternalFrame();
         LicenseCategory_Label = new javax.swing.JLabel();
         LMV_RdBtn = new javax.swing.JRadioButton();
         MC_RdBtn = new javax.swing.JRadioButton();
         HVT_RdBtn = new javax.swing.JRadioButton();
+        ChangePasswordFrame = new javax.swing.JInternalFrame();
+        ChangePwd_Label = new javax.swing.JLabel();
+        ChangePwd_NewPwd_Label = new javax.swing.JLabel();
+        ChangePwd_ConfPwd_Label = new javax.swing.JLabel();
+        ChangePwd_NewPwd_Textfield = new javax.swing.JTextField();
+        ChangePwd_ConfPwd_Textfield = new javax.swing.JTextField();
+        ChangePwd_Submit_Btn = new javax.swing.JButton();
+        ChangePwd_Home_Btn = new javax.swing.JButton();
+        Chg_Pwd_MAIT = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -185,7 +221,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(InstantRegister_activate_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(InstantRegister_pwd_textfield, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         InstantRegisterFrameLayout.setVerticalGroup(
             InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -410,7 +446,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.add(QuestionsFrame);
         QuestionsFrame.setBounds(0, 0, 468, 472);
 
-        MainLoginFrame.setPreferredSize(new java.awt.Dimension(200, 200));
+        MainLoginFrame.setPreferredSize(new java.awt.Dimension(500, 280));
         MainLoginFrame.setVisible(true);
 
         MainLogin_admin_btn.setText("Admin Login");
@@ -446,16 +482,6 @@ public class Home_Belhasa extends javax.swing.JFrame {
         MainLoginFrameLayout.setHorizontalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(MainLogin_admin_btn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(MainLogin_student_btn)
-                .addGap(50, 50, 50))
-            .addGroup(MainLoginFrameLayout.createSequentialGroup()
-                .addGap(213, 213, 213)
-                .addComponent(MainLogin_label)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(language_urdu)
@@ -463,13 +489,24 @@ public class Home_Belhasa extends javax.swing.JFrame {
                     .addComponent(language_english)
                     .addComponent(MainLogin_language_label))
                 .addGap(15, 15, 15))
+            .addGroup(MainLoginFrameLayout.createSequentialGroup()
+                .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainLoginFrameLayout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(MainLogin_admin_btn)
+                        .addGap(98, 98, 98)
+                        .addComponent(MainLogin_student_btn))
+                    .addGroup(MainLoginFrameLayout.createSequentialGroup()
+                        .addGap(178, 178, 178)
+                        .addComponent(MainLogin_label)))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         MainLoginFrameLayout.setVerticalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainLoginFrameLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(22, 22, 22)
                 .addComponent(MainLogin_label)
-                .addGap(5, 5, 5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MainLogin_language_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(language_english)
@@ -485,7 +522,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(MainLoginFrame);
-        MainLoginFrame.setBounds(0, 0, 200, 200);
+        MainLoginFrame.setBounds(0, 0, 500, 280);
 
         AdminLoginFrame.setVisible(true);
 
@@ -546,18 +583,23 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         StudentLoginFrame.setVisible(true);
 
-        jLabel19.setText("Students Login ");
+        StLogin_label.setText("Students Login ");
 
-        jLabel20.setText("Student Id");
+        StLogin_StId_label.setText("Student Id");
 
-        jLabel21.setText("Password");
+        StLogin_StPwd_label.setText("Password");
 
-        jButton12.setText("Sign In");
-
-        jButton13.setText("Sign Up");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        StLogin_SignIn_btn.setText("Sign In");
+        StLogin_SignIn_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                StLogin_SignIn_btnActionPerformed(evt);
+            }
+        });
+
+        StLogin_SignUp_btn.setText("Sign Up");
+        StLogin_SignUp_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StLogin_SignUp_btnActionPerformed(evt);
             }
         });
 
@@ -565,67 +607,111 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentLoginFrame.getContentPane().setLayout(StudentLoginFrameLayout);
         StudentLoginFrameLayout.setHorizontalGroup(
             StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StudentLoginFrameLayout.createSequentialGroup()
-                .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentLoginFrameLayout.createSequentialGroup()
+                .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(StudentLoginFrameLayout.createSequentialGroup()
-                        .addGap(221, 221, 221)
-                        .addComponent(jLabel19))
-                    .addGroup(StudentLoginFrameLayout.createSequentialGroup()
-                        .addGap(95, 95, 95)
+                        .addGap(43, 43, 43)
                         .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel21))
-                        .addGap(108, 108, 108)
+                            .addComponent(StLogin_StId_label)
+                            .addComponent(StLogin_StPwd_label))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                         .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(StudentLoginFrameLayout.createSequentialGroup()
-                                .addComponent(jButton12)
-                                .addGap(57, 57, 57)
-                                .addComponent(jButton13))
-                            .addComponent(jTextField11)
-                            .addComponent(jTextField10))))
+                            .addComponent(StLogin_StPwd_textfield)
+                            .addComponent(StLogin_StId_textfieldl, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(StudentLoginFrameLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(StLogin_SignIn_btn)
+                        .addGap(57, 57, 57)
+                        .addComponent(StLogin_SignUp_btn)))
+                .addGap(70, 70, 70))
+            .addGroup(StudentLoginFrameLayout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addComponent(StLogin_label)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         StudentLoginFrameLayout.setVerticalGroup(
             StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StudentLoginFrameLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel19)
-                .addGap(325, 325, 325)
+                .addGap(19, 19, 19)
+                .addComponent(StLogin_label)
+                .addGap(92, 92, 92)
+                .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(StudentLoginFrameLayout.createSequentialGroup()
+                        .addComponent(StLogin_StId_label)
+                        .addGap(30, 30, 30)
+                        .addComponent(StLogin_StPwd_label))
+                    .addGroup(StudentLoginFrameLayout.createSequentialGroup()
+                        .addComponent(StLogin_StId_textfieldl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
+                        .addComponent(StLogin_StPwd_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(36, 36, 36)
                 .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12)
-                    .addComponent(jButton13))
-                .addGap(61, 61, 61))
+                    .addComponent(StLogin_SignIn_btn)
+                    .addComponent(StLogin_SignUp_btn))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         desktopPane.add(StudentLoginFrame);
-        StudentLoginFrame.setBounds(0, 0, 471, 587);
+        StudentLoginFrame.setBounds(0, 0, 471, 338);
 
         ApproveNewStudents.setVisible(true);
 
-        jLabel5.setText("New Students");
+        ApproveStLogin_label.setText("Student Details");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        St_Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7", "Title 8", "Title 9", "Title 10"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(St_Table);
 
-        jButton10.setText("Approve");
+        ApproveStLogin_Approve_btn.setText("Approve");
+
+        ApproveStLogin_firstname_label.setText("First Name");
+
+        ApproveStLogin_lastname_label.setText("Last Name");
+
+        ApproveStLogin_gender_label.setText("Gender");
+
+        ApproveStLogin_nationality_label.setText("Nationailty");
+
+        ApproveStLogin_dob_label.setText("Date of Birth");
+
+        ApproveStLogin_dob_day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ApproveStLogin_dob_month_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ApproveStLogin_dob_year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ApproveStLogin_marital_label.setText("Marital Status");
+
+        ApproveStLogin_marital_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ApproveStLogin_emiratesId_label.setText("Emirates Id");
+
+        ApproveStLogin_passportno_label.setText("Passport No.");
+
+        ApproveStLogin_emailid_label.setText("Email Id");
+
+        ApproveStLogin_Update_btn.setText("Update");
+
+        ApproveStLogin_Delete_btn.setText("Delete");
+
+        ApproveStLogin_gender_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select gender", "Male", "Female", "others" }));
+
+        ApproveStLogin_nationality_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Country", " " }));
 
         javax.swing.GroupLayout ApproveNewStudentsLayout = new javax.swing.GroupLayout(ApproveNewStudents.getContentPane());
         ApproveNewStudents.getContentPane().setLayout(ApproveNewStudentsLayout);
@@ -634,53 +720,153 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
                 .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jLabel5))
+                        .addGap(20, 20, 20)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(jButton10)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApproveNewStudentsLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
+                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ApproveStLogin_firstname_label)
+                                    .addComponent(ApproveStLogin_gender_label)
+                                    .addComponent(ApproveStLogin_lastname_label)
+                                    .addComponent(ApproveStLogin_nationality_label)
+                                    .addComponent(ApproveStLogin_Approve_btn))
+                                .addGap(73, 73, 73)
+                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                                        .addComponent(ApproveStLogin_Update_btn)
+                                        .addGap(113, 113, 113)
+                                        .addComponent(ApproveStLogin_Delete_btn))
+                                    .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(ApproveStLogin_lastname_textfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                                        .addComponent(ApproveStLogin_firstname_textfield, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(ApproveStLogin_nationality_combo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(ApproveStLogin_gender_combo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ApproveStLogin_marital_label)
+                                    .addComponent(ApproveStLogin_dob_label)
+                                    .addComponent(ApproveStLogin_emiratesId_label)
+                                    .addComponent(ApproveStLogin_passportno_label)
+                                    .addComponent(ApproveStLogin_emailid_label))
+                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                                        .addGap(76, 76, 76)
+                                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(ApproveStLogin_dob_day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ApproveStLogin_marital_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(22, 22, 22)
+                                        .addComponent(ApproveStLogin_dob_month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(ApproveStLogin_dob_year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApproveNewStudentsLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(ApproveStLogin_passportno_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ApproveStLogin_emiratesid_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ApproveStLogin_email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(55, 55, 55))))))
+                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                        .addGap(204, 204, 204)
+                        .addComponent(ApproveStLogin_label)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         ApproveNewStudentsLayout.setVerticalGroup(
             ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5)
+                .addComponent(ApproveStLogin_label)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                        .addComponent(ApproveStLogin_firstname_label)
+                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(ApproveStLogin_lastname_label)
+                                .addGap(25, 25, 25)
+                                .addComponent(ApproveStLogin_gender_label))
+                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(ApproveStLogin_gender_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                        .addComponent(ApproveStLogin_firstname_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ApproveStLogin_lastname_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 612, Short.MAX_VALUE)
-                .addComponent(jButton10)
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_nationality_label)
+                    .addComponent(ApproveStLogin_nationality_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(ApproveStLogin_dob_label)
+                        .addGap(18, 18, 18)
+                        .addComponent(ApproveStLogin_marital_label))
+                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
+                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ApproveStLogin_dob_day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ApproveStLogin_dob_month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ApproveStLogin_dob_year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(ApproveStLogin_marital_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ApproveStLogin_emiratesId_label)
+                    .addComponent(ApproveStLogin_emiratesid_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ApproveStLogin_passportno_label)
+                    .addComponent(ApproveStLogin_passportno_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_emailid_label)
+                    .addComponent(ApproveStLogin_email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_Approve_btn)
+                    .addComponent(ApproveStLogin_Update_btn)
+                    .addComponent(ApproveStLogin_Delete_btn))
                 .addGap(23, 23, 23))
         );
 
         desktopPane.add(ApproveNewStudents);
-        ApproveNewStudents.setBounds(0, 0, 521, 1049);
+        ApproveNewStudents.setBounds(0, 0, 521, 677);
 
         AdminHomeFrame.setVisible(true);
 
-        jButton4.setText(" New Students");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        AdminHome_NewSt_btn.setText(" New Students");
+        AdminHome_NewSt_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                AdminHome_NewSt_btnActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Student Details");
+        AdminHome_Results_btn.setText("Results");
 
-        jButton7.setText("Results");
-
-        jButton8.setText("Change Password");
-
-        jButton9.setText("Logout");
-
-        jButton14.setText("License Category");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        AdminHome_ChangePwd_btn.setText("Change Password");
+        AdminHome_ChangePwd_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                AdminHome_ChangePwd_btnActionPerformed(evt);
+            }
+        });
+
+        AdminHome_Logout_btn.setText("Logout");
+        AdminHome_Logout_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminHome_Logout_btnActionPerformed(evt);
+            }
+        });
+
+        AdminHome_License_btn.setText("License Category");
+        AdminHome_License_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminHome_License_btnActionPerformed(evt);
             }
         });
 
@@ -691,56 +877,52 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(AdminHomeFrameLayout.createSequentialGroup()
                 .addGap(67, 67, 67)
                 .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(157, 157, 157))
+                    .addComponent(AdminHome_NewSt_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AdminHome_ChangePwd_btn)
+                    .addComponent(AdminHome_License_btn))
+                .addGap(61, 61, 61)
+                .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AdminHome_Results_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AdminHome_Logout_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         AdminHomeFrameLayout.setVerticalGroup(
             AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AdminHomeFrameLayout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addGap(54, 54, 54)
-                .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton14))
+                .addComponent(AdminHome_NewSt_btn)
                 .addGap(56, 56, 56)
                 .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton9))
-                .addContainerGap(51, Short.MAX_VALUE))
+                    .addComponent(AdminHome_License_btn)
+                    .addComponent(AdminHome_Results_btn))
+                .addGap(54, 54, 54)
+                .addGroup(AdminHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AdminHome_Logout_btn)
+                    .addComponent(AdminHome_ChangePwd_btn))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         desktopPane.add(AdminHomeFrame);
-        AdminHomeFrame.setBounds(0, 0, 470, 316);
+        AdminHomeFrame.setBounds(0, 0, 470, 340);
 
         StudentsSignUpFrame.setVisible(true);
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel7.setText("Sign Up");
+        StSignUp_label1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        StSignUp_label1.setText("Sign Up");
 
-        jLabel8.setText("Its free and will always be.");
+        StSignUp_label2.setText("Its free and will always be.");
 
-        Signup_Fname_Label.setText("First Name");
+        St_SignUp_firstName_label.setText("First Name");
 
-        jLabel10.setText("Last Name");
+        St_SignUp_lastName_label.setText("Last Name");
 
-        jLabel11.setText("Picture");
+        StSignUp_photo_label.setText("Picture");
 
-        jLabel12.setText("I am ");
+        St_Signup_gender_label.setText("I am ");
 
         St_Signup_gender_combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female", "Others" }));
 
-        jLabel13.setText("Birthday");
+        St_SignUp_DOB_label.setText("Birthday");
 
         St_SignUp_DOB_Day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day" }));
 
@@ -748,26 +930,26 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         St_SignUp_DOB_Year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year" }));
 
-        jButton11.setText("Register");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        St_SignUp_Register_btn.setText("Register");
+        St_SignUp_Register_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                St_SignUp_Register_btnActionPerformed(evt);
             }
         });
 
-        jLabel14.setText("Nationality");
+        St_SignUp_nationailty_label.setText("Nationality");
 
-        jLabel15.setText("Passport No.");
+        St_SignUp_passportNo_label.setText("Passport No.");
 
-        jLabel16.setText("Emirates Id");
+        St_SignUp_emiratesId_label.setText("Emirates Id");
 
-        jLabel17.setText("Marital Status");
+        St_SignUp_MaritalStatus_label.setText("Marital Status");
 
-        jLabel18.setText("Age");
+        St_SignUp_age_label.setText("Age");
 
         St_SignUp_Age_Textfield.setEditable(false);
 
-        St_SignUp_MaritalStatus_Label.setText("Email Id");
+        St_SignUp_Email_label.setText("Email Id");
 
         javax.swing.GroupLayout StudentsSignUpFrameLayout = new javax.swing.GroupLayout(StudentsSignUpFrame.getContentPane());
         StudentsSignUpFrame.getContentPane().setLayout(StudentsSignUpFrameLayout);
@@ -779,29 +961,29 @@ public class Home_Belhasa extends javax.swing.JFrame {
                     .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(StSignUp_label1)
+                            .addComponent(StSignUp_label2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())
                     .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Signup_Fname_Label)
-                                    .addComponent(jLabel10))
+                                    .addComponent(St_SignUp_firstName_label)
+                                    .addComponent(St_SignUp_lastName_label))
                                 .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                                    .addComponent(jLabel14)
+                                    .addComponent(St_SignUp_nationailty_label)
                                     .addGap(1, 1, 1)))
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel17)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel18)
-                            .addComponent(St_SignUp_MaritalStatus_Label))
+                            .addComponent(St_SignUp_passportNo_label)
+                            .addComponent(St_SignUp_emiratesId_label)
+                            .addComponent(St_SignUp_MaritalStatus_label)
+                            .addComponent(St_Signup_gender_label)
+                            .addComponent(St_SignUp_DOB_label)
+                            .addComponent(St_SignUp_age_label)
+                            .addComponent(St_SignUp_Email_label))
                         .addGap(36, 36, 36)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                                .addComponent(jButton11)
+                                .addComponent(St_SignUp_Register_btn)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                                 .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -823,65 +1005,65 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                     .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGap(46, 46, 46)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33))))))
         );
         StudentsSignUpFrameLayout.setVerticalGroup(
             StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addComponent(jLabel7)
+                .addComponent(StSignUp_label1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addComponent(StSignUp_label2)
                         .addGap(32, 32, 32)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Signup_Fname_Label)
+                                    .addComponent(St_SignUp_firstName_label)
                                     .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel10)
+                                    .addComponent(St_SignUp_lastName_label)
                                     .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(23, 23, 23)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel14)
+                                    .addComponent(St_SignUp_nationailty_label)
                                     .addComponent(St_SignUp_Nationality_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(26, 26, 26)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel15)
+                                    .addComponent(St_SignUp_passportNo_label)
                                     .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(24, 24, 24)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
+                            .addComponent(St_SignUp_emiratesId_label)
                             .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17)
+                            .addComponent(St_SignUp_MaritalStatus_label)
                             .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_MaritalStatus_Label)
+                            .addComponent(St_SignUp_Email_label)
                             .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12)
+                            .addComponent(St_Signup_gender_label)
                             .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
+                            .addComponent(St_SignUp_DOB_label)
                             .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
-                        .addComponent(jLabel18))
+                        .addComponent(St_SignUp_age_label))
                     .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(45, 45, 45)
-                .addComponent(jButton11)
+                .addComponent(St_SignUp_Register_btn)
                 .addContainerGap())
         );
 
@@ -904,6 +1086,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         Instant_RadioButton.setText("Instant Registration");
 
+        Email_RadioButton_label.setText("Send E-mail Notification To Admin for approval");
+
         javax.swing.GroupLayout ConfirmNotificationModeFrameLayout = new javax.swing.GroupLayout(ConfirmNotificationModeFrame.getContentPane());
         ConfirmNotificationModeFrame.getContentPane().setLayout(ConfirmNotificationModeFrameLayout);
         ConfirmNotificationModeFrameLayout.setHorizontalGroup(
@@ -911,22 +1095,27 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(ConfirmNotificationModeFrameLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(ConfirmNotificationModeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConfirmNotificationModeFrameLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(Email_RadioButton_label))
                     .addComponent(Instant_RadioButton)
                     .addComponent(Email_RadioButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(323, Short.MAX_VALUE))
         );
         ConfirmNotificationModeFrameLayout.setVerticalGroup(
             ConfirmNotificationModeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConfirmNotificationModeFrameLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(Email_RadioButton)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Email_RadioButton_label)
+                .addGap(42, 42, 42)
                 .addComponent(Instant_RadioButton)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         desktopPane.add(ConfirmNotificationModeFrame);
-        ConfirmNotificationModeFrame.setBounds(0, 0, 190, 167);
+        ConfirmNotificationModeFrame.setBounds(0, 0, 628, 227);
 
         LicenseCategoryFrame.setVisible(true);
 
@@ -976,6 +1165,120 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.add(LicenseCategoryFrame);
         LicenseCategoryFrame.setBounds(0, 0, 395, 323);
 
+        ChangePasswordFrame.setPreferredSize(new java.awt.Dimension(500, 300));
+        ChangePasswordFrame.setVisible(true);
+
+        ChangePwd_Label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        ChangePwd_Label.setText("CHANGE PASSWORD");
+
+        ChangePwd_NewPwd_Label.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        ChangePwd_NewPwd_Label.setText("NEW PASSWORD");
+
+        ChangePwd_ConfPwd_Label.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        ChangePwd_ConfPwd_Label.setText("CONFIRM PASSWORD");
+
+        ChangePwd_ConfPwd_Textfield.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ChangePwd_ConfPwd_TextfieldKeyReleased(evt);
+            }
+        });
+
+        ChangePwd_Submit_Btn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ChangePwd_Submit_Btn.setText("Submit");
+        ChangePwd_Submit_Btn.setPreferredSize(new java.awt.Dimension(90, 30));
+        ChangePwd_Submit_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChangePwd_Submit_BtnActionPerformed(evt);
+            }
+        });
+        ChangePwd_Submit_Btn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ChangePwd_Submit_BtnKeyReleased(evt);
+            }
+        });
+
+        ChangePwd_Home_Btn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ChangePwd_Home_Btn.setText("Home");
+        ChangePwd_Home_Btn.setPreferredSize(new java.awt.Dimension(65, 30));
+        ChangePwd_Home_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ChangePwd_Home_BtnMouseClicked(evt);
+            }
+        });
+        ChangePwd_Home_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChangePwd_Home_BtnActionPerformed(evt);
+            }
+        });
+        ChangePwd_Home_Btn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ChangePwd_Home_BtnKeyReleased(evt);
+            }
+        });
+
+        Chg_Pwd_MAIT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Chg_Pwd_MAITMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ChangePasswordFrameLayout = new javax.swing.GroupLayout(ChangePasswordFrame.getContentPane());
+        ChangePasswordFrame.getContentPane().setLayout(ChangePasswordFrameLayout);
+        ChangePasswordFrameLayout.setHorizontalGroup(
+            ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ChangePasswordFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ChangePwd_Home_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(ChangePwd_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(ChangePasswordFrameLayout.createSequentialGroup()
+                .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ChangePasswordFrameLayout.createSequentialGroup()
+                        .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ChangePwd_NewPwd_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(ChangePasswordFrameLayout.createSequentialGroup()
+                                    .addGap(99, 99, 99)
+                                    .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(ChangePwd_NewPwd_Label)
+                                        .addComponent(ChangePwd_ConfPwd_Label)))
+                                .addGroup(ChangePasswordFrameLayout.createSequentialGroup()
+                                    .addGap(279, 279, 279)
+                                    .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(ChangePwd_Submit_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ChangePwd_ConfPwd_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 60, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ChangePasswordFrameLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Chg_Pwd_MAIT)))
+                .addContainerGap())
+        );
+        ChangePasswordFrameLayout.setVerticalGroup(
+            ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ChangePasswordFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ChangePwd_Home_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ChangePwd_Label))
+                .addGap(38, 38, 38)
+                .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ChangePwd_NewPwd_Label)
+                    .addComponent(ChangePwd_NewPwd_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(ChangePasswordFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ChangePwd_ConfPwd_Label)
+                    .addComponent(ChangePwd_ConfPwd_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addComponent(ChangePwd_Submit_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Chg_Pwd_MAIT)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(ChangePasswordFrame);
+        ChangePasswordFrame.setBounds(0, 0, 500, 300);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -999,10 +1302,44 @@ public class Home_Belhasa extends javax.swing.JFrame {
         AdminLoginFrame.setVisible(false);
         ApproveNewStudents.setVisible(false);
         StudentsSignUpFrame.setVisible(false);
+        InstantRegisterFrame.setVisible(false);
+        ChangePasswordFrame.setVisible(false);
+        LicenseCategoryFrame.setVisible(false);
+        LessonsFrame.setVisible(false);
+        LessonContentFrame.setVisible(false);
+        QuestionsFrame.setVisible(false);
+        StudentsSignUpFrame.setVisible(false);
+        ConfirmNotificationModeFrame.setVisible(false);
+    }
+    private void countryList()
+    {
+        Country us = new Country("USA", "us");
+        Country in = new Country("India", "in");
+        Country vn = new Country("Vietnam", "vn");
+        Country ca = new Country("Canada", "ca");
+        Country de = new Country("Denmark", "de");
+        Country fr = new Country("France", "fr");
+        Country gb = new Country("Great Britain", "gb");
+        Country jp = new Country("Japan", "jp");
+ 
+        //create the model and add elements
+        DefaultListModel<Country> listModel = new DefaultListModel<>();
+        listModel.addElement(us);
+        listModel.addElement(in);
+        listModel.addElement(vn);
+        listModel.addElement(ca);
+        listModel.addElement(de);
+        listModel.addElement(fr);
+        listModel.addElement(gb);
+        listModel.addElement(jp);
+ 
+        //create the list
+        JList<Country> countryList = new JList<>(listModel);
+        //ApproveStLogin_nationality_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Country", " " }));
     }
     private void MainLogin_admin_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainLogin_admin_btnActionPerformed
         closeAllFrames();
-        AdminHomeFrame.setVisible(true);
+        AdminLoginFrame.setVisible(true);
     }//GEN-LAST:event_MainLogin_admin_btnActionPerformed
 
     private void MainLogin_student_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainLogin_student_btnActionPerformed
@@ -1013,34 +1350,122 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private void AdminLogin_login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminLogin_login_btnActionPerformed
          closeAllFrames();
         AdminHomeFrame.setVisible(true);
+        adminUser=AdminLogin_username_textfield.getText();
     }//GEN-LAST:event_AdminLogin_login_btnActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void AdminHome_NewSt_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_NewSt_btnActionPerformed
          closeAllFrames();
         ApproveNewStudents.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_AdminHome_NewSt_btnActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void StLogin_SignUp_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StLogin_SignUp_btnActionPerformed
         closeAllFrames();
         StudentsSignUpFrame.setVisible(true);
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_StLogin_SignUp_btnActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void AdminHome_License_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_License_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_AdminHome_License_btnActionPerformed
 
     private void Email_RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Email_RadioButtonActionPerformed
         UserRegistration_MailToAdmin();
     }//GEN-LAST:event_Email_RadioButtonActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void St_SignUp_Register_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_St_SignUp_Register_btnActionPerformed
         closeAllFrames();
         ConfirmNotificationModeFrame.setVisible(true);
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_St_SignUp_Register_btnActionPerformed
 
     private void Email_RadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Email_RadioButtonMouseClicked
        Register_Students_Fun();
     }//GEN-LAST:event_Email_RadioButtonMouseClicked
+
+    private void ChangePwd_ConfPwd_TextfieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ChangePwd_ConfPwd_TextfieldKeyReleased
+        if (evt.getKeyCode() == KeyEvent.VK_TAB) {
+            ChangePwd_Submit_Btn.requestFocus();
+        }
+    }//GEN-LAST:event_ChangePwd_ConfPwd_TextfieldKeyReleased
+
+    private void ChangePwd_Submit_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangePwd_Submit_BtnActionPerformed
+        ChangedPwd_Submit_Btn_fun();
+    }//GEN-LAST:event_ChangePwd_Submit_BtnActionPerformed
+
+    private void ChangePwd_Submit_BtnKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ChangePwd_Submit_BtnKeyReleased
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            ChangedPwd_Submit_Btn_fun();
+        }
+    }//GEN-LAST:event_ChangePwd_Submit_BtnKeyReleased
+
+    private void ChangedPwd_Submit_Btn_fun() {
+        try {
+            pst = con.prepareStatement("Update adminlogin set password=? where username='" + adminUser + "'");
+
+            if ((ChangePwd_NewPwd_Textfield.getText()).equals(ChangePwd_ConfPwd_Textfield.getText())
+                    && !ChangePwd_NewPwd_Textfield.getText().trim().equals("") && !ChangePwd_ConfPwd_Textfield.getText().trim().equals("")) {
+                pst.setString(1, ChangePwd_NewPwd_Textfield.getText());
+                pst.executeUpdate();
+                ChangePasswordFrame.setVisible(false);
+                JOptionPane.showMessageDialog(null, "Password Changed Successfully", "Alert", JOptionPane.ERROR_MESSAGE);
+                AdminHomeFrame.setVisible(true);
+                AdminHomeFrame.setLocation(300, 50);
+                AdminHomeFrame.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+                AdminHomeFrame.requestFocus();
+            } else {
+                ChangePasswordFrame.setVisible(true);
+                ChangePasswordFrame.setLocation(350, 200);
+                JOptionPane.showMessageDialog(null, "Password and Confirm Password Mismatched", "Alert", JOptionPane.ERROR_MESSAGE);
+                ChangePasswordFrame.requestFocus();
+            }
+            ChangePwd_NewPwd_Textfield.setText("");
+            ChangePwd_ConfPwd_Textfield.setText("");
+
+        } catch (Exception w) {
+            JOptionPane.showMessageDialog(this, "Connection Error!");
+
+        }
+    }
+    private void ChangePwd_Home_BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangePwd_Home_BtnMouseClicked
+        closeAllFrames();
+        AdminHomeFrame.setVisible(true);
+        AdminHomeFrame.setLocation(300, 50);
+        AdminHomeFrame.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+    }//GEN-LAST:event_ChangePwd_Home_BtnMouseClicked
+
+    private void ChangePwd_Home_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangePwd_Home_BtnActionPerformed
+        closeAllFrames();
+        AdminHomeFrame.setVisible(true);
+        AdminHomeFrame.setLocation(300, 50);
+        AdminHomeFrame.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+    }//GEN-LAST:event_ChangePwd_Home_BtnActionPerformed
+
+    private void ChangePwd_Home_BtnKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ChangePwd_Home_BtnKeyReleased
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            closeAllFrames();
+            AdminHomeFrame.setVisible(true);
+            AdminHomeFrame.setLocation(300, 50);
+            AdminHomeFrame.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+        }
+    }//GEN-LAST:event_ChangePwd_Home_BtnKeyReleased
+
+    private void Chg_Pwd_MAITMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Chg_Pwd_MAITMouseClicked
+        Chg_Pwd_MAIT.setCursor(new Cursor(Cursor.HAND_CURSOR));
+//        MAITFrame.setVisible(true);
+//        MAITFrame.setLocation(400,200);
+    }//GEN-LAST:event_Chg_Pwd_MAITMouseClicked
+
+    private void StLogin_SignIn_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StLogin_SignIn_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StLogin_SignIn_btnActionPerformed
+
+    private void AdminHome_ChangePwd_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_ChangePwd_btnActionPerformed
+        closeAllFrames();
+        ChangePasswordFrame.setVisible(true);
+    }//GEN-LAST:event_AdminHome_ChangePwd_btnActionPerformed
+
+    private void AdminHome_Logout_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_Logout_btnActionPerformed
+        closeAllFrames();
+        MainLoginFrame.setVisible(true);
+    }//GEN-LAST:event_AdminHome_Logout_btnActionPerformed
 private void Register_Students_Fun() {
       //  rowcount = User_Table.getSelectedRowCount();
 //        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
@@ -1170,6 +1595,11 @@ private void Register_Students_Fun() {
     private javax.swing.JLabel Add_Lesson_Lsn_Label;
     private javax.swing.JTextField Add_Lesson_Lsn_Textfield;
     private javax.swing.JInternalFrame AdminHomeFrame;
+    private javax.swing.JButton AdminHome_ChangePwd_btn;
+    private javax.swing.JButton AdminHome_License_btn;
+    private javax.swing.JButton AdminHome_Logout_btn;
+    private javax.swing.JButton AdminHome_NewSt_btn;
+    private javax.swing.JButton AdminHome_Results_btn;
     private javax.swing.JInternalFrame AdminLoginFrame;
     private javax.swing.JLabel AdminLogin_label;
     private javax.swing.JButton AdminLogin_login_btn;
@@ -1178,8 +1608,42 @@ private void Register_Students_Fun() {
     private javax.swing.JLabel AdminLogin_username_label;
     private javax.swing.JTextField AdminLogin_username_textfield;
     private javax.swing.JInternalFrame ApproveNewStudents;
+    private javax.swing.JButton ApproveStLogin_Approve_btn;
+    private javax.swing.JButton ApproveStLogin_Delete_btn;
+    private javax.swing.JButton ApproveStLogin_Update_btn;
+    private javax.swing.JComboBox<String> ApproveStLogin_dob_day_combo;
+    private javax.swing.JLabel ApproveStLogin_dob_label;
+    private javax.swing.JComboBox<String> ApproveStLogin_dob_month_combo;
+    private javax.swing.JComboBox<String> ApproveStLogin_dob_year_combo;
+    private javax.swing.JTextField ApproveStLogin_email_textfield;
+    private javax.swing.JLabel ApproveStLogin_emailid_label;
+    private javax.swing.JLabel ApproveStLogin_emiratesId_label;
+    private javax.swing.JTextField ApproveStLogin_emiratesid_textfield;
+    private javax.swing.JLabel ApproveStLogin_firstname_label;
+    private javax.swing.JTextField ApproveStLogin_firstname_textfield;
+    private javax.swing.JComboBox<String> ApproveStLogin_gender_combo;
+    private javax.swing.JLabel ApproveStLogin_gender_label;
+    private javax.swing.JLabel ApproveStLogin_label;
+    private javax.swing.JLabel ApproveStLogin_lastname_label;
+    private javax.swing.JTextField ApproveStLogin_lastname_textfield;
+    private javax.swing.JComboBox<String> ApproveStLogin_marital_combo;
+    private javax.swing.JLabel ApproveStLogin_marital_label;
+    private javax.swing.JComboBox<String> ApproveStLogin_nationality_combo;
+    private javax.swing.JLabel ApproveStLogin_nationality_label;
+    private javax.swing.JLabel ApproveStLogin_passportno_label;
+    private javax.swing.JTextField ApproveStLogin_passportno_textfield;
+    private javax.swing.JInternalFrame ChangePasswordFrame;
+    private javax.swing.JLabel ChangePwd_ConfPwd_Label;
+    private javax.swing.JTextField ChangePwd_ConfPwd_Textfield;
+    private javax.swing.JButton ChangePwd_Home_Btn;
+    private javax.swing.JLabel ChangePwd_Label;
+    private javax.swing.JLabel ChangePwd_NewPwd_Label;
+    private javax.swing.JTextField ChangePwd_NewPwd_Textfield;
+    private javax.swing.JButton ChangePwd_Submit_Btn;
+    private javax.swing.JLabel Chg_Pwd_MAIT;
     private javax.swing.JInternalFrame ConfirmNotificationModeFrame;
     private javax.swing.JRadioButton Email_RadioButton;
+    private javax.swing.JLabel Email_RadioButton_label;
     private javax.swing.JRadioButton HVT_RdBtn;
     private javax.swing.JInternalFrame InstantRegisterFrame;
     private javax.swing.JButton InstantRegister_activate_btn;
@@ -1214,20 +1678,40 @@ private void Register_Students_Fun() {
     private javax.swing.JTextField Qstn_Textfield;
     private javax.swing.JButton Qstn_Update_Btn;
     private javax.swing.JInternalFrame QuestionsFrame;
-    private javax.swing.JLabel Signup_Fname_Label;
+    private javax.swing.JButton StLogin_SignIn_btn;
+    private javax.swing.JButton StLogin_SignUp_btn;
+    private javax.swing.JLabel StLogin_StId_label;
+    private javax.swing.JTextField StLogin_StId_textfieldl;
+    private javax.swing.JLabel StLogin_StPwd_label;
+    private javax.swing.JTextField StLogin_StPwd_textfield;
+    private javax.swing.JLabel StLogin_label;
+    private javax.swing.JLabel StSignUp_label1;
+    private javax.swing.JLabel StSignUp_label2;
+    private javax.swing.JLabel StSignUp_photo_label;
     private javax.swing.JTextField St_SignUp_Age_Textfield;
     private javax.swing.JComboBox<String> St_SignUp_DOB_Day_combo;
     private javax.swing.JComboBox<String> St_SignUp_DOB_Month_combo;
     private javax.swing.JComboBox<String> St_SignUp_DOB_Year_combo;
+    private javax.swing.JLabel St_SignUp_DOB_label;
     private javax.swing.JTextField St_SignUp_Email_Textfield;
+    private javax.swing.JLabel St_SignUp_Email_label;
     private javax.swing.JTextField St_SignUp_EmiratesId_Textfield;
-    private javax.swing.JLabel St_SignUp_MaritalStatus_Label;
     private javax.swing.JTextField St_SignUp_MaritalStatus_Textfield;
+    private javax.swing.JLabel St_SignUp_MaritalStatus_label;
     private javax.swing.JTextField St_SignUp_Nationality_Textfield;
     private javax.swing.JTextField St_SignUp_PassportNo_Textfield;
+    private javax.swing.JButton St_SignUp_Register_btn;
+    private javax.swing.JLabel St_SignUp_age_label;
+    private javax.swing.JLabel St_SignUp_emiratesId_label;
     private javax.swing.JTextField St_SignUp_firstName_Textfield;
+    private javax.swing.JLabel St_SignUp_firstName_label;
     private javax.swing.JTextField St_SignUp_lastName_Textfield;
+    private javax.swing.JLabel St_SignUp_lastName_label;
+    private javax.swing.JLabel St_SignUp_nationailty_label;
+    private javax.swing.JLabel St_SignUp_passportNo_label;
     private javax.swing.JComboBox<String> St_Signup_gender_combobox;
+    private javax.swing.JLabel St_Signup_gender_label;
+    private javax.swing.JTable St_Table;
     private javax.swing.JInternalFrame StudentLoginFrame;
     private javax.swing.JInternalFrame StudentsSignUpFrame;
     private javax.swing.ButtonGroup buttonGroup1;
@@ -1235,33 +1719,6 @@ private void Register_Students_Fun() {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton7;
@@ -1269,9 +1726,6 @@ private void Register_Students_Fun() {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JRadioButton language_arabic;
     private javax.swing.JRadioButton language_english;
     private javax.swing.JRadioButton language_urdu;
