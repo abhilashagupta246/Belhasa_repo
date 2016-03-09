@@ -108,7 +108,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentsSignUpFrame = new javax.swing.JInternalFrame();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        Signup_Fname_Label = new javax.swing.JLabel();
         St_SignUp_firstName_Textfield = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         St_SignUp_lastName_Textfield = new javax.swing.JTextField();
@@ -185,7 +185,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(InstantRegisterFrame);
-        InstantRegisterFrame.setBounds(0, 0, 2574, 1123);
+        InstantRegisterFrame.setBounds(0, 0, 2574, 210);
 
         LessonsFrame.setVisible(true);
 
@@ -637,7 +637,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(ApproveNewStudents);
-        ApproveNewStudents.setBounds(0, 0, 717, 1050);
+        ApproveNewStudents.setBounds(0, 0, 521, 1050);
 
         AdminHomeFrame.setVisible(true);
 
@@ -709,7 +709,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         jLabel8.setText("Its free and will always be.");
 
-        jLabel9.setText("First Name");
+        Signup_Fname_Label.setText("First Name");
 
         jLabel10.setText("Last Name");
 
@@ -728,6 +728,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year" }));
 
         jButton11.setText("Register");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jLabel14.setText("Nationality");
 
@@ -758,7 +763,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
+                                    .addComponent(Signup_Fname_Label)
                                     .addComponent(jLabel10))
                                 .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                                     .addComponent(jLabel14)
@@ -808,7 +813,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel9)
+                                    .addComponent(Signup_Fname_Label)
                                     .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -994,6 +999,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         UserRegistration_MailToAdmin();
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        closeAllFrames();
+        ConfirmNotificationModeFrame.setVisible(true);
+    }//GEN-LAST:event_jButton11ActionPerformed
+
      private void UserRegistration_MailToAdmin()
     {
         String messageBody = null;
@@ -1101,6 +1111,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JTextField Qstn_Textfield;
     private javax.swing.JButton Qstn_Update_Btn;
     private javax.swing.JInternalFrame QuestionsFrame;
+    private javax.swing.JLabel Signup_Fname_Label;
     private javax.swing.JTextField St_SignUp_EmiratesId_Textfield;
     private javax.swing.JTextField St_SignUp_Nationality_Textfield;
     private javax.swing.JTextField St_SignUp_firstName_Textfield;
@@ -1152,7 +1163,6 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
