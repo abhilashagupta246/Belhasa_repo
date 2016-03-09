@@ -37,10 +37,10 @@ public class Home_Belhasa extends javax.swing.JFrame {
         buttonGroup4 = new javax.swing.ButtonGroup();
         desktopPane = new javax.swing.JDesktopPane();
         InstantRegisterFrame = new javax.swing.JInternalFrame();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
+        InstantRegister_label = new javax.swing.JLabel();
+        InstantRegister_pwd_label = new javax.swing.JLabel();
+        InstantRegister_pwd_textfield = new javax.swing.JTextField();
+        InstantRegister_activate_btn = new javax.swing.JButton();
         LessonsFrame = new javax.swing.JInternalFrame();
         Lessons_Label = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -72,19 +72,20 @@ public class Home_Belhasa extends javax.swing.JFrame {
         Qstn_Delete_Btn = new javax.swing.JButton();
         Qstn_Update_Btn = new javax.swing.JButton();
         MainLoginFrame = new javax.swing.JInternalFrame();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        MainLogin_admin_btn = new javax.swing.JButton();
+        MainLogin_student_btn = new javax.swing.JButton();
+        MainLogin_label = new javax.swing.JLabel();
+        MainLogin_language_label = new javax.swing.JLabel();
+        language_arabic = new javax.swing.JRadioButton();
+        language_english = new javax.swing.JRadioButton();
+        language_urdu = new javax.swing.JRadioButton();
         AdminLoginFrame = new javax.swing.JInternalFrame();
-        jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        AdminLogin_username_label = new javax.swing.JLabel();
+        AdminLogin_pwd_label = new javax.swing.JLabel();
+        AdminLogin_username_textfield = new javax.swing.JTextField();
+        AdminLogin_pwd_textfield = new javax.swing.JTextField();
+        AdminLogin_login_btn = new javax.swing.JButton();
+        AdminLogin_label = new javax.swing.JLabel();
         StudentLoginFrame = new javax.swing.JInternalFrame();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -144,13 +145,22 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.setBackground(new java.awt.Color(255, 255, 255));
         desktopPane.setPreferredSize(new java.awt.Dimension(1253, 1173));
 
+        InstantRegisterFrame.setMinimumSize(new java.awt.Dimension(0, 0));
+        InstantRegisterFrame.setPreferredSize(new java.awt.Dimension(100, 200));
         InstantRegisterFrame.setVisible(true);
 
-        jLabel22.setText("Instant Registration");
+        InstantRegister_label.setText("Instant Registration");
 
-        jLabel23.setText("Admin Password");
+        InstantRegister_pwd_label.setText("Admin Password");
 
-        jButton6.setText("Activate Account");
+        InstantRegister_pwd_textfield.setPreferredSize(new java.awt.Dimension(40, 20));
+        InstantRegister_pwd_textfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InstantRegister_pwd_textfieldActionPerformed(evt);
+            }
+        });
+
+        InstantRegister_activate_btn.setText("Activate Account");
 
         javax.swing.GroupLayout InstantRegisterFrameLayout = new javax.swing.GroupLayout(InstantRegisterFrame.getContentPane());
         InstantRegisterFrame.getContentPane().setLayout(InstantRegisterFrameLayout);
@@ -159,33 +169,33 @@ public class Home_Belhasa extends javax.swing.JFrame {
             .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
                 .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel23)
-                        .addGap(104, 104, 104)
-                        .addComponent(jButton6)
-                        .addGap(1982, 1982, 1982)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
                         .addGap(193, 193, 193)
-                        .addComponent(jLabel22)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(InstantRegister_label))
+                    .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(InstantRegister_pwd_label)
+                        .addGap(61, 61, 61)
+                        .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(InstantRegister_activate_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(InstantRegister_pwd_textfield, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         InstantRegisterFrameLayout.setVerticalGroup(
             InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InstantRegisterFrameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel22)
+                .addComponent(InstantRegister_label)
                 .addGap(66, 66, 66)
                 .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addComponent(jButton6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(InstantRegister_pwd_label)
+                    .addComponent(InstantRegister_pwd_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(InstantRegister_activate_btn)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         desktopPane.add(InstantRegisterFrame);
-        InstantRegisterFrame.setBounds(0, 0, 2574, 1123);
+        InstantRegisterFrame.setBounds(0, 0, 100, 200);
 
         LessonsFrame.setVisible(true);
 
@@ -247,7 +257,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonsFrame);
-        LessonsFrame.setBounds(0, 0, 509, 398);
+        LessonsFrame.setBounds(0, 0, 509, 397);
 
         LessonContentFrame.setVisible(true);
 
@@ -297,7 +307,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonContentFrame);
-        LessonContentFrame.setBounds(0, 0, 484, 331);
+        LessonContentFrame.setBounds(0, 0, 484, 330);
 
         AddLessonFrame.setVisible(true);
 
@@ -342,7 +352,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AddLessonFrame);
-        AddLessonFrame.setBounds(0, 0, 490, 262);
+        AddLessonFrame.setBounds(0, 0, 490, 261);
 
         QuestionsFrame.setVisible(true);
 
@@ -391,137 +401,141 @@ public class Home_Belhasa extends javax.swing.JFrame {
         QuestionsFrame.getContentPane().add(Qstn_Update_Btn, java.awt.BorderLayout.CENTER);
 
         desktopPane.add(QuestionsFrame);
-        QuestionsFrame.setBounds(0, 0, 468, 473);
+        QuestionsFrame.setBounds(0, 0, 468, 472);
 
+        MainLoginFrame.setPreferredSize(new java.awt.Dimension(200, 200));
         MainLoginFrame.setVisible(true);
 
-        jButton1.setText("Admin Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        MainLogin_admin_btn.setText("Admin Login");
+        MainLogin_admin_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                MainLogin_admin_btnActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Student Login");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        MainLogin_student_btn.setText("Student Login");
+        MainLogin_student_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                MainLogin_student_btnActionPerformed(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel6.setText("LOGIN");
+        MainLogin_label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        MainLogin_label.setText("LOGIN");
+
+        MainLogin_language_label.setText("Select language");
+
+        buttonGroup1.add(language_arabic);
+        language_arabic.setText("Arabic");
+
+        buttonGroup1.add(language_english);
+        language_english.setText("English");
+
+        buttonGroup1.add(language_urdu);
+        language_urdu.setText("Urdu");
 
         javax.swing.GroupLayout MainLoginFrameLayout = new javax.swing.GroupLayout(MainLoginFrame.getContentPane());
         MainLoginFrame.getContentPane().setLayout(MainLoginFrameLayout);
         MainLoginFrameLayout.setHorizontalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(MainLogin_admin_btn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                .addComponent(MainLogin_student_btn)
+                .addGap(50, 50, 50))
             .addGroup(MainLoginFrameLayout.createSequentialGroup()
-                .addGap(1322, 1322, 1322)
-                .addComponent(jButton1)
-                .addGap(434, 434, 434)
-                .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jLabel6))
+                .addGap(213, 213, 213)
+                .addComponent(MainLogin_label)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLoginFrameLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(language_urdu)
+                    .addComponent(language_arabic)
+                    .addComponent(language_english)
+                    .addComponent(MainLogin_language_label))
+                .addGap(15, 15, 15))
         );
         MainLoginFrameLayout.setVerticalGroup(
             MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainLoginFrameLayout.createSequentialGroup()
-                .addContainerGap(793, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(111, 111, 111)
+                .addGap(23, 23, 23)
+                .addComponent(MainLogin_label)
+                .addGap(5, 5, 5)
+                .addComponent(MainLogin_language_label)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(language_english)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(language_arabic)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(language_urdu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addGroup(MainLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(82, 82, 82))
+                    .addComponent(MainLogin_admin_btn)
+                    .addComponent(MainLogin_student_btn))
+                .addGap(74, 74, 74))
         );
 
         desktopPane.add(MainLoginFrame);
-        MainLoginFrame.setBounds(510, 60, 1970, 1071);
+        MainLoginFrame.setBounds(0, 0, 200, 200);
 
         AdminLoginFrame.setVisible(true);
 
-        jLabel1.setText("Select language");
+        AdminLogin_username_label.setText("User Name");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("English");
+        AdminLogin_pwd_label.setText("Password");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Arabic");
-
-        jLabel2.setText("User Name");
-
-        jLabel3.setText("Password");
-
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
-
-        jButton3.setText("Login");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        AdminLogin_login_btn.setText("Login");
+        AdminLogin_login_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                AdminLogin_login_btnActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("Admin Login");
+        AdminLogin_label.setText("Admin Login");
 
         javax.swing.GroupLayout AdminLoginFrameLayout = new javax.swing.GroupLayout(AdminLoginFrame.getContentPane());
         AdminLoginFrame.getContentPane().setLayout(AdminLoginFrameLayout);
         AdminLoginFrameLayout.setHorizontalGroup(
             AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminLoginFrameLayout.createSequentialGroup()
-                .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AdminLoginFrameLayout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(145, 145, 145)
-                        .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(AdminLoginFrameLayout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addComponent(jButton3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminLoginFrameLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(239, 239, 239)
+                .addComponent(AdminLogin_label)
+                .addGap(208, 208, 208))
+            .addGroup(AdminLoginFrameLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
                 .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jLabel1))
-                .addGap(34, 34, 34))
+                    .addComponent(AdminLogin_username_label)
+                    .addComponent(AdminLogin_pwd_label))
+                .addGap(60, 60, 60)
+                .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AdminLogin_login_btn)
+                    .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(AdminLogin_username_textfield)
+                        .addComponent(AdminLogin_pwd_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         AdminLoginFrameLayout.setVerticalGroup(
             AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AdminLoginFrameLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
+                .addComponent(AdminLogin_label)
+                .addGap(85, 85, 85)
                 .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4))
-                .addGap(26, 26, 26)
-                .addComponent(jRadioButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
-                .addGap(40, 40, 40)
-                .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AdminLogin_username_label)
+                    .addComponent(AdminLogin_username_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(AdminLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addContainerGap())
+                    .addComponent(AdminLogin_pwd_label)
+                    .addComponent(AdminLogin_pwd_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addComponent(AdminLogin_login_btn)
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         desktopPane.add(AdminLoginFrame);
-        AdminLoginFrame.setBounds(0, 0, 422, 349);
+        AdminLoginFrame.setBounds(0, 0, 422, 356);
 
         StudentLoginFrame.setVisible(true);
 
@@ -585,7 +599,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentLoginFrame);
-        StudentLoginFrame.setBounds(0, 0, 471, 588);
+        StudentLoginFrame.setBounds(0, 0, 471, 587);
 
         ApproveNewStudents.setVisible(true);
 
@@ -637,7 +651,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(ApproveNewStudents);
-        ApproveNewStudents.setBounds(0, 0, 717, 1050);
+        ApproveNewStudents.setBounds(0, 0, 521, 1049);
 
         AdminHomeFrame.setVisible(true);
 
@@ -700,7 +714,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AdminHomeFrame);
-        AdminHomeFrame.setBounds(0, 0, 470, 317);
+        AdminHomeFrame.setBounds(0, 0, 470, 316);
 
         StudentsSignUpFrame.setVisible(true);
 
@@ -852,7 +866,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentsSignUpFrame);
-        StudentsSignUpFrame.setBounds(0, 0, 563, 584);
+        StudentsSignUpFrame.setBounds(0, 0, 563, 583);
 
         ConfirmNotificationModeFrame.setVisible(true);
 
@@ -887,7 +901,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(ConfirmNotificationModeFrame);
-        ConfirmNotificationModeFrame.setBounds(0, 0, 190, 168);
+        ConfirmNotificationModeFrame.setBounds(0, 0, 190, 167);
 
         LicenseCategoryFrame.setVisible(true);
 
@@ -935,7 +949,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LicenseCategoryFrame);
-        LicenseCategoryFrame.setBounds(0, 0, 395, 324);
+        LicenseCategoryFrame.setBounds(0, 0, 395, 323);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -961,20 +975,20 @@ public class Home_Belhasa extends javax.swing.JFrame {
         ApproveNewStudents.setVisible(false);
         StudentsSignUpFrame.setVisible(false);
     }
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void MainLogin_admin_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainLogin_admin_btnActionPerformed
         closeAllFrames();
         AdminHomeFrame.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_MainLogin_admin_btnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void MainLogin_student_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainLogin_student_btnActionPerformed
          closeAllFrames();
         StudentLoginFrame.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_MainLogin_student_btnActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void AdminLogin_login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminLogin_login_btnActionPerformed
          closeAllFrames();
         AdminHomeFrame.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_AdminLogin_login_btnActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
          closeAllFrames();
@@ -993,6 +1007,10 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         UserRegistration_MailToAdmin();
     }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void InstantRegister_pwd_textfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstantRegister_pwd_textfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InstantRegister_pwd_textfieldActionPerformed
 
      private void UserRegistration_MailToAdmin()
     {
@@ -1074,10 +1092,20 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JTextField Add_Lesson_Lsn_Textfield;
     private javax.swing.JInternalFrame AdminHomeFrame;
     private javax.swing.JInternalFrame AdminLoginFrame;
+    private javax.swing.JLabel AdminLogin_label;
+    private javax.swing.JButton AdminLogin_login_btn;
+    private javax.swing.JLabel AdminLogin_pwd_label;
+    private javax.swing.JTextField AdminLogin_pwd_textfield;
+    private javax.swing.JLabel AdminLogin_username_label;
+    private javax.swing.JTextField AdminLogin_username_textfield;
     private javax.swing.JInternalFrame ApproveNewStudents;
     private javax.swing.JInternalFrame ConfirmNotificationModeFrame;
     private javax.swing.JRadioButton HVT_RdBtn;
     private javax.swing.JInternalFrame InstantRegisterFrame;
+    private javax.swing.JButton InstantRegister_activate_btn;
+    private javax.swing.JLabel InstantRegister_label;
+    private javax.swing.JLabel InstantRegister_pwd_label;
+    private javax.swing.JTextField InstantRegister_pwd_textfield;
     private javax.swing.JRadioButton LMV_RdBtn;
     private javax.swing.JTable LS_Table;
     private javax.swing.JInternalFrame LessonContentFrame;
@@ -1094,6 +1122,10 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JButton LsContent_Update_Btn;
     private javax.swing.JRadioButton MC_RdBtn;
     private javax.swing.JInternalFrame MainLoginFrame;
+    private javax.swing.JButton MainLogin_admin_btn;
+    private javax.swing.JLabel MainLogin_label;
+    private javax.swing.JLabel MainLogin_language_label;
+    private javax.swing.JButton MainLogin_student_btn;
     private javax.swing.JButton Qstn_Delete_Btn;
     private javax.swing.JLabel Qstn_Label;
     private javax.swing.JLabel Qstn_Qstn_Label;
@@ -1112,17 +1144,13 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -1130,7 +1158,6 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1141,20 +1168,12 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
@@ -1165,14 +1184,14 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JRadioButton language_arabic;
+    private javax.swing.JRadioButton language_english;
+    private javax.swing.JRadioButton language_urdu;
     private javax.swing.JButton qstn_Add_Btn;
     // End of variables declaration//GEN-END:variables
 }
