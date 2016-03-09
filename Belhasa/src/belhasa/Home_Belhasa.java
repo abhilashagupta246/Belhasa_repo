@@ -141,6 +141,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
         St_SignUp_MaritalStatus_Textfield = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         St_SignUp_Age_Textfield = new javax.swing.JTextField();
+        St_SignUp_MaritalStatus_Label = new javax.swing.JLabel();
+        St_SignUp_Email_Textfield = new javax.swing.JTextField();
         ConfirmNotificationModeFrame = new javax.swing.JInternalFrame();
         Email_RadioButton = new javax.swing.JRadioButton();
         Instant_RadioButton = new javax.swing.JRadioButton();
@@ -156,7 +158,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.setPreferredSize(new java.awt.Dimension(1253, 1173));
 
         InstantRegisterFrame.setMinimumSize(new java.awt.Dimension(0, 0));
-        InstantRegisterFrame.setPreferredSize(new java.awt.Dimension(100, 200));
+        InstantRegisterFrame.setPreferredSize(new java.awt.Dimension(200, 200));
         InstantRegisterFrame.setVisible(true);
 
         InstantRegister_label.setText("Instant Registration");
@@ -164,11 +166,6 @@ public class Home_Belhasa extends javax.swing.JFrame {
         InstantRegister_pwd_label.setText("Admin Password");
 
         InstantRegister_pwd_textfield.setPreferredSize(new java.awt.Dimension(40, 20));
-        InstantRegister_pwd_textfield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InstantRegister_pwd_textfieldActionPerformed(evt);
-            }
-        });
 
         InstantRegister_activate_btn.setText("Activate Account");
 
@@ -188,7 +185,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(InstantRegister_activate_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(InstantRegister_pwd_textfield, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(234, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
         InstantRegisterFrameLayout.setVerticalGroup(
             InstantRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +202,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(InstantRegisterFrame);
-        InstantRegisterFrame.setBounds(0, 0, 100, 200);
+        InstantRegisterFrame.setBounds(0, 0, 200, 200);
 
         LessonsFrame.setVisible(true);
 
@@ -741,7 +738,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         jLabel12.setText("I am ");
 
-        St_Signup_gender_combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender" }));
+        St_Signup_gender_combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female", "Others" }));
 
         jLabel13.setText("Birthday");
 
@@ -770,6 +767,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         St_SignUp_Age_Textfield.setEditable(false);
 
+        St_SignUp_MaritalStatus_Label.setText("Email Id");
+
         javax.swing.GroupLayout StudentsSignUpFrameLayout = new javax.swing.GroupLayout(StudentsSignUpFrame.getContentPane());
         StudentsSignUpFrame.getContentPane().setLayout(StudentsSignUpFrameLayout);
         StudentsSignUpFrameLayout.setHorizontalGroup(
@@ -797,7 +796,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
                             .addComponent(jLabel17)
                             .addComponent(jLabel12)
                             .addComponent(jLabel13)
-                            .addComponent(jLabel18))
+                            .addComponent(jLabel18)
+                            .addComponent(St_SignUp_MaritalStatus_Label))
                         .addGap(36, 36, 36)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
@@ -808,6 +808,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentsSignUpFrameLayout.createSequentialGroup()
                                 .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
                                         .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -860,11 +861,15 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17)
                             .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_MaritalStatus_Label)
+                            .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
                             .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addGap(25, 25, 25)
                         .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
                             .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -881,7 +886,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentsSignUpFrame);
-        StudentsSignUpFrame.setBounds(0, 0, 563, 583);
+        StudentsSignUpFrame.setBounds(0, 0, 563, 589);
 
         ConfirmNotificationModeFrame.setVisible(true);
 
@@ -1214,7 +1219,9 @@ private void Register_Students_Fun() {
     private javax.swing.JComboBox<String> St_SignUp_DOB_Day_combo;
     private javax.swing.JComboBox<String> St_SignUp_DOB_Month_combo;
     private javax.swing.JComboBox<String> St_SignUp_DOB_Year_combo;
+    private javax.swing.JTextField St_SignUp_Email_Textfield;
     private javax.swing.JTextField St_SignUp_EmiratesId_Textfield;
+    private javax.swing.JLabel St_SignUp_MaritalStatus_Label;
     private javax.swing.JTextField St_SignUp_MaritalStatus_Textfield;
     private javax.swing.JTextField St_SignUp_Nationality_Textfield;
     private javax.swing.JTextField St_SignUp_PassportNo_Textfield;
