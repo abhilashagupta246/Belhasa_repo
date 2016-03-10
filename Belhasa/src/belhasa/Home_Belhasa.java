@@ -6,12 +6,8 @@ import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.DefaultListModel;
-import javax.swing.JList;
+import java.util.Calendar;
 import javax.swing.JOptionPane;
 
 /*
@@ -1320,6 +1316,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
     }
    private void countryList()
    {
+       St_SignUp_nationailty_combo.removeAllItems();
+       ApproveStLogin_nationality_combo.removeAllItems();
        String countrylist="select * from countrylist";
        try{
            pst=con.prepareStatement(countrylist);
@@ -1327,9 +1325,18 @@ public class Home_Belhasa extends javax.swing.JFrame {
            while(rs.next())
            {
                String country=rs.getString("country_name");
-               //System.out.println(country);
                St_SignUp_nationailty_combo.addItem(country);
+               ApproveStLogin_nationality_combo.addItem(country);
            }
+           
+            int year = Calendar.getInstance().get(Calendar.YEAR);
+             for (int i = year; i > 1950; i--)
+            {
+//               String yr;
+//               yr = Integer.toString(i);
+            St_SignUp_DOB_Year_combo.addItem(Integer.toString(i));
+            
+            }
        }
        catch(Exception e)
        {
