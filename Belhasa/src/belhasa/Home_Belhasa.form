@@ -1007,454 +1007,477 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="452" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="ApproveStLogin_firstname_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_gender_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_lastname_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_nationality_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_Approve_btn" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="ApproveStLogin_Update_btn" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                                              <Component id="ApproveStLogin_Delete_btn" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="ApproveStLogin_lastname_textfield" alignment="0" pref="156" max="32767" attributes="0"/>
-                                              <Component id="ApproveStLogin_firstname_textfield" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="ApproveStLogin_nationality_combo" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="ApproveStLogin_gender_combo" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="ApproveStLogin_marital_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_dob_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_emiratesId_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_passportno_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ApproveStLogin_emailid_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="ApproveStLogin_dob_day_combo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="ApproveStLogin_marital_combo" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                              <Component id="ApproveStLogin_dob_month_combo" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="ApproveStLogin_dob_year_combo" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="ApproveStLogin_passportno_textfield" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
-                                                  <Component id="ApproveStLogin_emiratesid_textfield" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
-                                                  <Component id="ApproveStLogin_email_textfield" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="ApproveStLogin_Back_btn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="ApproveStLogin_label" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ApproveNewStudentsScrollPanel" min="-2" pref="673" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ApproveStLogin_label" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="ApproveStLogin_Back_btn" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="194" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="ApproveStLogin_firstname_label" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="ApproveStLogin_lastname_label" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="ApproveStLogin_gender_label" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                      <Component id="ApproveStLogin_gender_combo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="ApproveStLogin_firstname_textfield" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="ApproveStLogin_lastname_textfield" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ApproveStLogin_nationality_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ApproveStLogin_nationality_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                              <Component id="ApproveStLogin_dob_label" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="ApproveStLogin_marital_label" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="ApproveStLogin_dob_day_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ApproveStLogin_dob_month_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ApproveStLogin_dob_year_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="ApproveStLogin_marital_combo" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ApproveStLogin_emiratesId_label" min="-2" max="-2" attributes="0"/>
-                          <Component id="ApproveStLogin_emiratesid_textfield" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ApproveStLogin_passportno_label" min="-2" max="-2" attributes="0"/>
-                          <Component id="ApproveStLogin_passportno_textfield" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ApproveStLogin_emailid_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ApproveStLogin_email_textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ApproveStLogin_Approve_btn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ApproveStLogin_Update_btn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ApproveStLogin_Delete_btn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="ApproveNewStudentsScrollPanel" alignment="0" pref="496" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Student Details"/>
-              </Properties>
-            </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
+            <Container class="javax.swing.JScrollPane" name="ApproveNewStudentsScrollPanel">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="St_Table">
-                  <Properties>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="10" rowCount="10">
-                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 5" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 6" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 7" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 8" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 9" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 10" type="java.lang.Object"/>
-                      </Table>
-                    </Property>
-                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                      <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                      </TableColumnModel>
-                    </Property>
-                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
-                    </Property>
-                  </Properties>
-                </Component>
+                <Container class="javax.swing.JPanel" name="ApproveNewStudentsPanel">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="ApproveStLogin_firstname_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_gender_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_lastname_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_nationality_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_emiratesId_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_passportno_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_emailid_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="ApproveStLogin_lastname_textfield" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="ApproveStLogin_firstname_textfield" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="ApproveStLogin_nationality_combo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="ApproveStLogin_gender_combo" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="ApproveStLogin_emiratesid_textfield" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  <Component id="ApproveStLogin_passportno_textfield" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  <Component id="ApproveStLogin_email_textfield" min="-2" pref="156" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="ApproveStLogin_dob_day_combo" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Component id="ApproveStLogin_Approve_btn" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                              <Component id="ApproveStLogin_Update_btn" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="ApproveStLogin_Delete_btn" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="ApproveStLogin_marital_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_dob_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_marital_combo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_dob_month_combo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_dob_year_combo" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_Back_btn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_label" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="452" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="106" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ApproveStLogin_Back_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ApproveStLogin_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="194" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="ApproveStLogin_firstname_label" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="ApproveStLogin_lastname_label" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="ApproveStLogin_gender_label" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="ApproveStLogin_gender_combo" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="ApproveStLogin_firstname_textfield" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_lastname_textfield" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ApproveStLogin_nationality_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ApproveStLogin_nationality_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ApproveStLogin_emiratesId_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ApproveStLogin_emiratesid_textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="ApproveStLogin_passportno_label" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ApproveStLogin_passportno_textfield" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ApproveStLogin_emailid_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ApproveStLogin_email_textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="24" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_dob_label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_marital_label" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="ApproveStLogin_dob_day_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_dob_month_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ApproveStLogin_dob_year_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="ApproveStLogin_marital_combo" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ApproveStLogin_Approve_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ApproveStLogin_Update_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ApproveStLogin_Delete_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Student Details"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="ApproveStLogin_Back_btn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Back"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTable" name="St_Table">
+                          <Properties>
+                            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                              <Table columnCount="10" rowCount="10">
+                                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 5" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 6" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 7" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 8" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 9" type="java.lang.Object"/>
+                                <Column editable="true" title="Title 10" type="java.lang.Object"/>
+                              </Table>
+                            </Property>
+                            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                              <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                              </TableColumnModel>
+                            </Property>
+                            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_lastname_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Last Name"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_firstname_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="First Name"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="ApproveStLogin_firstname_textfield">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="ApproveStLogin_lastname_textfield">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_gender_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Gender"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_nationality_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nationailty"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_dob_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Date of Birth"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ApproveStLogin_dob_day_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="33">
+                            <StringItem index="0" value="Day"/>
+                            <StringItem index="1" value="0"/>
+                            <StringItem index="2" value="1"/>
+                            <StringItem index="3" value="2"/>
+                            <StringItem index="4" value="3"/>
+                            <StringItem index="5" value="4"/>
+                            <StringItem index="6" value="5"/>
+                            <StringItem index="7" value="6"/>
+                            <StringItem index="8" value="7"/>
+                            <StringItem index="9" value="8"/>
+                            <StringItem index="10" value="9"/>
+                            <StringItem index="11" value="10"/>
+                            <StringItem index="12" value="11"/>
+                            <StringItem index="13" value="12"/>
+                            <StringItem index="14" value="13"/>
+                            <StringItem index="15" value="14"/>
+                            <StringItem index="16" value="15"/>
+                            <StringItem index="17" value="16"/>
+                            <StringItem index="18" value="17"/>
+                            <StringItem index="19" value="18"/>
+                            <StringItem index="20" value="19"/>
+                            <StringItem index="21" value="20"/>
+                            <StringItem index="22" value="21"/>
+                            <StringItem index="23" value="22"/>
+                            <StringItem index="24" value="23"/>
+                            <StringItem index="25" value="24"/>
+                            <StringItem index="26" value="25"/>
+                            <StringItem index="27" value="26"/>
+                            <StringItem index="28" value="27"/>
+                            <StringItem index="29" value="28"/>
+                            <StringItem index="30" value="29"/>
+                            <StringItem index="31" value="30"/>
+                            <StringItem index="32" value="31"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ApproveStLogin_dob_month_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="14">
+                            <StringItem index="0" value="Month"/>
+                            <StringItem index="1" value="January"/>
+                            <StringItem index="2" value="Febuary"/>
+                            <StringItem index="3" value="March"/>
+                            <StringItem index="4" value="April"/>
+                            <StringItem index="5" value="May"/>
+                            <StringItem index="6" value="June"/>
+                            <StringItem index="7" value="July"/>
+                            <StringItem index="8" value="August"/>
+                            <StringItem index="9" value="September"/>
+                            <StringItem index="10" value="October"/>
+                            <StringItem index="11" value="November"/>
+                            <StringItem index="12" value="December"/>
+                            <StringItem index="13" value=" "/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ApproveStLogin_dob_year_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_marital_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Marital Status"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ApproveStLogin_marital_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="6">
+                            <StringItem index="0" value="Select"/>
+                            <StringItem index="1" value="Single"/>
+                            <StringItem index="2" value="Married"/>
+                            <StringItem index="3" value="Unmarried"/>
+                            <StringItem index="4" value="widow"/>
+                            <StringItem index="5" value="others"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ApproveStLogin_nationality_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="Select Country"/>
+                            <StringItem index="1" value=" "/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ApproveStLogin_gender_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="4">
+                            <StringItem index="0" value="Select gender"/>
+                            <StringItem index="1" value="Male"/>
+                            <StringItem index="2" value="Female"/>
+                            <StringItem index="3" value="others"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="ApproveStLogin_Approve_btn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Approve"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="ApproveStLogin_emiratesid_textfield">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_emiratesId_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Emirates Id"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="ApproveStLogin_passportno_textfield">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_passportno_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Passport No."/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="ApproveStLogin_email_textfield">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ApproveStLogin_emailid_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Email Id"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="ApproveStLogin_Delete_btn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Delete"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="ApproveStLogin_Update_btn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Update"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="ApproveStLogin_Approve_btn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Approve"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_firstname_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="First Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="ApproveStLogin_firstname_textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_lastname_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Last Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="ApproveStLogin_lastname_textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_gender_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Gender"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_nationality_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Nationailty"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_dob_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Date of Birth"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="ApproveStLogin_dob_day_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="33">
-                    <StringItem index="0" value="Day"/>
-                    <StringItem index="1" value="0"/>
-                    <StringItem index="2" value="1"/>
-                    <StringItem index="3" value="2"/>
-                    <StringItem index="4" value="3"/>
-                    <StringItem index="5" value="4"/>
-                    <StringItem index="6" value="5"/>
-                    <StringItem index="7" value="6"/>
-                    <StringItem index="8" value="7"/>
-                    <StringItem index="9" value="8"/>
-                    <StringItem index="10" value="9"/>
-                    <StringItem index="11" value="10"/>
-                    <StringItem index="12" value="11"/>
-                    <StringItem index="13" value="12"/>
-                    <StringItem index="14" value="13"/>
-                    <StringItem index="15" value="14"/>
-                    <StringItem index="16" value="15"/>
-                    <StringItem index="17" value="16"/>
-                    <StringItem index="18" value="17"/>
-                    <StringItem index="19" value="18"/>
-                    <StringItem index="20" value="19"/>
-                    <StringItem index="21" value="20"/>
-                    <StringItem index="22" value="21"/>
-                    <StringItem index="23" value="22"/>
-                    <StringItem index="24" value="23"/>
-                    <StringItem index="25" value="24"/>
-                    <StringItem index="26" value="25"/>
-                    <StringItem index="27" value="26"/>
-                    <StringItem index="28" value="27"/>
-                    <StringItem index="29" value="28"/>
-                    <StringItem index="30" value="29"/>
-                    <StringItem index="31" value="30"/>
-                    <StringItem index="32" value="31"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="ApproveStLogin_dob_month_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="14">
-                    <StringItem index="0" value="Month"/>
-                    <StringItem index="1" value="January"/>
-                    <StringItem index="2" value="Febuary"/>
-                    <StringItem index="3" value="March"/>
-                    <StringItem index="4" value="April"/>
-                    <StringItem index="5" value="May"/>
-                    <StringItem index="6" value="June"/>
-                    <StringItem index="7" value="July"/>
-                    <StringItem index="8" value="August"/>
-                    <StringItem index="9" value="September"/>
-                    <StringItem index="10" value="October"/>
-                    <StringItem index="11" value="November"/>
-                    <StringItem index="12" value="December"/>
-                    <StringItem index="13" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="ApproveStLogin_dob_year_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_marital_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Marital Status"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="ApproveStLogin_marital_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_emiratesId_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Emirates Id"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="ApproveStLogin_emiratesid_textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_passportno_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Passport No."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="ApproveStLogin_passportno_textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="ApproveStLogin_emailid_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Email Id"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="ApproveStLogin_email_textfield">
-            </Component>
-            <Component class="javax.swing.JButton" name="ApproveStLogin_Update_btn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Update"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="ApproveStLogin_Delete_btn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Delete"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="ApproveStLogin_gender_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Select gender"/>
-                    <StringItem index="1" value="Male"/>
-                    <StringItem index="2" value="Female"/>
-                    <StringItem index="3" value="others"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="ApproveStLogin_nationality_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="2">
-                    <StringItem index="0" value="Select Country"/>
-                    <StringItem index="1" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JButton" name="ApproveStLogin_Back_btn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Back"/>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JInternalFrame" name="AdminHomeFrame">
@@ -1519,6 +1542,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Results"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AdminHome_Results_btnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="AdminHome_ChangePwd_btn">
               <Properties>
@@ -1562,374 +1588,396 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="St_SignUp_firstName_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_lastName_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="St_SignUp_nationailty_label" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="St_SignUp_passportNo_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="St_SignUp_MaritalStatus_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="St_Signup_gender_label" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_Email_label" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_DOB_label" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_age_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="St_SignUp_emiratesId_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="241" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="St_SignUp_Age_Textfield" pref="172" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="St_SignUp_Email_Textfield" max="32767" attributes="0"/>
-                                          <Component id="St_SignUp_MaritalStatus_Textfield" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="St_SignUp_EmiratesId_Textfield" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="St_SignUp_PassportNo_Textfield" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="St_SignUp_nationailty_combo" max="32767" attributes="0"/>
-                                          <Component id="St_SignUp_firstName_Textfield" max="32767" attributes="0"/>
-                                          <Component id="St_SignUp_lastName_Textfield" max="32767" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="St_SignUp_DOB_Day_combo" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="13" max="32767" attributes="0"/>
-                                              <Component id="St_SignUp_DOB_Month_combo" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                              <Component id="St_SignUp_DOB_Year_combo" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="StSignUp_photo_label" min="-2" pref="132" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="St_Signup_gender_combobox" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="St_SignUp_Back_btn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-                      <Component id="StSignUp_label1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="StSignUp_label2" min="-2" pref="342" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="St_SignUp_Register_btn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jScrollPane5" alignment="0" pref="739" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="StSignUp_label1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="St_SignUp_Back_btn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="StSignUp_label2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="St_SignUp_firstName_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_firstName_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="St_SignUp_lastName_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_lastName_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="St_SignUp_nationailty_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_nationailty_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="St_SignUp_passportNo_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_PassportNo_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="StSignUp_photo_label" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="St_SignUp_emiratesId_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="St_SignUp_EmiratesId_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="St_SignUp_MaritalStatus_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="St_SignUp_MaritalStatus_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="St_SignUp_Email_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="St_SignUp_Email_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="St_Signup_gender_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="St_Signup_gender_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="St_SignUp_DOB_Day_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_DOB_Month_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_DOB_Year_combo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="St_SignUp_Register_btn" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="St_SignUp_DOB_label" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="St_SignUp_age_label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="St_SignUp_Age_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="178" max="32767" attributes="0"/>
+                      <Component id="jScrollPane5" min="-2" pref="577" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="StSignUp_label1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="24" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Sign Up"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="StSignUp_label2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Its free and will always be."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_firstName_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="First Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="St_SignUp_firstName_Textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_lastName_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Last Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="St_SignUp_lastName_Textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="StSignUp_photo_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Picture"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_Signup_gender_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="I am "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="St_Signup_gender_combobox">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Select Gender"/>
-                    <StringItem index="1" value="Male"/>
-                    <StringItem index="2" value="Female"/>
-                    <StringItem index="3" value="Others"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_DOB_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Birthday"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="St_SignUp_DOB_Day_combo">
-              <Properties>
-                <Property name="maximumRowCount" type="int" value="32"/>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="33">
-                    <StringItem index="0" value="Day"/>
-                    <StringItem index="1" value="0"/>
-                    <StringItem index="2" value="1"/>
-                    <StringItem index="3" value="2"/>
-                    <StringItem index="4" value="3"/>
-                    <StringItem index="5" value="4"/>
-                    <StringItem index="6" value="5"/>
-                    <StringItem index="7" value="6"/>
-                    <StringItem index="8" value="7"/>
-                    <StringItem index="9" value="8"/>
-                    <StringItem index="10" value="9"/>
-                    <StringItem index="11" value="10"/>
-                    <StringItem index="12" value="11"/>
-                    <StringItem index="13" value="12"/>
-                    <StringItem index="14" value="13"/>
-                    <StringItem index="15" value="14"/>
-                    <StringItem index="16" value="15"/>
-                    <StringItem index="17" value="16"/>
-                    <StringItem index="18" value="17"/>
-                    <StringItem index="19" value="18"/>
-                    <StringItem index="20" value="19"/>
-                    <StringItem index="21" value="20"/>
-                    <StringItem index="22" value="21"/>
-                    <StringItem index="23" value="22"/>
-                    <StringItem index="24" value="23"/>
-                    <StringItem index="25" value="24"/>
-                    <StringItem index="26" value="25"/>
-                    <StringItem index="27" value="26"/>
-                    <StringItem index="28" value="27"/>
-                    <StringItem index="29" value="28"/>
-                    <StringItem index="30" value="29"/>
-                    <StringItem index="31" value="30"/>
-                    <StringItem index="32" value="31"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="St_SignUp_DOB_Month_combo">
-              <Properties>
-                <Property name="maximumRowCount" type="int" value="12"/>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="14">
-                    <StringItem index="0" value="Month"/>
-                    <StringItem index="1" value="January"/>
-                    <StringItem index="2" value="Febuary"/>
-                    <StringItem index="3" value="March"/>
-                    <StringItem index="4" value="April"/>
-                    <StringItem index="5" value="May"/>
-                    <StringItem index="6" value="June"/>
-                    <StringItem index="7" value="July"/>
-                    <StringItem index="8" value="August"/>
-                    <StringItem index="9" value="September"/>
-                    <StringItem index="10" value="October"/>
-                    <StringItem index="11" value="November"/>
-                    <StringItem index="12" value="December"/>
-                    <StringItem index="13" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="St_SignUp_DOB_Year_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="1">
-                    <StringItem index="0" value="Year"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JButton" name="St_SignUp_Register_btn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Register"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="St_SignUp_Register_btnActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_nationailty_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Nationality"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_passportNo_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Passport No."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="St_SignUp_PassportNo_Textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_emiratesId_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Emirates Id"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="St_SignUp_EmiratesId_Textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_MaritalStatus_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Marital Status"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="St_SignUp_MaritalStatus_Textfield">
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_age_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Age"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="St_SignUp_Age_Textfield">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="St_SignUp_Email_label">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Email Id"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="St_SignUp_Email_Textfield">
-            </Component>
-            <Component class="javax.swing.JComboBox" name="St_SignUp_nationailty_combo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JButton" name="St_SignUp_Back_btn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Back"/>
-              </Properties>
-            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="jPanel1">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="St_SignUp_Back_btn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="StSignUp_label2" min="-2" pref="342" max="-2" attributes="0"/>
+                                          <Component id="StSignUp_label1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="St_SignUp_firstName_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_lastName_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_passportNo_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_emiratesId_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_Email_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_nationailty_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_MaritalStatus_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_Signup_gender_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_DOB_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_age_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="St_SignUp_MaritalStatus_combo" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_EmiratesId_Textfield" min="-2" pref="214" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_Email_Textfield" min="-2" pref="214" max="-2" attributes="0"/>
+                                                  <Component id="St_SignUp_nationailty_combo" min="-2" pref="214" max="-2" attributes="0"/>
+                                                  <Component id="St_Signup_gender_combobox" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                          <Component id="St_SignUp_Age_Textfield" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="St_SignUp_DOB_Day_combo" alignment="0" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                                      <Component id="St_SignUp_DOB_Month_combo" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <Component id="St_SignUp_DOB_Year_combo" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="St_SignUp_PassportNo_Textfield" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="St_SignUp_lastName_Textfield" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="St_SignUp_firstName_Textfield" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace pref="88" max="32767" attributes="0"/>
+                                                      <Component id="StSignUp_photo_label" min="-2" pref="132" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Component id="St_SignUp_Register_btn" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="St_SignUp_Back_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="StSignUp_label1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="StSignUp_label2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="St_SignUp_firstName_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="St_SignUp_firstName_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="St_SignUp_lastName_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="St_SignUp_lastName_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="St_SignUp_passportNo_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="St_SignUp_PassportNo_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="St_SignUp_emiratesId_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="St_SignUp_EmiratesId_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="38" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="St_SignUp_Email_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="St_SignUp_Email_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="St_SignUp_nationailty_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="St_SignUp_nationailty_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="StSignUp_photo_label" min="-2" pref="147" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="St_SignUp_MaritalStatus_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="St_SignUp_MaritalStatus_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="St_Signup_gender_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="St_Signup_gender_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="St_SignUp_DOB_Day_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="St_SignUp_DOB_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="St_SignUp_DOB_Month_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="St_SignUp_DOB_Year_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="St_SignUp_age_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="St_SignUp_Age_Textfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="St_SignUp_Register_btn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_passportNo_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Passport No."/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="St_SignUp_PassportNo_Textfield">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="St_SignUp_firstName_Textfield">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_lastName_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Last Name"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_nationailty_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nationality"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="St_SignUp_lastName_Textfield">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_Email_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Email Id"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="St_SignUp_nationailty_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="St_SignUp_Email_Textfield">
+                    </Component>
+                    <Component class="javax.swing.JButton" name="St_SignUp_Back_btn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Back"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="St_SignUp_MaritalStatus_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="7">
+                            <StringItem index="0" value="Select"/>
+                            <StringItem index="1" value="Single"/>
+                            <StringItem index="2" value="Married"/>
+                            <StringItem index="3" value="UnMarried"/>
+                            <StringItem index="4" value="Widow"/>
+                            <StringItem index="5" value="Others"/>
+                            <StringItem index="6" value=" "/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="St_SignUp_DOB_Month_combo">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="12"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="14">
+                            <StringItem index="0" value="Month"/>
+                            <StringItem index="1" value="January"/>
+                            <StringItem index="2" value="Febuary"/>
+                            <StringItem index="3" value="March"/>
+                            <StringItem index="4" value="April"/>
+                            <StringItem index="5" value="May"/>
+                            <StringItem index="6" value="June"/>
+                            <StringItem index="7" value="July"/>
+                            <StringItem index="8" value="August"/>
+                            <StringItem index="9" value="September"/>
+                            <StringItem index="10" value="October"/>
+                            <StringItem index="11" value="November"/>
+                            <StringItem index="12" value="December"/>
+                            <StringItem index="13" value=" "/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="St_SignUp_DOB_Day_combo">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="32"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="33">
+                            <StringItem index="0" value="Day"/>
+                            <StringItem index="1" value="0"/>
+                            <StringItem index="2" value="1"/>
+                            <StringItem index="3" value="2"/>
+                            <StringItem index="4" value="3"/>
+                            <StringItem index="5" value="4"/>
+                            <StringItem index="6" value="5"/>
+                            <StringItem index="7" value="6"/>
+                            <StringItem index="8" value="7"/>
+                            <StringItem index="9" value="8"/>
+                            <StringItem index="10" value="9"/>
+                            <StringItem index="11" value="10"/>
+                            <StringItem index="12" value="11"/>
+                            <StringItem index="13" value="12"/>
+                            <StringItem index="14" value="13"/>
+                            <StringItem index="15" value="14"/>
+                            <StringItem index="16" value="15"/>
+                            <StringItem index="17" value="16"/>
+                            <StringItem index="18" value="17"/>
+                            <StringItem index="19" value="18"/>
+                            <StringItem index="20" value="19"/>
+                            <StringItem index="21" value="20"/>
+                            <StringItem index="22" value="21"/>
+                            <StringItem index="23" value="22"/>
+                            <StringItem index="24" value="23"/>
+                            <StringItem index="25" value="24"/>
+                            <StringItem index="26" value="25"/>
+                            <StringItem index="27" value="26"/>
+                            <StringItem index="28" value="27"/>
+                            <StringItem index="29" value="28"/>
+                            <StringItem index="30" value="29"/>
+                            <StringItem index="31" value="30"/>
+                            <StringItem index="32" value="31"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="St_SignUp_DOB_Year_combo">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="1">
+                            <StringItem index="0" value="Year"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_Signup_gender_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="I am "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_firstName_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="First Name"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_MaritalStatus_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Marital Status"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="StSignUp_photo_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Picture"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="StSignUp_label2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Its free and will always be."/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="St_SignUp_EmiratesId_Textfield">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_DOB_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Birthday"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="StSignUp_label1">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Times New Roman" size="24" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Sign Up"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_emiratesId_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Emirates Id"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="St_Signup_gender_combobox">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="4">
+                            <StringItem index="0" value="Select Gender"/>
+                            <StringItem index="1" value="Male"/>
+                            <StringItem index="2" value="Female"/>
+                            <StringItem index="3" value="Others"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="St_SignUp_Register_btn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Register"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="St_SignUp_Register_btnActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="St_SignUp_Age_Textfield">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="St_SignUp_age_label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Age"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JInternalFrame" name="ConfirmNotificationModeFrame">
@@ -2253,6 +2301,202 @@
             <Component class="javax.swing.JLabel" name="Chg_Pwd_MAIT">
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Chg_Pwd_MAITMouseClicked"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="ResultFrame">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1000, 400]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="Results_Home_Btn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="369" max="-2" attributes="0"/>
+                              <Component id="Results_label" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="422" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Results_MAIT" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Results_StudentName_Lbl" min="-2" pref="120" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                              <Component id="Results_Subject_Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
+                              <Component id="Results_Search_Btn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Results_Report_Btn" min="-2" pref="123" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane14" alignment="0" min="-2" pref="760" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Results_Home_Btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Results_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Results_StudentName_Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Results_Subject_Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Results_Search_Btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Results_Report_Btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jScrollPane14" min="-2" pref="227" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="Results_MAIT" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane14">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="Result_Table">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="6" rowCount="10">
+                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 5" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 6" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="Results_label">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="24" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="RESULTS"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="Results_Home_Btn">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Home"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[70, 30]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Results_Home_BtnActionPerformed"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Results_Home_BtnKeyReleased"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBox1">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Results_StudentName_Lbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="STUDENT NAME"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Results_Subject_Lbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="DATE"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBox2">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBox2ItemStateChanged"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Results_Search_Btn">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Search"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[75, 30]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Results_Search_BtnActionPerformed"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Results_Search_BtnKeyReleased"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Results_MAIT">
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Results_MAITMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="Results_Report_Btn">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Export Report"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[103, 30]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Results_Report_BtnActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

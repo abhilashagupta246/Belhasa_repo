@@ -2,16 +2,21 @@ package belhasa;
 
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Dimension;
 import java.awt.event.KeyEvent;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Calendar;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -117,13 +122,15 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StLogin_SignUp_btn = new javax.swing.JButton();
         StLogin_Back_Btn = new javax.swing.JButton();
         ApproveNewStudents = new javax.swing.JInternalFrame();
+        ApproveNewStudentsScrollPanel = new javax.swing.JScrollPane();
+        ApproveNewStudentsPanel = new javax.swing.JPanel();
         ApproveStLogin_label = new javax.swing.JLabel();
+        ApproveStLogin_Back_btn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         St_Table = new javax.swing.JTable();
-        ApproveStLogin_Approve_btn = new javax.swing.JButton();
+        ApproveStLogin_lastname_label = new javax.swing.JLabel();
         ApproveStLogin_firstname_label = new javax.swing.JLabel();
         ApproveStLogin_firstname_textfield = new javax.swing.JTextField();
-        ApproveStLogin_lastname_label = new javax.swing.JLabel();
         ApproveStLogin_lastname_textfield = new javax.swing.JTextField();
         ApproveStLogin_gender_label = new javax.swing.JLabel();
         ApproveStLogin_nationality_label = new javax.swing.JLabel();
@@ -133,17 +140,17 @@ public class Home_Belhasa extends javax.swing.JFrame {
         ApproveStLogin_dob_year_combo = new javax.swing.JComboBox<>();
         ApproveStLogin_marital_label = new javax.swing.JLabel();
         ApproveStLogin_marital_combo = new javax.swing.JComboBox<>();
-        ApproveStLogin_emiratesId_label = new javax.swing.JLabel();
-        ApproveStLogin_emiratesid_textfield = new javax.swing.JTextField();
-        ApproveStLogin_passportno_label = new javax.swing.JLabel();
-        ApproveStLogin_passportno_textfield = new javax.swing.JTextField();
-        ApproveStLogin_emailid_label = new javax.swing.JLabel();
-        ApproveStLogin_email_textfield = new javax.swing.JTextField();
-        ApproveStLogin_Update_btn = new javax.swing.JButton();
-        ApproveStLogin_Delete_btn = new javax.swing.JButton();
-        ApproveStLogin_gender_combo = new javax.swing.JComboBox<>();
         ApproveStLogin_nationality_combo = new javax.swing.JComboBox<>();
-        ApproveStLogin_Back_btn = new javax.swing.JButton();
+        ApproveStLogin_gender_combo = new javax.swing.JComboBox<>();
+        ApproveStLogin_Approve_btn = new javax.swing.JButton();
+        ApproveStLogin_emiratesid_textfield = new javax.swing.JTextField();
+        ApproveStLogin_emiratesId_label = new javax.swing.JLabel();
+        ApproveStLogin_passportno_textfield = new javax.swing.JTextField();
+        ApproveStLogin_passportno_label = new javax.swing.JLabel();
+        ApproveStLogin_email_textfield = new javax.swing.JTextField();
+        ApproveStLogin_emailid_label = new javax.swing.JLabel();
+        ApproveStLogin_Delete_btn = new javax.swing.JButton();
+        ApproveStLogin_Update_btn = new javax.swing.JButton();
         AdminHomeFrame = new javax.swing.JInternalFrame();
         AdminHome_NewSt_btn = new javax.swing.JButton();
         AdminHome_Results_btn = new javax.swing.JButton();
@@ -151,33 +158,35 @@ public class Home_Belhasa extends javax.swing.JFrame {
         AdminHome_Logout_btn = new javax.swing.JButton();
         AdminHome_License_btn = new javax.swing.JButton();
         StudentsSignUpFrame = new javax.swing.JInternalFrame();
-        StSignUp_label1 = new javax.swing.JLabel();
-        StSignUp_label2 = new javax.swing.JLabel();
-        St_SignUp_firstName_label = new javax.swing.JLabel();
-        St_SignUp_firstName_Textfield = new javax.swing.JTextField();
-        St_SignUp_lastName_label = new javax.swing.JLabel();
-        St_SignUp_lastName_Textfield = new javax.swing.JTextField();
-        StSignUp_photo_label = new javax.swing.JLabel();
-        St_Signup_gender_label = new javax.swing.JLabel();
-        St_Signup_gender_combobox = new javax.swing.JComboBox<>();
-        St_SignUp_DOB_label = new javax.swing.JLabel();
-        St_SignUp_DOB_Day_combo = new javax.swing.JComboBox<>();
-        St_SignUp_DOB_Month_combo = new javax.swing.JComboBox<>();
-        St_SignUp_DOB_Year_combo = new javax.swing.JComboBox<>();
-        St_SignUp_Register_btn = new javax.swing.JButton();
-        St_SignUp_nationailty_label = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
         St_SignUp_passportNo_label = new javax.swing.JLabel();
         St_SignUp_PassportNo_Textfield = new javax.swing.JTextField();
-        St_SignUp_emiratesId_label = new javax.swing.JLabel();
-        St_SignUp_EmiratesId_Textfield = new javax.swing.JTextField();
-        St_SignUp_MaritalStatus_label = new javax.swing.JLabel();
-        St_SignUp_MaritalStatus_Textfield = new javax.swing.JTextField();
-        St_SignUp_age_label = new javax.swing.JLabel();
-        St_SignUp_Age_Textfield = new javax.swing.JTextField();
+        St_SignUp_firstName_Textfield = new javax.swing.JTextField();
+        St_SignUp_lastName_label = new javax.swing.JLabel();
+        St_SignUp_nationailty_label = new javax.swing.JLabel();
+        St_SignUp_lastName_Textfield = new javax.swing.JTextField();
         St_SignUp_Email_label = new javax.swing.JLabel();
-        St_SignUp_Email_Textfield = new javax.swing.JTextField();
         St_SignUp_nationailty_combo = new javax.swing.JComboBox<>();
+        St_SignUp_Email_Textfield = new javax.swing.JTextField();
         St_SignUp_Back_btn = new javax.swing.JButton();
+        St_SignUp_MaritalStatus_combo = new javax.swing.JComboBox<>();
+        St_SignUp_DOB_Month_combo = new javax.swing.JComboBox<>();
+        St_SignUp_DOB_Day_combo = new javax.swing.JComboBox<>();
+        St_SignUp_DOB_Year_combo = new javax.swing.JComboBox<>();
+        St_Signup_gender_label = new javax.swing.JLabel();
+        St_SignUp_firstName_label = new javax.swing.JLabel();
+        St_SignUp_MaritalStatus_label = new javax.swing.JLabel();
+        StSignUp_photo_label = new javax.swing.JLabel();
+        StSignUp_label2 = new javax.swing.JLabel();
+        St_SignUp_EmiratesId_Textfield = new javax.swing.JTextField();
+        St_SignUp_DOB_label = new javax.swing.JLabel();
+        StSignUp_label1 = new javax.swing.JLabel();
+        St_SignUp_emiratesId_label = new javax.swing.JLabel();
+        St_Signup_gender_combobox = new javax.swing.JComboBox<>();
+        St_SignUp_Register_btn = new javax.swing.JButton();
+        St_SignUp_Age_Textfield = new javax.swing.JTextField();
+        St_SignUp_age_label = new javax.swing.JLabel();
         ConfirmNotificationModeFrame = new javax.swing.JInternalFrame();
         Email_RadioButton = new javax.swing.JRadioButton();
         Instant_RadioButton = new javax.swing.JRadioButton();
@@ -198,6 +207,18 @@ public class Home_Belhasa extends javax.swing.JFrame {
         ChangePwd_Submit_Btn = new javax.swing.JButton();
         ChangePwd_Home_Btn = new javax.swing.JButton();
         Chg_Pwd_MAIT = new javax.swing.JLabel();
+        ResultFrame = new javax.swing.JInternalFrame();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        Result_Table = new javax.swing.JTable();
+        Results_label = new javax.swing.JLabel();
+        Results_Home_Btn = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        Results_StudentName_Lbl = new javax.swing.JLabel();
+        Results_Subject_Lbl = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        Results_Search_Btn = new javax.swing.JButton();
+        Results_MAIT = new javax.swing.JLabel();
+        Results_Report_Btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -731,6 +752,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         ApproveStLogin_label.setText("Student Details");
 
+        ApproveStLogin_Back_btn.setText("Back");
+
         St_Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -750,11 +773,9 @@ public class Home_Belhasa extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(St_Table);
 
-        ApproveStLogin_Approve_btn.setText("Approve");
+        ApproveStLogin_lastname_label.setText("Last Name");
 
         ApproveStLogin_firstname_label.setText("First Name");
-
-        ApproveStLogin_lastname_label.setText("Last Name");
 
         ApproveStLogin_gender_label.setText("Gender");
 
@@ -768,7 +789,13 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         ApproveStLogin_marital_label.setText("Marital Status");
 
-        ApproveStLogin_marital_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ApproveStLogin_marital_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Single", "Married", "Unmarried", "widow", "others" }));
+
+        ApproveStLogin_nationality_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Country", " " }));
+
+        ApproveStLogin_gender_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select gender", "Male", "Female", "others" }));
+
+        ApproveStLogin_Approve_btn.setText("Approve");
 
         ApproveStLogin_emiratesId_label.setText("Emirates Id");
 
@@ -776,144 +803,152 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         ApproveStLogin_emailid_label.setText("Email Id");
 
-        ApproveStLogin_Update_btn.setText("Update");
-
         ApproveStLogin_Delete_btn.setText("Delete");
 
-        ApproveStLogin_gender_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select gender", "Male", "Female", "others" }));
+        ApproveStLogin_Update_btn.setText("Update");
 
-        ApproveStLogin_nationality_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Country", " " }));
+        javax.swing.GroupLayout ApproveNewStudentsPanelLayout = new javax.swing.GroupLayout(ApproveNewStudentsPanel);
+        ApproveNewStudentsPanel.setLayout(ApproveNewStudentsPanelLayout);
+        ApproveNewStudentsPanelLayout.setHorizontalGroup(
+            ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApproveNewStudentsPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ApproveStLogin_firstname_label)
+                            .addComponent(ApproveStLogin_gender_label)
+                            .addComponent(ApproveStLogin_lastname_label)
+                            .addComponent(ApproveStLogin_nationality_label)
+                            .addComponent(ApproveStLogin_emiratesId_label)
+                            .addComponent(ApproveStLogin_passportno_label)
+                            .addComponent(ApproveStLogin_emailid_label))
+                        .addGap(62, 62, 62)
+                        .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(ApproveStLogin_lastname_textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(ApproveStLogin_firstname_textfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(ApproveStLogin_nationality_combo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(ApproveStLogin_gender_combo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(ApproveStLogin_emiratesid_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ApproveStLogin_passportno_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ApproveStLogin_email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(137, 137, 137))
+                            .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                                .addComponent(ApproveStLogin_dob_day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(44, 44, 44)
+                                .addComponent(ApproveStLogin_Approve_btn)
+                                .addGap(74, 74, 74)
+                                .addComponent(ApproveStLogin_Update_btn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ApproveStLogin_Delete_btn))))
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ApproveStLogin_marital_label)
+                            .addComponent(ApproveStLogin_dob_label))
+                        .addGap(76, 76, 76)
+                        .addComponent(ApproveStLogin_marital_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(ApproveStLogin_dob_month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ApproveStLogin_dob_year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32))
+            .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(ApproveStLogin_Back_btn)
+                        .addGap(216, 216, 216)
+                        .addComponent(ApproveStLogin_label))
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(106, Short.MAX_VALUE))
+        );
+        ApproveNewStudentsPanelLayout.setVerticalGroup(
+            ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_Back_btn)
+                    .addComponent(ApproveStLogin_label))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addComponent(ApproveStLogin_firstname_label)
+                        .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(ApproveStLogin_lastname_label)
+                                .addGap(25, 25, 25)
+                                .addComponent(ApproveStLogin_gender_label))
+                            .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(ApproveStLogin_gender_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addComponent(ApproveStLogin_firstname_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ApproveStLogin_lastname_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_nationality_label)
+                    .addComponent(ApproveStLogin_nationality_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_emiratesId_label)
+                    .addComponent(ApproveStLogin_emiratesid_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ApproveStLogin_passportno_label)
+                    .addComponent(ApproveStLogin_passportno_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_emailid_label)
+                    .addComponent(ApproveStLogin_email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(ApproveStLogin_dob_label)
+                        .addGap(18, 18, 18)
+                        .addComponent(ApproveStLogin_marital_label))
+                    .addGroup(ApproveNewStudentsPanelLayout.createSequentialGroup()
+                        .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ApproveStLogin_dob_day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ApproveStLogin_dob_month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ApproveStLogin_dob_year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(ApproveStLogin_marital_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ApproveNewStudentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ApproveStLogin_Approve_btn)
+                    .addComponent(ApproveStLogin_Update_btn)
+                    .addComponent(ApproveStLogin_Delete_btn))
+                .addGap(17, 17, 17))
+        );
 
-        ApproveStLogin_Back_btn.setText("Back");
+        ApproveNewStudentsScrollPanel.setViewportView(ApproveNewStudentsPanel);
 
         javax.swing.GroupLayout ApproveNewStudentsLayout = new javax.swing.GroupLayout(ApproveNewStudents.getContentPane());
         ApproveNewStudents.getContentPane().setLayout(ApproveNewStudentsLayout);
         ApproveNewStudentsLayout.setHorizontalGroup(
             ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ApproveStLogin_firstname_label)
-                                    .addComponent(ApproveStLogin_gender_label)
-                                    .addComponent(ApproveStLogin_lastname_label)
-                                    .addComponent(ApproveStLogin_nationality_label)
-                                    .addComponent(ApproveStLogin_Approve_btn))
-                                .addGap(73, 73, 73)
-                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                                        .addComponent(ApproveStLogin_Update_btn)
-                                        .addGap(113, 113, 113)
-                                        .addComponent(ApproveStLogin_Delete_btn))
-                                    .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(ApproveStLogin_lastname_textfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                                        .addComponent(ApproveStLogin_firstname_textfield, javax.swing.GroupLayout.Alignment.LEADING))
-                                    .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(ApproveStLogin_nationality_combo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(ApproveStLogin_gender_combo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ApproveStLogin_marital_label)
-                                    .addComponent(ApproveStLogin_dob_label)
-                                    .addComponent(ApproveStLogin_emiratesId_label)
-                                    .addComponent(ApproveStLogin_passportno_label)
-                                    .addComponent(ApproveStLogin_emailid_label))
-                                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                                        .addGap(76, 76, 76)
-                                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(ApproveStLogin_dob_day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ApproveStLogin_marital_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(22, 22, 22)
-                                        .addComponent(ApproveStLogin_dob_month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(ApproveStLogin_dob_year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApproveNewStudentsLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(ApproveStLogin_passportno_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ApproveStLogin_emiratesid_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ApproveStLogin_email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(55, 55, 55))))))
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addComponent(ApproveStLogin_Back_btn)
-                        .addGap(131, 131, 131)
-                        .addComponent(ApproveStLogin_label)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addComponent(ApproveNewStudentsScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         ApproveNewStudentsLayout.setVerticalGroup(
             ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ApproveStLogin_label))
-                    .addComponent(ApproveStLogin_Back_btn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addComponent(ApproveStLogin_firstname_label)
-                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(ApproveStLogin_lastname_label)
-                                .addGap(25, 25, 25)
-                                .addComponent(ApproveStLogin_gender_label))
-                            .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                                .addGap(55, 55, 55)
-                                .addComponent(ApproveStLogin_gender_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addComponent(ApproveStLogin_firstname_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ApproveStLogin_lastname_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ApproveStLogin_nationality_label)
-                    .addComponent(ApproveStLogin_nationality_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(ApproveStLogin_dob_label)
-                        .addGap(18, 18, 18)
-                        .addComponent(ApproveStLogin_marital_label))
-                    .addGroup(ApproveNewStudentsLayout.createSequentialGroup()
-                        .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ApproveStLogin_dob_day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ApproveStLogin_dob_month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ApproveStLogin_dob_year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(ApproveStLogin_marital_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ApproveStLogin_emiratesId_label)
-                    .addComponent(ApproveStLogin_emiratesid_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ApproveStLogin_passportno_label)
-                    .addComponent(ApproveStLogin_passportno_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ApproveStLogin_emailid_label)
-                    .addComponent(ApproveStLogin_email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ApproveStLogin_Approve_btn)
-                    .addComponent(ApproveStLogin_Update_btn)
-                    .addComponent(ApproveStLogin_Delete_btn))
-                .addGap(23, 23, 23))
+            .addComponent(ApproveNewStudentsScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
         );
 
         desktopPane.add(ApproveNewStudents);
-        ApproveNewStudents.setBounds(0, 0, 521, 677);
+        ApproveNewStudents.setBounds(0, 0, 689, 529);
 
         AdminHomeFrame.setVisible(true);
 
@@ -925,6 +960,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         });
 
         AdminHome_Results_btn.setText("Results");
+        AdminHome_Results_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminHome_Results_btnActionPerformed(evt);
+            }
+        });
 
         AdminHome_ChangePwd_btn.setText("Change Password");
         AdminHome_ChangePwd_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -985,30 +1025,44 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentsSignUpFrame.setPreferredSize(new java.awt.Dimension(755, 800));
         StudentsSignUpFrame.setVisible(true);
 
-        StSignUp_label1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        StSignUp_label1.setText("Sign Up");
-
-        StSignUp_label2.setText("Its free and will always be.");
-
-        St_SignUp_firstName_label.setText("First Name");
+        St_SignUp_passportNo_label.setText("Passport No.");
 
         St_SignUp_lastName_label.setText("Last Name");
 
-        StSignUp_photo_label.setText("Picture");
+        St_SignUp_nationailty_label.setText("Nationality");
 
-        St_Signup_gender_label.setText("I am ");
+        St_SignUp_Email_label.setText("Email Id");
 
-        St_Signup_gender_combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female", "Others" }));
+        St_SignUp_Back_btn.setText("Back");
 
-        St_SignUp_DOB_label.setText("Birthday");
-
-        St_SignUp_DOB_Day_combo.setMaximumRowCount(32);
-        St_SignUp_DOB_Day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        St_SignUp_MaritalStatus_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Single", "Married", "UnMarried", "Widow", "Others", " " }));
 
         St_SignUp_DOB_Month_combo.setMaximumRowCount(12);
         St_SignUp_DOB_Month_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", " " }));
 
+        St_SignUp_DOB_Day_combo.setMaximumRowCount(32);
+        St_SignUp_DOB_Day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+
         St_SignUp_DOB_Year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year" }));
+
+        St_Signup_gender_label.setText("I am ");
+
+        St_SignUp_firstName_label.setText("First Name");
+
+        St_SignUp_MaritalStatus_label.setText("Marital Status");
+
+        StSignUp_photo_label.setText("Picture");
+
+        StSignUp_label2.setText("Its free and will always be.");
+
+        St_SignUp_DOB_label.setText("Birthday");
+
+        StSignUp_label1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        StSignUp_label1.setText("Sign Up");
+
+        St_SignUp_emiratesId_label.setText("Emirates Id");
+
+        St_Signup_gender_combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female", "Others" }));
 
         St_SignUp_Register_btn.setText("Register");
         St_SignUp_Register_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -1017,148 +1071,138 @@ public class Home_Belhasa extends javax.swing.JFrame {
             }
         });
 
-        St_SignUp_nationailty_label.setText("Nationality");
-
-        St_SignUp_passportNo_label.setText("Passport No.");
-
-        St_SignUp_emiratesId_label.setText("Emirates Id");
-
-        St_SignUp_MaritalStatus_label.setText("Marital Status");
+        St_SignUp_Age_Textfield.setEditable(false);
 
         St_SignUp_age_label.setText("Age");
 
-        St_SignUp_Age_Textfield.setEditable(false);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(St_SignUp_Back_btn)
+                        .addGap(118, 118, 118)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(StSignUp_label2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(StSignUp_label1)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(St_SignUp_firstName_label)
+                                    .addComponent(St_SignUp_lastName_label)
+                                    .addComponent(St_SignUp_passportNo_label)
+                                    .addComponent(St_SignUp_emiratesId_label)
+                                    .addComponent(St_SignUp_Email_label)
+                                    .addComponent(St_SignUp_nationailty_label)
+                                    .addComponent(St_SignUp_MaritalStatus_label)
+                                    .addComponent(St_Signup_gender_label)
+                                    .addComponent(St_SignUp_DOB_label)
+                                    .addComponent(St_SignUp_age_label))
+                                .addGap(133, 133, 133)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(St_SignUp_MaritalStatus_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(53, 53, 53)
+                                        .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                                        .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(St_SignUp_Register_btn))))
+                .addGap(44, 44, 44))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_Back_btn)
+                    .addComponent(StSignUp_label1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(StSignUp_label2)
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_firstName_label)
+                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_lastName_label)
+                            .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_passportNo_label)
+                            .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_emiratesId_label)
+                            .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_Email_label)
+                            .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(45, 45, 45)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_nationailty_label)
+                            .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_MaritalStatus_label)
+                    .addComponent(St_SignUp_MaritalStatus_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_Signup_gender_label)
+                    .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(St_SignUp_DOB_label)
+                    .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_age_label)
+                    .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(55, 55, 55)
+                .addComponent(St_SignUp_Register_btn)
+                .addGap(88, 88, 88))
+        );
 
-        St_SignUp_Email_label.setText("Email Id");
-
-        St_SignUp_Back_btn.setText("Back");
+        jScrollPane5.setViewportView(jPanel1);
 
         javax.swing.GroupLayout StudentsSignUpFrameLayout = new javax.swing.GroupLayout(StudentsSignUpFrame.getContentPane());
         StudentsSignUpFrame.getContentPane().setLayout(StudentsSignUpFrameLayout);
         StudentsSignUpFrameLayout.setHorizontalGroup(
             StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(St_SignUp_firstName_label)
-                            .addComponent(St_SignUp_lastName_label))
-                        .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                            .addComponent(St_SignUp_nationailty_label)
-                            .addGap(1, 1, 1)))
-                    .addComponent(St_SignUp_passportNo_label)
-                    .addComponent(St_SignUp_MaritalStatus_label)
-                    .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(St_Signup_gender_label)
-                            .addComponent(St_SignUp_Email_label)
-                            .addComponent(St_SignUp_DOB_label)
-                            .addComponent(St_SignUp_age_label)))
-                    .addComponent(St_SignUp_emiratesId_label))
-                .addGap(241, 241, 241)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                                .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                                .addGap(46, 46, 46))
-                            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(St_SignUp_Email_Textfield)
-                                    .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(St_SignUp_nationailty_combo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(St_SignUp_firstName_Textfield)
-                                    .addComponent(St_SignUp_lastName_Textfield)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, StudentsSignUpFrameLayout.createSequentialGroup()
-                                        .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                                        .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))
-                    .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                        .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(St_SignUp_Back_btn)
-                .addGap(146, 146, 146)
-                .addComponent(StSignUp_label1)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentsSignUpFrameLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(StSignUp_label2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(191, 191, 191))
-            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addGap(194, 194, 194)
-                .addComponent(St_SignUp_Register_btn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE)
         );
         StudentsSignUpFrameLayout.setVerticalGroup(
             StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(StSignUp_label1)
-                    .addComponent(St_SignUp_Back_btn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(StSignUp_label2)
-                .addGap(27, 27, 27)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_firstName_label)
-                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_lastName_label)
-                            .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(23, 23, 23)
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_nationailty_label)
-                            .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_passportNo_label)
-                            .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(24, 24, 24)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(St_SignUp_emiratesId_label)
-                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(St_SignUp_MaritalStatus_label)
-                    .addComponent(St_SignUp_MaritalStatus_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(St_SignUp_Email_label)
-                    .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(St_Signup_gender_label)
-                    .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_DOB_Day_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(115, 115, 115)
-                        .addComponent(St_SignUp_Register_btn))
-                    .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                        .addComponent(St_SignUp_DOB_label)
-                        .addGap(44, 44, 44)
-                        .addGroup(StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_age_label)
-                            .addComponent(St_SignUp_Age_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         desktopPane.add(StudentsSignUpFrame);
@@ -1396,6 +1440,139 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.add(ChangePasswordFrame);
         ChangePasswordFrame.setBounds(0, 0, 500, 300);
 
+        ResultFrame.setPreferredSize(new java.awt.Dimension(1000, 400));
+        ResultFrame.setVisible(true);
+
+        Result_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+            }
+        ));
+        jScrollPane14.setViewportView(Result_Table);
+
+        Results_label.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Results_label.setText("RESULTS");
+
+        Results_Home_Btn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Results_Home_Btn.setText("Home");
+        Results_Home_Btn.setPreferredSize(new java.awt.Dimension(70, 30));
+        Results_Home_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Results_Home_BtnActionPerformed(evt);
+            }
+        });
+        Results_Home_Btn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Results_Home_BtnKeyReleased(evt);
+            }
+        });
+
+        Results_StudentName_Lbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Results_StudentName_Lbl.setText("STUDENT NAME");
+
+        Results_Subject_Lbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Results_Subject_Lbl.setText("DATE");
+
+        jComboBox2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox2ItemStateChanged(evt);
+            }
+        });
+
+        Results_Search_Btn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Results_Search_Btn.setText("Search");
+        Results_Search_Btn.setPreferredSize(new java.awt.Dimension(75, 30));
+        Results_Search_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Results_Search_BtnActionPerformed(evt);
+            }
+        });
+        Results_Search_Btn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Results_Search_BtnKeyReleased(evt);
+            }
+        });
+
+        Results_MAIT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Results_MAITMouseClicked(evt);
+            }
+        });
+
+        Results_Report_Btn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        Results_Report_Btn.setText("Export Report");
+        Results_Report_Btn.setPreferredSize(new java.awt.Dimension(103, 30));
+        Results_Report_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Results_Report_BtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ResultFrameLayout = new javax.swing.GroupLayout(ResultFrame.getContentPane());
+        ResultFrame.getContentPane().setLayout(ResultFrameLayout);
+        ResultFrameLayout.setHorizontalGroup(
+            ResultFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResultFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ResultFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ResultFrameLayout.createSequentialGroup()
+                        .addComponent(Results_Home_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(369, 369, 369)
+                        .addComponent(Results_label)
+                        .addGap(422, 422, 422))
+                    .addComponent(Results_MAIT)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ResultFrameLayout.createSequentialGroup()
+                        .addComponent(Results_StudentName_Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(128, 128, 128)
+                        .addComponent(Results_Subject_Lbl)
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(180, 180, 180)
+                        .addComponent(Results_Search_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Results_Report_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        ResultFrameLayout.setVerticalGroup(
+            ResultFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResultFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ResultFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Results_Home_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Results_label))
+                .addGap(33, 33, 33)
+                .addGroup(ResultFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Results_StudentName_Lbl)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Results_Subject_Lbl)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Results_Search_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Results_Report_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(Results_MAIT)
+                .addContainerGap())
+        );
+
+        desktopPane.add(ResultFrame);
+        ResultFrame.setBounds(0, 0, 1000, 400);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1428,6 +1605,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentsSignUpFrame.setVisible(false);
         ConfirmNotificationModeFrame.setVisible(false);
         AddLessonFrame.setVisible(false);
+        ResultFrame.setVisible(false);
     }
    private void countryList()
    {
@@ -1482,6 +1660,9 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private void AdminHome_NewSt_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_NewSt_btnActionPerformed
          closeAllFrames();
         ApproveNewStudents.setVisible(true);
+//        JScrollPane ApproveNewStudentsPane=new JScrollPane(ApproveNewStudentsPanel);
+//        ApproveNewStudentsPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+//        ApproveNewStudentsPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         countryList();
     }//GEN-LAST:event_AdminHome_NewSt_btnActionPerformed
 
@@ -1636,6 +1817,69 @@ public class Home_Belhasa extends javax.swing.JFrame {
         closeAllFrames();
         InstantRegisterFrame.setVisible(true);
     }//GEN-LAST:event_Instant_RadioButtonMouseClicked1
+
+    private void AdminHome_Results_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_Results_btnActionPerformed
+        closeAllFrames();
+        ResultFrame.setVisible(true);
+    }//GEN-LAST:event_AdminHome_Results_btnActionPerformed
+
+    private void Results_Home_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Results_Home_BtnActionPerformed
+        closeAllFrames();
+        AdminHomeFrame.setVisible(true);
+        AdminHomeFrame.setLocation(300, 50);
+        AdminHomeFrame.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+    }//GEN-LAST:event_Results_Home_BtnActionPerformed
+
+    private void Results_Home_BtnKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Results_Home_BtnKeyReleased
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            closeAllFrames();
+            AdminHomeFrame.setVisible(true);
+            AdminHomeFrame.setLocation(300, 50);
+            AdminHomeFrame.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+        }
+    }//GEN-LAST:event_Results_Home_BtnKeyReleased
+
+    private void jComboBox2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox2ItemStateChanged
+
+    }//GEN-LAST:event_jComboBox2ItemStateChanged
+
+    private void Results_Search_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Results_Search_BtnActionPerformed
+       // Populate_Results();
+    }//GEN-LAST:event_Results_Search_BtnActionPerformed
+
+    private void Results_Search_BtnKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Results_Search_BtnKeyReleased
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+           // Populate_Results();
+        }
+    }//GEN-LAST:event_Results_Search_BtnKeyReleased
+
+    private void Results_MAITMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Results_MAITMouseClicked
+        Results_MAIT.setCursor(new Cursor(Cursor.HAND_CURSOR));
+       
+    }//GEN-LAST:event_Results_MAITMouseClicked
+
+    private void Results_Report_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Results_Report_BtnActionPerformed
+        //Path to your .jasper file in your package
+        String reportName = "./reports/Results.jasper";
+
+        //Get a stream to read the file
+        InputStream is = this.getClass().getClassLoader().getResourceAsStream(reportName);
+
+//        JasperPrint jp;
+//        try {
+//            jp = JasperFillManager.fillReport(is, null, con);
+//            JRViewer jv = new JRViewer(jp);
+//            JFrame ReportFrame = new JFrame();
+//
+//            ReportFrame.getContentPane().add(jv);
+//            ReportFrame.validate();
+//            ReportFrame.setVisible(true);
+//            ReportFrame.setSize(new Dimension(800,600));
+//            ReportFrame.setLocation(300,100);
+//        } catch (JRException ex) {
+//            Logger.getLogger(List.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    }//GEN-LAST:event_Results_Report_BtnActionPerformed
 private void Register_Students_Fun() {
       
 //        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
@@ -1680,7 +1924,7 @@ private void Register_Students_Fun() {
                     System.out.println("Admin mail...6");
                     //pst.setString(6, St_SignUp_Age_Textfield.getText());
                     pst.setString(6, "25");
-                    pst.setString(7, St_SignUp_MaritalStatus_Textfield.getText());
+                   // pst.setString(7, St_SignUp_MaritalStatus_Textfield.getText());
                     System.out.println("666......");
                     pst.setString(8, St_SignUp_EmiratesId_Textfield.getText());
                     pst.setString(9, St_SignUp_PassportNo_Textfield.getText());
@@ -1693,7 +1937,7 @@ private void Register_Students_Fun() {
                     St_SignUp_lastName_Textfield.setText("");
                     St_SignUp_nationailty_combo.setSelectedIndex(0);
                     St_SignUp_Age_Textfield.setText("");
-                    St_SignUp_MaritalStatus_Textfield.setText("");
+                    //St_SignUp_MaritalStatus_Textfield.setText("");
                     St_SignUp_EmiratesId_Textfield.setText("");
                     St_SignUp_PassportNo_Textfield.setText("");
                     St_SignUp_Email_Textfield.setText("");
@@ -1847,6 +2091,8 @@ private void Register_Students_Fun() {
     private javax.swing.JLabel AdminLogin_username_label;
     private javax.swing.JTextField AdminLogin_username_textfield;
     private javax.swing.JInternalFrame ApproveNewStudents;
+    private javax.swing.JPanel ApproveNewStudentsPanel;
+    private javax.swing.JScrollPane ApproveNewStudentsScrollPanel;
     private javax.swing.JButton ApproveStLogin_Approve_btn;
     private javax.swing.JButton ApproveStLogin_Back_btn;
     private javax.swing.JButton ApproveStLogin_Delete_btn;
@@ -1923,6 +2169,15 @@ private void Register_Students_Fun() {
     private javax.swing.JTextField Qstn_Textfield;
     private javax.swing.JButton Qstn_Update_Btn;
     private javax.swing.JInternalFrame QuestionsFrame;
+    private javax.swing.JInternalFrame ResultFrame;
+    private javax.swing.JTable Result_Table;
+    private javax.swing.JButton Results_Home_Btn;
+    private javax.swing.JLabel Results_MAIT;
+    private javax.swing.JButton Results_Report_Btn;
+    private javax.swing.JButton Results_Search_Btn;
+    private javax.swing.JLabel Results_StudentName_Lbl;
+    private javax.swing.JLabel Results_Subject_Lbl;
+    private javax.swing.JLabel Results_label;
     private javax.swing.JButton StLogin_Back_Btn;
     private javax.swing.JButton StLogin_SignIn_btn;
     private javax.swing.JButton StLogin_SignUp_btn;
@@ -1943,7 +2198,7 @@ private void Register_Students_Fun() {
     private javax.swing.JTextField St_SignUp_Email_Textfield;
     private javax.swing.JLabel St_SignUp_Email_label;
     private javax.swing.JTextField St_SignUp_EmiratesId_Textfield;
-    private javax.swing.JTextField St_SignUp_MaritalStatus_Textfield;
+    private javax.swing.JComboBox<String> St_SignUp_MaritalStatus_combo;
     private javax.swing.JLabel St_SignUp_MaritalStatus_label;
     private javax.swing.JTextField St_SignUp_PassportNo_Textfield;
     private javax.swing.JButton St_SignUp_Register_btn;
@@ -1966,13 +2221,18 @@ private void Register_Students_Fun() {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JDesktopPane desktopPane;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JRadioButton language_arabic;
     private javax.swing.JRadioButton language_english;
     private javax.swing.JRadioButton language_urdu;
