@@ -2,7 +2,6 @@ package belhasa;
 
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -11,12 +10,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Calendar;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JFrame;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -35,11 +35,14 @@ public class Home_Belhasa extends javax.swing.JFrame {
     ResultSet rs, rs1, rs2;
     PreparedStatement pst, pst1, pst2;
     String adminUser="";
+    JRadioButton firstoption,secondoption,thirdoption;
+    
     public Home_Belhasa() {
         initComponents();
         con = mysqlconnect.ConnectDb();
         closeAllFrames();
         MainLoginFrame.setVisible(true);
+        //StudentsHomeFrame.setVisible(true);
     }
 
     /**
@@ -219,6 +222,13 @@ public class Home_Belhasa extends javax.swing.JFrame {
         Results_Search_Btn = new javax.swing.JButton();
         Results_MAIT = new javax.swing.JLabel();
         Results_Report_Btn = new javax.swing.JButton();
+        StudentsHomeFrame = new javax.swing.JInternalFrame();
+        StHome_Lessons_btn = new javax.swing.JButton();
+        StHome_label = new javax.swing.JLabel();
+        StHome_Results_btn = new javax.swing.JButton();
+        StHome_Logout_btn = new javax.swing.JButton();
+        StudentsShortQuestonFrame = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -944,11 +954,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
         ApproveNewStudentsLayout.setVerticalGroup(
             ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ApproveNewStudentsScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
+            .addComponent(ApproveNewStudentsScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
         );
 
         desktopPane.add(ApproveNewStudents);
-        ApproveNewStudents.setBounds(0, 0, 689, 529);
+        ApproveNewStudents.setBounds(0, 0, 689, 537);
 
         AdminHomeFrame.setVisible(true);
 
@@ -1573,6 +1583,80 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.add(ResultFrame);
         ResultFrame.setBounds(0, 0, 1000, 400);
 
+        StudentsHomeFrame.setVisible(true);
+
+        StHome_Lessons_btn.setText("Test");
+        StHome_Lessons_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StHome_Lessons_btnActionPerformed(evt);
+            }
+        });
+
+        StHome_label.setText("Home ");
+
+        StHome_Results_btn.setText("Results");
+
+        StHome_Logout_btn.setText("Logout");
+
+        javax.swing.GroupLayout StudentsHomeFrameLayout = new javax.swing.GroupLayout(StudentsHomeFrame.getContentPane());
+        StudentsHomeFrame.getContentPane().setLayout(StudentsHomeFrameLayout);
+        StudentsHomeFrameLayout.setHorizontalGroup(
+            StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                .addGroup(StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                        .addGap(238, 238, 238)
+                        .addComponent(StHome_label))
+                    .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(StHome_Lessons_btn)
+                        .addGap(131, 131, 131)
+                        .addGroup(StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(StHome_Logout_btn)
+                            .addComponent(StHome_Results_btn))))
+                .addContainerGap(225, Short.MAX_VALUE))
+        );
+        StudentsHomeFrameLayout.setVerticalGroup(
+            StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(StHome_label)
+                .addGap(46, 46, 46)
+                .addGroup(StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(StHome_Lessons_btn)
+                    .addComponent(StHome_Results_btn))
+                .addGap(51, 51, 51)
+                .addComponent(StHome_Logout_btn)
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(StudentsHomeFrame);
+        StudentsHomeFrame.setBounds(0, 0, 586, 380);
+
+        StudentsShortQuestonFrame.setVisible(true);
+
+        jLabel1.setText("Test");
+
+        javax.swing.GroupLayout StudentsShortQuestonFrameLayout = new javax.swing.GroupLayout(StudentsShortQuestonFrame.getContentPane());
+        StudentsShortQuestonFrame.getContentPane().setLayout(StudentsShortQuestonFrameLayout);
+        StudentsShortQuestonFrameLayout.setHorizontalGroup(
+            StudentsShortQuestonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsShortQuestonFrameLayout.createSequentialGroup()
+                .addGap(256, 256, 256)
+                .addComponent(jLabel1)
+                .addContainerGap(329, Short.MAX_VALUE))
+        );
+        StudentsShortQuestonFrameLayout.setVerticalGroup(
+            StudentsShortQuestonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsShortQuestonFrameLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addContainerGap(400, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(StudentsShortQuestonFrame);
+        StudentsShortQuestonFrame.setBounds(0, 0, 622, 472);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1606,6 +1690,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         ConfirmNotificationModeFrame.setVisible(false);
         AddLessonFrame.setVisible(false);
         ResultFrame.setVisible(false);
+        StudentsShortQuestonFrame.setVisible(false);
     }
    private void countryList()
    {
@@ -1880,7 +1965,49 @@ public class Home_Belhasa extends javax.swing.JFrame {
 //            Logger.getLogger(List.class.getName()).log(Level.SEVERE, null, ex);
 //        }
     }//GEN-LAST:event_Results_Report_BtnActionPerformed
-private void Register_Students_Fun() {
+
+    private void StHome_Lessons_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StHome_Lessons_btnActionPerformed
+        closeAllFrames();
+        StudentsShortQuestonFrame.setVisible(true);
+        Populate_Questions();
+    }//GEN-LAST:event_StHome_Lessons_btnActionPerformed
+
+     private void Populate_Questions() {
+        try {
+           int i=1;
+            pst = con.prepareStatement("select * from questionstable");
+            rs = pst.executeQuery();
+           while(rs.next())
+           {
+               JPanel questionPanel=new JPanel();
+               JLabel questionNo=new JLabel();
+               questionNo.setText("Question "+i);
+               JLabel questionText=new JLabel();
+               questionText.setText(rs.getString("questions"));
+               ButtonGroup group=new ButtonGroup();
+               firstoption=new JRadioButton();
+               secondoption=new JRadioButton();
+               thirdoption=new JRadioButton();
+                group.add(firstoption);
+                group.add(secondoption);
+                group.add(thirdoption);
+               firstoption.setText(rs.getString("option1"));
+               secondoption.setText(rs.getString("option2"));
+               thirdoption.setText(rs.getString("option3"));
+               questionPanel.add(questionNo);
+               questionPanel.add(questionText);
+               questionPanel.add(firstoption);
+               questionPanel.add(secondoption);
+               questionPanel.add(thirdoption);
+           }
+        } catch (SQLException e) {
+            Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, e);
+        }
+        
+    }
+    
+    
+    private void Register_Students_Fun() {
       
 //        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
 //            if (userCheck(adusr_email_textfield.getText())) {
@@ -2178,6 +2305,10 @@ private void Register_Students_Fun() {
     private javax.swing.JLabel Results_StudentName_Lbl;
     private javax.swing.JLabel Results_Subject_Lbl;
     private javax.swing.JLabel Results_label;
+    private javax.swing.JButton StHome_Lessons_btn;
+    private javax.swing.JButton StHome_Logout_btn;
+    private javax.swing.JButton StHome_Results_btn;
+    private javax.swing.JLabel StHome_label;
     private javax.swing.JButton StLogin_Back_Btn;
     private javax.swing.JButton StLogin_SignIn_btn;
     private javax.swing.JButton StLogin_SignUp_btn;
@@ -2215,6 +2346,8 @@ private void Register_Students_Fun() {
     private javax.swing.JLabel St_Signup_gender_label;
     private javax.swing.JTable St_Table;
     private javax.swing.JInternalFrame StudentLoginFrame;
+    private javax.swing.JInternalFrame StudentsHomeFrame;
+    private javax.swing.JInternalFrame StudentsShortQuestonFrame;
     private javax.swing.JInternalFrame StudentsSignUpFrame;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
@@ -2223,6 +2356,7 @@ private void Register_Students_Fun() {
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
