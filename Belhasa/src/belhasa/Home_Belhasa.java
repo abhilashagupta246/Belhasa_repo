@@ -5,13 +5,16 @@ import java.awt.Cursor;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
+//import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -39,6 +42,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
     String studentImage = null;
     String studentImageUrl = null;
     int pictureId = 0;
+     File file ;
+      BufferedImage bi;
     public Home_Belhasa() {
         initComponents();
         con = mysqlconnect.ConnectDb();
@@ -1094,6 +1099,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         St_SignUp_DOB_Day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
         St_SignUp_DOB_Year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year" }));
+        St_SignUp_DOB_Year_combo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                St_SignUp_DOB_Year_comboItemStateChanged(evt);
+            }
+        });
 
         St_Signup_gender_label.setText("I am ");
 
@@ -1176,42 +1186,41 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                         .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(28, 28, 28)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(St_SignUp_Upload_Photo_Btn)))))
                             .addComponent(St_SignUp_Register_btn))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(St_SignUp_Upload_Photo_Btn)))
-                .addGap(286, 286, 286))
+                .addContainerGap(397, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(St_SignUp_Back_btn)
-                                    .addComponent(StSignUp_label1))
-                                .addGap(43, 43, 43)
-                                .addComponent(StSignUp_label2))
-                            .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_firstName_label)
-                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(St_SignUp_Upload_Photo_Btn)))
-                .addGap(16, 16, 16)
+                            .addComponent(St_SignUp_Back_btn)
+                            .addComponent(StSignUp_label1))
+                        .addGap(43, 43, 43)
+                        .addComponent(StSignUp_label2))
+                    .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(St_SignUp_lastName_label)
-                    .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(St_SignUp_firstName_label)
+                    .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(St_SignUp_lastName_label)
+                            .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(St_SignUp_Upload_Photo_Btn)))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(St_SignUp_passportNo_label)
@@ -1262,8 +1271,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
         StudentsSignUpFrameLayout.setVerticalGroup(
             StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 714, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 56, Short.MAX_VALUE))
         );
 
         desktopPane.add(StudentsSignUpFrame);
@@ -1952,7 +1961,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
 //        }
     }//GEN-LAST:event_Results_Report_BtnActionPerformed
 private void AddStudentsPicture_Upload_Btn_fun() {
-       String sql = "Select id from lesson_image order by id desc";
+      // String sql = "Select studentid from students order by studentid desc";
 
         JFileChooser filechooser = new JFileChooser();
         filechooser.setDialogTitle("Choose the File to upload");
@@ -1960,24 +1969,14 @@ private void AddStudentsPicture_Upload_Btn_fun() {
 
         int returnval = filechooser.showOpenDialog(this);
         if (returnval == JFileChooser.APPROVE_OPTION) {
-            File file = filechooser.getSelectedFile();
-            BufferedImage bi;
+            file = filechooser.getSelectedFile();
+           
             try {
 
                 bi = ImageIO.read(file);
                 bi = scale(bi, 600, 400);
                 StSignUp_photo_label.setIcon(new ImageIcon(bi));
-                studentImage = file.getName();
-                if (!studentImage.endsWith("jpg")) {
-                    studentImage = studentImage.substring(0, studentImage.lastIndexOf(".") + 1).concat("jpg");
-                }
-                pst = con.prepareStatement(sql);
-                rs = pst.executeQuery(sql);
-                if (rs.next()) {
-                    pictureId++;
-                }
-                File f = new File("c:\\wamp\\www\\images\\" + "_" + pictureId + "_" + studentImage);
-                ImageIO.write(bi, "jpg", f);
+                
 
             } catch (Exception e) {
                 Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, e);
@@ -2055,7 +2054,38 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
        closeAllFrames();
         AdminHomeFrame.setVisible(true);
     }//GEN-LAST:event_LicenseCategory_Back_BtnActionPerformed
-private void Register_Students_Fun() {
+
+    private void St_SignUp_DOB_Year_comboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_St_SignUp_DOB_Year_comboItemStateChanged
+        int dobYear=Integer.parseInt(St_SignUp_DOB_Year_combo.getSelectedItem().toString());
+        int dobmonth=Integer.parseInt(St_SignUp_DOB_Month_combo.getSelectedItem().toString());
+        int dobDay=Integer.parseInt(St_SignUp_DOB_Day_combo.getSelectedItem().toString());
+      //  System.out.println(dobYear);
+      int age=getAge(dobYear,dobmonth,dobDay);
+      System.out.println("...."+age);
+      String newAge= "" + age;
+     St_SignUp_Age_Textfield.setText(newAge);   
+        
+    }//GEN-LAST:event_St_SignUp_DOB_Year_comboItemStateChanged
+public int getAge(int year, int month, int day) {
+    Date now = new Date();
+    System.out.println(now);
+    int nowMonth = now.getMonth()+1;
+    int nowYear = now.getYear()+1900;
+   int result = nowYear - year;
+
+    if (month > nowMonth) {
+        result--;
+    }
+    else if (month == nowMonth) {
+        int nowDay = now.getDate();
+
+        if (day > nowDay) {
+            result--;
+        }
+    }
+   return result;
+}
+    private void Register_Students_Fun() {
       
 //        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
 //            if (userCheck(adusr_email_textfield.getText())) {
@@ -2099,13 +2129,30 @@ private void Register_Students_Fun() {
                     System.out.println("Admin mail...6");
                     //pst.setString(6, St_SignUp_Age_Textfield.getText());
                     pst.setString(6, "25");
-                   // pst.setString(7, St_SignUp_MaritalStatus_Textfield.getText());
+                    pst.setString(7, St_SignUp_MaritalStatus_combo.getSelectedItem().toString());
                     System.out.println("666......");
                     pst.setString(8, St_SignUp_EmiratesId_Textfield.getText());
                     pst.setString(9, St_SignUp_PassportNo_Textfield.getText());
                     pst.setString(10, St_SignUp_Email_Textfield.getText());
-                    pst.setString(11, "uih");
+                  
+                    studentImage = file.getName();
+                    System.out.println(studentImage);
+                if (!studentImage.endsWith("jpg")) {
+                    studentImage = studentImage.substring(0, studentImage.lastIndexOf(".") + 1).concat("jpg");
+                }
+               
+                File f = new File("c:\\wamp\\www\\images\\" + "_" + St_SignUp_EmiratesId_Textfield.getText() + "_" + studentImage);
+                
+                ImageIO.write(bi, "jpg", f);
+                     if (studentImage == null) {
+            JOptionPane.showMessageDialog(null, "No picture is selected", "Alert", JOptionPane.ERROR_MESSAGE);
+        } else {
+            studentImageUrl = St_SignUp_EmiratesId_Textfield.getText() + "_" + studentImage;
+           
+             pst.setString(11, studentImageUrl);
                     System.out.println("66666...........");
+                     }
+                   
                     pst.executeUpdate();
                     System.out.println("Admin mail...7");
                     St_SignUp_firstName_Textfield.setText("");
@@ -2117,11 +2164,13 @@ private void Register_Students_Fun() {
                     St_SignUp_PassportNo_Textfield.setText("");
                     St_SignUp_Email_Textfield.setText("");
                     //St_Signup_gender_combobox.setText("");
-                    
+                     StSignUp_photo_label.setIcon(null);
                     //updateUsersIndex();
                 } catch (SQLException ex) {
                     Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } catch (IOException ex) {
+             Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, ex);
+         }
 //            }
 //        } else {
 //            JOptionPane.showMessageDialog(null, "Please enter user information correctly", "Alert", JOptionPane.ERROR_MESSAGE);
