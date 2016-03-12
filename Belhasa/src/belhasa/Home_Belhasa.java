@@ -18,9 +18,13 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -42,6 +46,8 @@ public class Home_Belhasa extends javax.swing.JFrame {
     String studentImage = null;
     String studentImageUrl = null;
     int pictureId = 0;
+    JRadioButton firstoption,secondoption,thirdoption;
+    
      File file ;
       BufferedImage bi;
     public Home_Belhasa() {
@@ -49,6 +55,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         con = mysqlconnect.ConnectDb();
         closeAllFrames();
         MainLoginFrame.setVisible(true);
+        //StudentsHomeFrame.setVisible(true);
     }
 
     /**
@@ -229,6 +236,13 @@ public class Home_Belhasa extends javax.swing.JFrame {
         Results_Search_Btn = new javax.swing.JButton();
         Results_MAIT = new javax.swing.JLabel();
         Results_Report_Btn = new javax.swing.JButton();
+        StudentsHomeFrame = new javax.swing.JInternalFrame();
+        StHome_Lessons_btn = new javax.swing.JButton();
+        StHome_label = new javax.swing.JLabel();
+        StHome_Results_btn = new javax.swing.JButton();
+        StHome_Logout_btn = new javax.swing.JButton();
+        StudentsShortQuestonFrame = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -710,7 +724,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         StLogin_label.setText("Students Login ");
 
-        StLogin_StId_label.setText("Student Id");
+        StLogin_StId_label.setText("Registration Number");
 
         StLogin_StPwd_label.setText("Password");
 
@@ -746,7 +760,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(StLogin_StId_label)
                             .addComponent(StLogin_StPwd_label))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                         .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(StLogin_StPwd_textfield)
                             .addComponent(StLogin_StId_textfieldl, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -994,11 +1008,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
         ApproveNewStudentsLayout.setVerticalGroup(
             ApproveNewStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ApproveNewStudentsScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
+            .addComponent(ApproveNewStudentsScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
         );
 
         desktopPane.add(ApproveNewStudents);
-        ApproveNewStudents.setBounds(0, 0, 689, 530);
+        ApproveNewStudents.setBounds(0, 0, 689, 538);
 
         AdminHomeFrame.setVisible(true);
 
@@ -1098,7 +1112,6 @@ public class Home_Belhasa extends javax.swing.JFrame {
         St_SignUp_DOB_Day_combo.setMaximumRowCount(32);
         St_SignUp_DOB_Day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
-        St_SignUp_DOB_Year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year" }));
         St_SignUp_DOB_Year_combo.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 St_SignUp_DOB_Year_comboItemStateChanged(evt);
@@ -1270,9 +1283,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
         StudentsSignUpFrameLayout.setVerticalGroup(
             StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 714, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 56, Short.MAX_VALUE))
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         desktopPane.add(StudentsSignUpFrame);
@@ -1653,6 +1664,80 @@ public class Home_Belhasa extends javax.swing.JFrame {
         desktopPane.add(ResultFrame);
         ResultFrame.setBounds(0, 0, 1000, 400);
 
+        StudentsHomeFrame.setVisible(true);
+
+        StHome_Lessons_btn.setText("Test");
+        StHome_Lessons_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StHome_Lessons_btnActionPerformed(evt);
+            }
+        });
+
+        StHome_label.setText("Home ");
+
+        StHome_Results_btn.setText("Results");
+
+        StHome_Logout_btn.setText("Logout");
+
+        javax.swing.GroupLayout StudentsHomeFrameLayout = new javax.swing.GroupLayout(StudentsHomeFrame.getContentPane());
+        StudentsHomeFrame.getContentPane().setLayout(StudentsHomeFrameLayout);
+        StudentsHomeFrameLayout.setHorizontalGroup(
+            StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                .addGroup(StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                        .addGap(238, 238, 238)
+                        .addComponent(StHome_label))
+                    .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(StHome_Lessons_btn)
+                        .addGap(131, 131, 131)
+                        .addGroup(StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(StHome_Logout_btn)
+                            .addComponent(StHome_Results_btn))))
+                .addContainerGap(225, Short.MAX_VALUE))
+        );
+        StudentsHomeFrameLayout.setVerticalGroup(
+            StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsHomeFrameLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(StHome_label)
+                .addGap(46, 46, 46)
+                .addGroup(StudentsHomeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(StHome_Lessons_btn)
+                    .addComponent(StHome_Results_btn))
+                .addGap(51, 51, 51)
+                .addComponent(StHome_Logout_btn)
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(StudentsHomeFrame);
+        StudentsHomeFrame.setBounds(0, 0, 586, 381);
+
+        StudentsShortQuestonFrame.setVisible(true);
+
+        jLabel1.setText("Test");
+
+        javax.swing.GroupLayout StudentsShortQuestonFrameLayout = new javax.swing.GroupLayout(StudentsShortQuestonFrame.getContentPane());
+        StudentsShortQuestonFrame.getContentPane().setLayout(StudentsShortQuestonFrameLayout);
+        StudentsShortQuestonFrameLayout.setHorizontalGroup(
+            StudentsShortQuestonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsShortQuestonFrameLayout.createSequentialGroup()
+                .addGap(256, 256, 256)
+                .addComponent(jLabel1)
+                .addContainerGap(329, Short.MAX_VALUE))
+        );
+        StudentsShortQuestonFrameLayout.setVerticalGroup(
+            StudentsShortQuestonFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentsShortQuestonFrameLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addContainerGap(400, Short.MAX_VALUE))
+        );
+
+        desktopPane.add(StudentsShortQuestonFrame);
+        StudentsShortQuestonFrame.setBounds(0, 0, 622, 473);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1686,11 +1771,15 @@ public class Home_Belhasa extends javax.swing.JFrame {
         ConfirmNotificationModeFrame.setVisible(false);
         AddLessonFrame.setVisible(false);
         ResultFrame.setVisible(false);
+        StudentsShortQuestonFrame.setVisible(false);
+        StudentsHomeFrame.setVisible(false);
     }
    private void countryList()
    {
        St_SignUp_nationailty_combo.removeAllItems();
        ApproveStLogin_nationality_combo.removeAllItems();
+       St_SignUp_DOB_Year_combo.removeAllItems();
+       ApproveStLogin_dob_year_combo.removeAllItems();
        St_SignUp_DOB_Year_combo.addItem("Year");
        ApproveStLogin_dob_year_combo.addItem("Year");
        String countrylist="select * from countrylist";
@@ -1849,7 +1938,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     }//GEN-LAST:event_Chg_Pwd_MAITMouseClicked
 
     private void StLogin_SignIn_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StLogin_SignIn_btnActionPerformed
-        // TODO add your handling code here:
+        studentsSignIn();
     }//GEN-LAST:event_StLogin_SignIn_btnActionPerformed
 
     private void AdminHome_ChangePwd_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_ChangePwd_btnActionPerformed
@@ -1866,6 +1955,24 @@ public class Home_Belhasa extends javax.swing.JFrame {
         InstantRegisterFrame.setVisible(true);
     }//GEN-LAST:event_Instant_RadioButtonMouseClicked
 
+    private void studentsSignIn()
+    {
+        try{
+        String studentslogin="select * from students where registrationno='"+StLogin_StId_textfieldl.getText()+"'";
+        pst=con.prepareStatement(studentslogin);
+        rs = pst.executeQuery();
+        while(rs.next())
+        {
+          closeAllFrames();
+          StudentsHomeFrame.setVisible(true);
+        }
+        }
+       
+       catch (SQLException ex) {
+                    Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }  
+    
     private void InstantRegister_activate_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstantRegister_activate_btnActionPerformed
        try{
         String adminPasswordCheck="select username ,password from adminlogin";
@@ -1938,6 +2045,48 @@ public class Home_Belhasa extends javax.swing.JFrame {
        
     }//GEN-LAST:event_Results_MAITMouseClicked
 
+    private String populate_monthList(String mnth)
+    {
+        String mnthno="";
+        if (mnth.equals("January")) {
+            mnthno = "01";
+        }
+        if (mnth.equals("Febuary")) {
+            mnthno = "02";
+        }
+        if (mnth.equals("March")) {
+            mnthno = "03";
+        }
+        if (mnth.equals("April")) {
+            mnthno = "04";
+        }
+        if (mnth.equals("May")) {
+            mnthno = "05";
+        }
+        if (mnth.equals("June")) {
+            mnthno = "06";
+        }
+        if (mnth.equals("July")) {
+            mnthno = "07";
+        }
+        if (mnth.equals("August")) {
+            mnthno = "08";
+        }
+        if (mnth.equals("September")) {
+            mnthno = "09";
+        }
+        if (mnth.equals("October")) {
+            mnthno = "10";
+        }
+        if (mnth.equals("November")) {
+            mnthno = "11";
+        }
+        if (mnth.equals("December")) {
+            mnthno = "12";
+        }
+         return   mnthno; 
+    }
+    
     private void Results_Report_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Results_Report_BtnActionPerformed
         //Path to your .jasper file in your package
         String reportName = "./reports/Results.jasper";
@@ -2056,14 +2205,60 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
     }//GEN-LAST:event_LicenseCategory_Back_BtnActionPerformed
 
     private void St_SignUp_DOB_Year_comboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_St_SignUp_DOB_Year_comboItemStateChanged
-        int dobYear=Integer.parseInt(St_SignUp_DOB_Year_combo.getSelectedItem().toString());
-        int dobmonth=Integer.parseInt(St_SignUp_DOB_Month_combo.getSelectedItem().toString());
-        int dobDay=Integer.parseInt(St_SignUp_DOB_Day_combo.getSelectedItem().toString());
-      //  System.out.println(dobYear);
-      int age=getAge(dobYear,dobmonth,dobDay);
-      System.out.println("...."+age);
-      String newAge= "" + age;
-     St_SignUp_Age_Textfield.setText(newAge);   
+       
+//        if(St_SignUp_DOB_Year_combo.getSelectedIndex()!=0 && (St_SignUp_DOB_Month_combo.getSelectedIndex()!=0) && (St_SignUp_DOB_Day_combo.getSelectedIndex()!=0)) 
+//                {
+////                        if((St_SignUp_DOB_Month_combo.getSelectedIndex()!=0) && (St_SignUp_DOB_Day_combo.getSelectedIndex()!=0))
+////                        {
+//                            int dobYear=Integer.parseInt(St_SignUp_DOB_Year_combo.getSelectedItem().toString());
+//                            int dobmonth=Integer.parseInt(populate_monthList(St_SignUp_DOB_Month_combo.getSelectedItem().toString()));
+//                            int dobDay=Integer.parseInt(St_SignUp_DOB_Day_combo.getSelectedItem().toString());
+//                             //  System.out.println(dobYear);
+//                             int age=getAge(dobYear,dobmonth,dobDay);
+//                            System.out.println("...."+age);
+//                            String newAge= "" + age;
+//                           St_SignUp_Age_Textfield.setText(newAge);   
+////
+////                        }
+////                        else if((St_SignUp_DOB_Month_combo.getSelectedIndex()!=0) || (St_SignUp_DOB_Day_combo.getSelectedIndex()!=0)){
+////                       
+////                                JOptionPane.showMessageDialog(null, "Please give day and month", "Alert", JOptionPane.ERROR_MESSAGE);
+////                         }
+//                }
+//                else
+//                {
+//                     JOptionPane.showMessageDialog(null, "Please give day,month and year", "Alert", JOptionPane.ERROR_MESSAGE);
+//                        //        St_SignUp_DOB_Year_combo.setSelectedIndex(0);
+//                          //      St_SignUp_DOB_Month_combo.setSelectedIndex(0);
+//                        //        St_SignUp_DOB_Day_combo.setSelectedIndex(0);
+//                }
+                
+        if(St_SignUp_DOB_Day_combo.getSelectedIndex()!=0)
+        {
+            if(St_SignUp_DOB_Month_combo.getSelectedIndex()!=0)
+            {
+                if(St_SignUp_DOB_Year_combo.getSelectedIndex()!=0)
+                        {
+                            int dobYear=Integer.parseInt(St_SignUp_DOB_Year_combo.getSelectedItem().toString());
+                            int dobmonth=Integer.parseInt(populate_monthList(St_SignUp_DOB_Month_combo.getSelectedItem().toString()));
+                            int dobDay=Integer.parseInt(St_SignUp_DOB_Day_combo.getSelectedItem().toString());
+                             //  System.out.println(dobYear);
+                             int age=getAge(dobYear,dobmonth,dobDay);
+                            System.out.println("...."+age);
+                            String newAge= "" + age;
+                           St_SignUp_Age_Textfield.setText(newAge); 
+                        }
+            }
+            else
+        {
+            JOptionPane.showMessageDialog(null, "Please give month", "Alert", JOptionPane.ERROR_MESSAGE);
+        }
+            
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Please give day,month and year", "Alert", JOptionPane.ERROR_MESSAGE);
+        }
         
     }//GEN-LAST:event_St_SignUp_DOB_Year_comboItemStateChanged
 public int getAge(int year, int month, int day) {
@@ -2085,24 +2280,59 @@ public int getAge(int year, int month, int day) {
     }
    return result;
 }
+    private void StHome_Lessons_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StHome_Lessons_btnActionPerformed
+        closeAllFrames();
+        Populate_Questions();
+        StudentsShortQuestonFrame.setVisible(true);
+        
+    }//GEN-LAST:event_StHome_Lessons_btnActionPerformed
+
+     private void Populate_Questions() {
+        try {
+           int i=1;
+            JPanel questionPanel;
+            pst = con.prepareStatement("select * from questionstable");
+            rs = pst.executeQuery();
+           while(rs.next())
+           {
+               questionPanel=new JPanel();
+               questionPanel.setName("Panel "+i);
+               //questionPanel
+               questionPanel.setBounds(10,50, 200, 200);
+                System.out.println(questionPanel.getName());
+               JLabel questionNo=new JLabel();
+               questionNo.setText("Question "+i);
+               JLabel questionText=new JLabel();
+               questionText.setText(rs.getString("questions"));
+               ButtonGroup group=new ButtonGroup();
+               firstoption=new JRadioButton();
+               secondoption=new JRadioButton();
+               thirdoption=new JRadioButton();
+                group.add(firstoption);
+                group.add(secondoption);
+                group.add(thirdoption);
+               firstoption.setText(rs.getString("option1"));
+               secondoption.setText(rs.getString("option2"));
+               thirdoption.setText(rs.getString("option3"));
+               questionPanel.add(questionNo);
+               questionPanel.add(questionText);
+               questionPanel.add(firstoption);
+               questionPanel.add(secondoption);
+               questionPanel.add(thirdoption);
+               StudentsShortQuestonFrame.add(questionPanel);
+               System.out.println("hello "+i);
+               i++;
+           }
+        } catch (SQLException e) {
+            Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
+    
     private void Register_Students_Fun() {
       
-//        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
-//            if (userCheck(adusr_email_textfield.getText())) {
-//                JOptionPane.showMessageDialog(null, "Email Id already exist", "Alert", JOptionPane.ERROR_MESSAGE);
-//                adusr_email_textfield.setText("");
-//            } else if (!EmailValidator(adusr_email_textfield.getText().trim())) {
-//                JOptionPane.showMessageDialog(null, "Please enter valid Email Id", "Alert", JOptionPane.ERROR_MESSAGE);
-//                adusr_email_textfield.setText("");
-//            } 
-//            else if(!(adusr_password_textfield.getText()).equals(adusr_confpassword_textfield.getText())){
-//            JOptionPane.showMessageDialog(null, "Password and Confirm Password Mismatched", "Alert", JOptionPane.ERROR_MESSAGE);
-//            adusr_password_textfield.setText("");
-//            adusr_confpassword_textfield.setText("");
-//            }else {
                 try {
                     System.out.println("1...");
-                    String insertStudent = "INSERT INTO students(firstname,lastname,gender,nationality,dob,age,maritalstatus,emiratesid,passportnumber,emailid,photo) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+                    String insertStudent = "INSERT INTO students(firstname,lastname,gender,nationality,dob,age,maritalstatus,emiratesid,passportnumber,emailid,photo,registrationno) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
                     System.out.println("2...");
                     pst = con.prepareStatement(insertStudent);
                     pst.setString(1, St_SignUp_firstName_Textfield.getText());
@@ -2120,14 +2350,12 @@ public int getAge(int year, int month, int day) {
                     System.out.println("Admin mail...4");
                     pst.setString(4, St_SignUp_nationailty_combo.getSelectedItem().toString());
                     String day=St_SignUp_DOB_Day_combo.getSelectedItem().toString();
-                    String month=St_SignUp_DOB_Month_combo.getSelectedItem().toString();
+                    String month=populate_monthList(St_SignUp_DOB_Month_combo.getSelectedItem().toString());
                     String year=St_SignUp_DOB_Year_combo.getSelectedItem().toString();
                     System.out.println("Admin mail...5");
                     StringBuffer dob=new StringBuffer();
-                    dob.append(month).append("-").append(day).append("-").append(year);
+                    dob.append(year).append("-").append(month).append("-").append(day);
                     pst.setString(5, dob.toString());
-                    System.out.println("Admin mail...6");
-                    //pst.setString(6, St_SignUp_Age_Textfield.getText());
                     pst.setString(6, "25");
                     pst.setString(7, St_SignUp_MaritalStatus_combo.getSelectedItem().toString());
                     System.out.println("666......");
@@ -2159,7 +2387,7 @@ public int getAge(int year, int month, int day) {
                     St_SignUp_lastName_Textfield.setText("");
                     St_SignUp_nationailty_combo.setSelectedIndex(0);
                     St_SignUp_Age_Textfield.setText("");
-                    //St_SignUp_MaritalStatus_Textfield.setText("");
+                    St_SignUp_MaritalStatus_combo.setSelectedIndex(0);
                     St_SignUp_EmiratesId_Textfield.setText("");
                     St_SignUp_PassportNo_Textfield.setText("");
                     St_SignUp_Email_Textfield.setText("");
@@ -2402,6 +2630,10 @@ public int getAge(int year, int month, int day) {
     private javax.swing.JLabel Results_StudentName_Lbl;
     private javax.swing.JLabel Results_Subject_Lbl;
     private javax.swing.JLabel Results_label;
+    private javax.swing.JButton StHome_Lessons_btn;
+    private javax.swing.JButton StHome_Logout_btn;
+    private javax.swing.JButton StHome_Results_btn;
+    private javax.swing.JLabel StHome_label;
     private javax.swing.JButton StLogin_Back_Btn;
     private javax.swing.JButton StLogin_SignIn_btn;
     private javax.swing.JButton StLogin_SignUp_btn;
@@ -2440,6 +2672,8 @@ public int getAge(int year, int month, int day) {
     private javax.swing.JLabel St_Signup_gender_label;
     private javax.swing.JTable St_Table;
     private javax.swing.JInternalFrame StudentLoginFrame;
+    private javax.swing.JInternalFrame StudentsHomeFrame;
+    private javax.swing.JInternalFrame StudentsShortQuestonFrame;
     private javax.swing.JInternalFrame StudentsSignUpFrame;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
@@ -2448,6 +2682,7 @@ public int getAge(int year, int month, int day) {
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
