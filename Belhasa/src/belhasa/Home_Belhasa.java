@@ -3,6 +3,8 @@ package belhasa;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +14,10 @@ import java.sql.Statement;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -35,6 +40,9 @@ public class Home_Belhasa extends javax.swing.JFrame {
     ResultSet rs, rs1, rs2;
     PreparedStatement pst, pst1, pst2;
     String adminUser="";
+    String studentImage = null;
+    String studentImageUrl = null;
+    int pictureId = 0;
     JRadioButton firstoption,secondoption,thirdoption;
     
     public Home_Belhasa() {
@@ -190,6 +198,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         St_SignUp_Register_btn = new javax.swing.JButton();
         St_SignUp_Age_Textfield = new javax.swing.JTextField();
         St_SignUp_age_label = new javax.swing.JLabel();
+        St_SignUp_Upload_Photo_Btn = new javax.swing.JButton();
         ConfirmNotificationModeFrame = new javax.swing.JInternalFrame();
         Email_RadioButton = new javax.swing.JRadioButton();
         Instant_RadioButton = new javax.swing.JRadioButton();
@@ -253,6 +262,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         });
 
         InstantRegister_Back_Btn.setText("Back");
+        InstantRegister_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InstantRegister_Back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout InstantRegisterFrameLayout = new javax.swing.GroupLayout(InstantRegisterFrame.getContentPane());
         InstantRegisterFrame.getContentPane().setLayout(InstantRegisterFrameLayout);
@@ -318,6 +332,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         Lessons_Enter_Btn.setText("Enter");
 
         Lessons_Back_Btn.setText("Back");
+        Lessons_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Lessons_Back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout LessonsFrameLayout = new javax.swing.GroupLayout(LessonsFrame.getContentPane());
         LessonsFrame.getContentPane().setLayout(LessonsFrameLayout);
@@ -360,7 +379,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonsFrame);
-        LessonsFrame.setBounds(0, 0, 509, 397);
+        LessonsFrame.setBounds(0, 0, 509, 398);
 
         LessonContentFrame.setVisible(true);
 
@@ -376,6 +395,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         LsContent_Qstn_Btn.setText("Questions");
 
         LessonContent_Back_Btn.setText("Back");
+        LessonContent_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LessonContent_Back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout LessonContentFrameLayout = new javax.swing.GroupLayout(LessonContentFrame.getContentPane());
         LessonContentFrame.getContentPane().setLayout(LessonContentFrameLayout);
@@ -418,7 +442,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonContentFrame);
-        LessonContentFrame.setBounds(0, 0, 484, 330);
+        LessonContentFrame.setBounds(0, 0, 484, 331);
 
         AddLessonFrame.setVisible(true);
 
@@ -431,6 +455,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         Add_Lesson_Add_Btn.setText("Add");
 
         Add_Lesson_back_Btn.setText("Back");
+        Add_Lesson_back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Add_Lesson_back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout AddLessonFrameLayout = new javax.swing.GroupLayout(AddLessonFrame.getContentPane());
         AddLessonFrame.getContentPane().setLayout(AddLessonFrameLayout);
@@ -467,7 +496,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AddLessonFrame);
-        AddLessonFrame.setBounds(0, 0, 490, 261);
+        AddLessonFrame.setBounds(0, 0, 490, 262);
 
         QuestionsFrame.setVisible(true);
         QuestionsFrame.getContentPane().setLayout(null);
@@ -530,11 +559,16 @@ public class Home_Belhasa extends javax.swing.JFrame {
         Qstn_Update_Btn.setBounds(350, 440, 90, 30);
 
         qstn_Back_Btn.setText("Back");
+        qstn_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qstn_Back_BtnActionPerformed(evt);
+            }
+        });
         QuestionsFrame.getContentPane().add(qstn_Back_Btn);
         qstn_Back_Btn.setBounds(0, 10, 55, 23);
 
         desktopPane.add(QuestionsFrame);
-        QuestionsFrame.setBounds(0, 0, 22, 33);
+        QuestionsFrame.setBounds(0, 0, 22, 34);
 
         MainLoginFrame.setPreferredSize(new java.awt.Dimension(500, 280));
         MainLoginFrame.setVisible(true);
@@ -629,6 +663,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         AdminLogin_label.setText("Admin Login");
 
         AdminLogin_Back_Btn.setText("Back");
+        AdminLogin_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminLogin_Back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout AdminLoginFrameLayout = new javax.swing.GroupLayout(AdminLoginFrame.getContentPane());
         AdminLoginFrame.getContentPane().setLayout(AdminLoginFrameLayout);
@@ -674,7 +713,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AdminLoginFrame);
-        AdminLoginFrame.setBounds(0, 0, 422, 360);
+        AdminLoginFrame.setBounds(0, 0, 422, 361);
 
         StudentLoginFrame.setVisible(true);
 
@@ -699,6 +738,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         });
 
         StLogin_Back_Btn.setText("Back");
+        StLogin_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StLogin_Back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout StudentLoginFrameLayout = new javax.swing.GroupLayout(StudentLoginFrame.getContentPane());
         StudentLoginFrame.getContentPane().setLayout(StudentLoginFrameLayout);
@@ -756,13 +800,18 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentLoginFrame);
-        StudentLoginFrame.setBounds(0, 0, 471, 342);
+        StudentLoginFrame.setBounds(0, 0, 471, 343);
 
         ApproveNewStudents.setVisible(true);
 
         ApproveStLogin_label.setText("Student Details");
 
         ApproveStLogin_Back_btn.setText("Back");
+        ApproveStLogin_Back_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApproveStLogin_Back_btnActionPerformed(evt);
+            }
+        });
 
         St_Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1030,7 +1079,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AdminHomeFrame);
-        AdminHomeFrame.setBounds(0, 0, 470, 340);
+        AdminHomeFrame.setBounds(0, 0, 470, 341);
 
         StudentsSignUpFrame.setPreferredSize(new java.awt.Dimension(755, 800));
         StudentsSignUpFrame.setVisible(true);
@@ -1044,6 +1093,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         St_SignUp_Email_label.setText("Email Id");
 
         St_SignUp_Back_btn.setText("Back");
+        St_SignUp_Back_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                St_SignUp_Back_btnActionPerformed(evt);
+            }
+        });
 
         St_SignUp_MaritalStatus_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Single", "Married", "UnMarried", "Widow", "Others", " " }));
 
@@ -1085,19 +1139,26 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         St_SignUp_age_label.setText("Age");
 
+        St_SignUp_Upload_Photo_Btn.setText("Upload Photo");
+        St_SignUp_Upload_Photo_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                St_SignUp_Upload_Photo_BtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(St_SignUp_Back_btn)
                         .addGap(118, 118, 118)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(StSignUp_label2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(StSignUp_label1)))
+                            .addComponent(StSignUp_label1)
+                            .addComponent(StSignUp_label2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(128, 128, 128)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1116,7 +1177,6 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                 .addGap(133, 133, 133)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(St_SignUp_MaritalStatus_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(St_Signup_gender_combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1128,56 +1188,61 @@ public class Home_Belhasa extends javax.swing.JFrame {
                                         .addComponent(St_SignUp_DOB_Month_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(34, 34, 34)
                                         .addComponent(St_SignUp_DOB_Year_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                                        .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(St_SignUp_Register_btn))))
-                .addGap(44, 44, 44))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(St_SignUp_Upload_Photo_Btn)))
+                .addGap(286, 286, 286))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(St_SignUp_Back_btn)
-                    .addComponent(StSignUp_label1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(StSignUp_label2)
-                        .addGap(33, 33, 33)
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(St_SignUp_Back_btn)
+                                    .addComponent(StSignUp_label1))
+                                .addGap(43, 43, 43)
+                                .addComponent(StSignUp_label2))
+                            .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(St_SignUp_firstName_label)
-                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_lastName_label)
-                            .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_passportNo_label)
-                            .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_emiratesId_label)
-                            .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_Email_label)
-                            .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(45, 45, 45)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(St_SignUp_nationailty_label)
-                            .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32))
+                            .addComponent(St_SignUp_firstName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(StSignUp_photo_label, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(122, 122, 122)
+                        .addComponent(St_SignUp_Upload_Photo_Btn)))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_lastName_label)
+                    .addComponent(St_SignUp_lastName_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_passportNo_label)
+                    .addComponent(St_SignUp_PassportNo_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_emiratesId_label)
+                    .addComponent(St_SignUp_EmiratesId_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_Email_label)
+                    .addComponent(St_SignUp_Email_Textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(St_SignUp_nationailty_label)
+                    .addComponent(St_SignUp_nationailty_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(St_SignUp_MaritalStatus_label)
                     .addComponent(St_SignUp_MaritalStatus_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1247,6 +1312,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         });
 
         ConfNotification_Back_Btn.setText("Back");
+        ConfNotification_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfNotification_Back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ConfirmNotificationModeFrameLayout = new javax.swing.GroupLayout(ConfirmNotificationModeFrame.getContentPane());
         ConfirmNotificationModeFrame.getContentPane().setLayout(ConfirmNotificationModeFrameLayout);
@@ -1280,7 +1350,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(ConfirmNotificationModeFrame);
-        ConfirmNotificationModeFrame.setBounds(0, 0, 628, 231);
+        ConfirmNotificationModeFrame.setBounds(0, 0, 628, 232);
 
         LicenseCategoryFrame.setVisible(true);
 
@@ -1297,6 +1367,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
         HVT_RdBtn.setText("HVT");
 
         LicenseCategory_Back_Btn.setText("Back");
+        LicenseCategory_Back_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LicenseCategory_Back_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout LicenseCategoryFrameLayout = new javax.swing.GroupLayout(LicenseCategoryFrame.getContentPane());
         LicenseCategoryFrame.getContentPane().setLayout(LicenseCategoryFrameLayout);
@@ -1334,7 +1409,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LicenseCategoryFrame);
-        LicenseCategoryFrame.setBounds(0, 0, 395, 327);
+        LicenseCategoryFrame.setBounds(0, 0, 395, 328);
 
         ChangePasswordFrame.setPreferredSize(new java.awt.Dimension(500, 300));
         ChangePasswordFrame.setVisible(true);
@@ -1965,6 +2040,110 @@ public class Home_Belhasa extends javax.swing.JFrame {
 //            Logger.getLogger(List.class.getName()).log(Level.SEVERE, null, ex);
 //        }
     }//GEN-LAST:event_Results_Report_BtnActionPerformed
+private void AddStudentsPicture_Upload_Btn_fun() {
+       String sql = "Select id from lesson_image order by id desc";
+
+        JFileChooser filechooser = new JFileChooser();
+        filechooser.setDialogTitle("Choose the File to upload");
+        filechooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+
+        int returnval = filechooser.showOpenDialog(this);
+        if (returnval == JFileChooser.APPROVE_OPTION) {
+            File file = filechooser.getSelectedFile();
+            BufferedImage bi;
+            try {
+
+                bi = ImageIO.read(file);
+                bi = scale(bi, 600, 400);
+                StSignUp_photo_label.setIcon(new ImageIcon(bi));
+                studentImage = file.getName();
+                if (!studentImage.endsWith("jpg")) {
+                    studentImage = studentImage.substring(0, studentImage.lastIndexOf(".") + 1).concat("jpg");
+                }
+                pst = con.prepareStatement(sql);
+                rs = pst.executeQuery(sql);
+                if (rs.next()) {
+                    pictureId++;
+                }
+                File f = new File("c:\\wamp\\www\\images\\" + "_" + pictureId + "_" + studentImage);
+                ImageIO.write(bi, "jpg", f);
+
+            } catch (Exception e) {
+                Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+    }
+private BufferedImage scale(BufferedImage src, int w, int h) {
+        BufferedImage img = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
+        int x, y;
+        int ww = src.getWidth();
+        int hh = src.getHeight();
+        for (x = 0; x < w; x++) {
+            for (y = 0; y < h; y++) {
+                int col = src.getRGB(x * ww / w, y * hh / h);
+                img.setRGB(x, y, col);
+            }
+        }
+        return img;
+    }
+    private void St_SignUp_Upload_Photo_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_St_SignUp_Upload_Photo_BtnActionPerformed
+        AddStudentsPicture_Upload_Btn_fun();
+    }//GEN-LAST:event_St_SignUp_Upload_Photo_BtnActionPerformed
+
+    private void InstantRegister_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstantRegister_Back_BtnActionPerformed
+        closeAllFrames();
+        ConfirmNotificationModeFrame.setVisible(true);
+    }//GEN-LAST:event_InstantRegister_Back_BtnActionPerformed
+
+    private void Lessons_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lessons_Back_BtnActionPerformed
+        closeAllFrames();
+        AdminHomeFrame.setVisible(true);
+    }//GEN-LAST:event_Lessons_Back_BtnActionPerformed
+
+    private void LessonContent_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LessonContent_Back_BtnActionPerformed
+       closeAllFrames();
+        LessonsFrame.setVisible(true);
+    }//GEN-LAST:event_LessonContent_Back_BtnActionPerformed
+
+    private void Add_Lesson_back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add_Lesson_back_BtnActionPerformed
+        closeAllFrames();
+        LessonsFrame.setVisible(true);
+    }//GEN-LAST:event_Add_Lesson_back_BtnActionPerformed
+
+    private void qstn_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qstn_Back_BtnActionPerformed
+       closeAllFrames();
+        LessonContentFrame.setVisible(true);
+    }//GEN-LAST:event_qstn_Back_BtnActionPerformed
+
+    private void AdminLogin_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminLogin_Back_BtnActionPerformed
+        closeAllFrames();
+        MainLoginFrame.setVisible(true);
+    }//GEN-LAST:event_AdminLogin_Back_BtnActionPerformed
+
+    private void StLogin_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StLogin_Back_BtnActionPerformed
+        closeAllFrames();
+        MainLoginFrame.setVisible(true);
+    }//GEN-LAST:event_StLogin_Back_BtnActionPerformed
+
+    private void ApproveStLogin_Back_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApproveStLogin_Back_btnActionPerformed
+        closeAllFrames();
+        AdminHomeFrame.setVisible(true);
+    }//GEN-LAST:event_ApproveStLogin_Back_btnActionPerformed
+
+    private void St_SignUp_Back_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_St_SignUp_Back_btnActionPerformed
+        closeAllFrames();
+        StudentLoginFrame.setVisible(true);
+    }//GEN-LAST:event_St_SignUp_Back_btnActionPerformed
+
+    private void ConfNotification_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfNotification_Back_BtnActionPerformed
+        closeAllFrames();
+        StudentsSignUpFrame.setVisible(true);
+    }//GEN-LAST:event_ConfNotification_Back_BtnActionPerformed
+
+    private void LicenseCategory_Back_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LicenseCategory_Back_BtnActionPerformed
+       closeAllFrames();
+        AdminHomeFrame.setVisible(true);
+    }//GEN-LAST:event_LicenseCategory_Back_BtnActionPerformed
 
     private void StHome_Lessons_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StHome_Lessons_btnActionPerformed
         closeAllFrames();
@@ -2333,6 +2512,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private javax.swing.JLabel St_SignUp_MaritalStatus_label;
     private javax.swing.JTextField St_SignUp_PassportNo_Textfield;
     private javax.swing.JButton St_SignUp_Register_btn;
+    private javax.swing.JButton St_SignUp_Upload_Photo_Btn;
     private javax.swing.JLabel St_SignUp_age_label;
     private javax.swing.JLabel St_SignUp_emiratesId_label;
     private javax.swing.JTextField St_SignUp_firstName_Textfield;
