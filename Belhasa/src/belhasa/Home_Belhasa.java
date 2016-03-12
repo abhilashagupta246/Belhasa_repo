@@ -1948,7 +1948,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private void studentsSignIn()
     {
         try{
-        String studentslogin="select * from students where registrationno="+StLogin_StId_textfieldl.getText();
+        String studentslogin="select * from students where registrationno='"+StLogin_StId_textfieldl.getText()+"'";
         pst=con.prepareStatement(studentslogin);
         rs = pst.executeQuery();
         while(rs.next())
@@ -2206,18 +2206,24 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
 
     private void StHome_Lessons_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StHome_Lessons_btnActionPerformed
         closeAllFrames();
-        StudentsShortQuestonFrame.setVisible(true);
         Populate_Questions();
+        StudentsShortQuestonFrame.setVisible(true);
+        
     }//GEN-LAST:event_StHome_Lessons_btnActionPerformed
 
      private void Populate_Questions() {
         try {
            int i=1;
+            JPanel questionPanel;
             pst = con.prepareStatement("select * from questionstable");
             rs = pst.executeQuery();
            while(rs.next())
            {
-               JPanel questionPanel=new JPanel();
+               questionPanel=new JPanel();
+               questionPanel.setName("Panel "+i);
+               //questionPanel
+               questionPanel.setBounds(10,50, 200, 200);
+                System.out.println(questionPanel.getName());
                JLabel questionNo=new JLabel();
                questionNo.setText("Question "+i);
                JLabel questionText=new JLabel();
@@ -2237,13 +2243,14 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
                questionPanel.add(firstoption);
                questionPanel.add(secondoption);
                questionPanel.add(thirdoption);
+               StudentsShortQuestonFrame.add(questionPanel);
+               System.out.println("hello "+i);
+               i++;
            }
         } catch (SQLException e) {
             Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, e);
         }
-        
     }
-    
     
     private void Register_Students_Fun() {
       
@@ -2273,8 +2280,6 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
                     StringBuffer dob=new StringBuffer();
                     dob.append(year).append("-").append(month).append("-").append(day);
                     pst.setString(5, dob.toString());
-                    System.out.println("Admin mail...6");
-                    //pst.setString(6, St_SignUp_Age_Textfield.getText());
                     pst.setString(6, "25");
                     pst.setString(7, St_SignUp_MaritalStatus_combo.getSelectedItem().toString());
                     System.out.println("666......");
