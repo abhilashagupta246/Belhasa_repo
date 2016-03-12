@@ -379,7 +379,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonsFrame);
-        LessonsFrame.setBounds(0, 0, 509, 398);
+        LessonsFrame.setBounds(0, 0, 509, 397);
 
         LessonContentFrame.setVisible(true);
 
@@ -442,7 +442,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LessonContentFrame);
-        LessonContentFrame.setBounds(0, 0, 484, 331);
+        LessonContentFrame.setBounds(0, 0, 484, 330);
 
         AddLessonFrame.setVisible(true);
 
@@ -496,7 +496,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AddLessonFrame);
-        AddLessonFrame.setBounds(0, 0, 490, 262);
+        AddLessonFrame.setBounds(0, 0, 490, 261);
 
         QuestionsFrame.setVisible(true);
         QuestionsFrame.getContentPane().setLayout(null);
@@ -568,7 +568,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         qstn_Back_Btn.setBounds(0, 10, 55, 23);
 
         desktopPane.add(QuestionsFrame);
-        QuestionsFrame.setBounds(0, 0, 22, 34);
+        QuestionsFrame.setBounds(0, 0, 22, 33);
 
         MainLoginFrame.setPreferredSize(new java.awt.Dimension(500, 280));
         MainLoginFrame.setVisible(true);
@@ -713,13 +713,13 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AdminLoginFrame);
-        AdminLoginFrame.setBounds(0, 0, 422, 361);
+        AdminLoginFrame.setBounds(0, 0, 422, 360);
 
         StudentLoginFrame.setVisible(true);
 
         StLogin_label.setText("Students Login ");
 
-        StLogin_StId_label.setText("Student Id");
+        StLogin_StId_label.setText("Registration Number");
 
         StLogin_StPwd_label.setText("Password");
 
@@ -755,7 +755,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
                         .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(StLogin_StId_label)
                             .addComponent(StLogin_StPwd_label))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                         .addGroup(StudentLoginFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(StLogin_StPwd_textfield)
                             .addComponent(StLogin_StId_textfieldl, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -800,7 +800,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(StudentLoginFrame);
-        StudentLoginFrame.setBounds(0, 0, 471, 343);
+        StudentLoginFrame.setBounds(0, 0, 471, 342);
 
         ApproveNewStudents.setVisible(true);
 
@@ -1079,7 +1079,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(AdminHomeFrame);
-        AdminHomeFrame.setBounds(0, 0, 470, 341);
+        AdminHomeFrame.setBounds(0, 0, 470, 340);
 
         StudentsSignUpFrame.setPreferredSize(new java.awt.Dimension(755, 800));
         StudentsSignUpFrame.setVisible(true);
@@ -1275,9 +1275,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
         StudentsSignUpFrameLayout.setVerticalGroup(
             StudentsSignUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StudentsSignUpFrameLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         desktopPane.add(StudentsSignUpFrame);
@@ -1350,7 +1348,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(ConfirmNotificationModeFrame);
-        ConfirmNotificationModeFrame.setBounds(0, 0, 628, 232);
+        ConfirmNotificationModeFrame.setBounds(0, 0, 628, 231);
 
         LicenseCategoryFrame.setVisible(true);
 
@@ -1409,7 +1407,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         );
 
         desktopPane.add(LicenseCategoryFrame);
-        LicenseCategoryFrame.setBounds(0, 0, 395, 328);
+        LicenseCategoryFrame.setBounds(0, 0, 395, 327);
 
         ChangePasswordFrame.setPreferredSize(new java.awt.Dimension(500, 300));
         ChangePasswordFrame.setVisible(true);
@@ -1766,6 +1764,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
         AddLessonFrame.setVisible(false);
         ResultFrame.setVisible(false);
         StudentsShortQuestonFrame.setVisible(false);
+        StudentsHomeFrame.setVisible(false);
     }
    private void countryList()
    {
@@ -1929,7 +1928,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     }//GEN-LAST:event_Chg_Pwd_MAITMouseClicked
 
     private void StLogin_SignIn_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StLogin_SignIn_btnActionPerformed
-        // TODO add your handling code here:
+        studentsSignIn();
     }//GEN-LAST:event_StLogin_SignIn_btnActionPerformed
 
     private void AdminHome_ChangePwd_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_ChangePwd_btnActionPerformed
@@ -1946,6 +1945,24 @@ public class Home_Belhasa extends javax.swing.JFrame {
         InstantRegisterFrame.setVisible(true);
     }//GEN-LAST:event_Instant_RadioButtonMouseClicked
 
+    private void studentsSignIn()
+    {
+        try{
+        String studentslogin="select * from students where registrationno="+StLogin_StId_textfieldl.getText();
+        pst=con.prepareStatement(studentslogin);
+        rs = pst.executeQuery();
+        while(rs.next())
+        {
+          closeAllFrames();
+          StudentsHomeFrame.setVisible(true);
+        }
+        }
+       
+       catch (SQLException ex) {
+                    Logger.getLogger(Home_Belhasa.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }  
+    
     private void InstantRegister_activate_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstantRegister_activate_btnActionPerformed
        try{
         String adminPasswordCheck="select username ,password from adminlogin";
@@ -2018,6 +2035,48 @@ public class Home_Belhasa extends javax.swing.JFrame {
        
     }//GEN-LAST:event_Results_MAITMouseClicked
 
+    private String populate_monthList(String mnth)
+    {
+        String mnthno="";
+        if (mnth.equals("January")) {
+            mnthno = "01";
+        }
+        if (mnth.equals("Febuary")) {
+            mnthno = "02";
+        }
+        if (mnth.equals("March")) {
+            mnthno = "03";
+        }
+        if (mnth.equals("April")) {
+            mnthno = "04";
+        }
+        if (mnth.equals("May")) {
+            mnthno = "05";
+        }
+        if (mnth.equals("June")) {
+            mnthno = "06";
+        }
+        if (mnth.equals("July")) {
+            mnthno = "07";
+        }
+        if (mnth.equals("August")) {
+            mnthno = "08";
+        }
+        if (mnth.equals("September")) {
+            mnthno = "09";
+        }
+        if (mnth.equals("October")) {
+            mnthno = "10";
+        }
+        if (mnth.equals("November")) {
+            mnthno = "11";
+        }
+        if (mnth.equals("December")) {
+            mnthno = "12";
+        }
+         return   mnthno; 
+    }
+    
     private void Results_Report_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Results_Report_BtnActionPerformed
         //Path to your .jasper file in your package
         String reportName = "./reports/Results.jasper";
@@ -2188,22 +2247,9 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
     
     private void Register_Students_Fun() {
       
-//        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
-//            if (userCheck(adusr_email_textfield.getText())) {
-//                JOptionPane.showMessageDialog(null, "Email Id already exist", "Alert", JOptionPane.ERROR_MESSAGE);
-//                adusr_email_textfield.setText("");
-//            } else if (!EmailValidator(adusr_email_textfield.getText().trim())) {
-//                JOptionPane.showMessageDialog(null, "Please enter valid Email Id", "Alert", JOptionPane.ERROR_MESSAGE);
-//                adusr_email_textfield.setText("");
-//            } 
-//            else if(!(adusr_password_textfield.getText()).equals(adusr_confpassword_textfield.getText())){
-//            JOptionPane.showMessageDialog(null, "Password and Confirm Password Mismatched", "Alert", JOptionPane.ERROR_MESSAGE);
-//            adusr_password_textfield.setText("");
-//            adusr_confpassword_textfield.setText("");
-//            }else {
                 try {
                     System.out.println("1...");
-                    String insertStudent = "INSERT INTO students(firstname,lastname,gender,nationality,dob,age,maritalstatus,emiratesid,passportnumber,emailid,photo) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+                    String insertStudent = "INSERT INTO students(firstname,lastname,gender,nationality,dob,age,maritalstatus,emiratesid,passportnumber,emailid,photo,registrationno) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
                     System.out.println("2...");
                     pst = con.prepareStatement(insertStudent);
                     pst.setString(1, St_SignUp_firstName_Textfield.getText());
@@ -2221,21 +2267,22 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
                     System.out.println("Admin mail...4");
                     pst.setString(4, St_SignUp_nationailty_combo.getSelectedItem().toString());
                     String day=St_SignUp_DOB_Day_combo.getSelectedItem().toString();
-                    String month=St_SignUp_DOB_Month_combo.getSelectedItem().toString();
+                    String month=populate_monthList(St_SignUp_DOB_Month_combo.getSelectedItem().toString());
                     String year=St_SignUp_DOB_Year_combo.getSelectedItem().toString();
                     System.out.println("Admin mail...5");
                     StringBuffer dob=new StringBuffer();
-                    dob.append(month).append("-").append(day).append("-").append(year);
+                    dob.append(year).append("-").append(month).append("-").append(day);
                     pst.setString(5, dob.toString());
                     System.out.println("Admin mail...6");
                     //pst.setString(6, St_SignUp_Age_Textfield.getText());
                     pst.setString(6, "25");
-                   // pst.setString(7, St_SignUp_MaritalStatus_Textfield.getText());
+                    pst.setString(7, St_SignUp_MaritalStatus_combo.getSelectedItem().toString());
                     System.out.println("666......");
                     pst.setString(8, St_SignUp_EmiratesId_Textfield.getText());
                     pst.setString(9, St_SignUp_PassportNo_Textfield.getText());
                     pst.setString(10, St_SignUp_Email_Textfield.getText());
                     pst.setString(11, "uih");
+                    pst.setString(12,"1");
                     System.out.println("66666...........");
                     pst.executeUpdate();
                     System.out.println("Admin mail...7");
@@ -2243,7 +2290,7 @@ private BufferedImage scale(BufferedImage src, int w, int h) {
                     St_SignUp_lastName_Textfield.setText("");
                     St_SignUp_nationailty_combo.setSelectedIndex(0);
                     St_SignUp_Age_Textfield.setText("");
-                    //St_SignUp_MaritalStatus_Textfield.setText("");
+                    St_SignUp_MaritalStatus_combo.setSelectedIndex(0);
                     St_SignUp_EmiratesId_Textfield.setText("");
                     St_SignUp_PassportNo_Textfield.setText("");
                     St_SignUp_Email_Textfield.setText("");
