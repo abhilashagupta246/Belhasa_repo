@@ -686,11 +686,9 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         ApproveStLogin_dob_label.setText("Date of Birth");
 
-        ApproveStLogin_dob_day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ApproveStLogin_dob_day_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
-        ApproveStLogin_dob_month_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        ApproveStLogin_dob_year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ApproveStLogin_dob_month_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", " " }));
 
         ApproveStLogin_marital_label.setText("Marital Status");
 
@@ -926,6 +924,11 @@ public class Home_Belhasa extends javax.swing.JFrame {
 
         St_SignUp_DOB_Month_combo.setMaximumRowCount(12);
         St_SignUp_DOB_Month_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", " " }));
+        St_SignUp_DOB_Month_combo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                St_SignUp_DOB_Month_comboActionPerformed(evt);
+            }
+        });
 
         St_SignUp_DOB_Year_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year" }));
 
@@ -1313,11 +1316,14 @@ public class Home_Belhasa extends javax.swing.JFrame {
         QuestionsFrame.setVisible(false);
         StudentsSignUpFrame.setVisible(false);
         ConfirmNotificationModeFrame.setVisible(false);
+        AddLessonFrame.setVisible(false);
     }
    private void countryList()
    {
        St_SignUp_nationailty_combo.removeAllItems();
        ApproveStLogin_nationality_combo.removeAllItems();
+       St_SignUp_DOB_Year_combo.addItem("Year");
+       ApproveStLogin_dob_year_combo.addItem("Year");
        String countrylist="select * from countrylist";
        try{
            pst=con.prepareStatement(countrylist);
@@ -1335,7 +1341,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
 //               String yr;
 //               yr = Integer.toString(i);
             St_SignUp_DOB_Year_combo.addItem(Integer.toString(i));
-            
+            ApproveStLogin_dob_year_combo.addItem(Integer.toString(i));
             }
        }
        catch(Exception e)
@@ -1363,6 +1369,7 @@ public class Home_Belhasa extends javax.swing.JFrame {
     private void AdminHome_NewSt_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminHome_NewSt_btnActionPerformed
          closeAllFrames();
         ApproveNewStudents.setVisible(true);
+        countryList();
     }//GEN-LAST:event_AdminHome_NewSt_btnActionPerformed
 
     private void StLogin_SignUp_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StLogin_SignUp_btnActionPerformed
@@ -1474,6 +1481,10 @@ public class Home_Belhasa extends javax.swing.JFrame {
         closeAllFrames();
         MainLoginFrame.setVisible(true);
     }//GEN-LAST:event_AdminHome_Logout_btnActionPerformed
+
+    private void St_SignUp_DOB_Month_comboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_St_SignUp_DOB_Month_comboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_St_SignUp_DOB_Month_comboActionPerformed
 private void Register_Students_Fun() {
       //  rowcount = User_Table.getSelectedRowCount();
 //        if (!adusr_username_textfield.getText().trim().equalsIgnoreCase("") && !adusr_email_textfield.getText().trim().equalsIgnoreCase("") && !adusr_password_textfield.getText().equalsIgnoreCase("") &&!adusr_confpassword_textfield.getText().equalsIgnoreCase("")) {
